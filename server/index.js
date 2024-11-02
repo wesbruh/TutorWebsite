@@ -1,8 +1,9 @@
 const express = require("express")
 const app = express()
-const mongoose = require('mongoose')
+// Come back to this - Jay
+//const mongoose = require('mongoose')
 
-mongoose.connect()
+// mongoose.connect()
 
 app.listen(3001, () => {
     console.log("SERVER RUNS PERFECTLY!");
