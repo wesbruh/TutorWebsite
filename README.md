@@ -1,6 +1,8 @@
 # README testing
+  I tested with no problem
 
 ## INSTRUCTIONS (Please follow instruction accordingly):
+
 !! Make sure you are in 'TUTORWEBSITE' directory !!
 
 cd client
@@ -15,6 +17,6 @@ cd ..
 cd server
 npm install express mongoose cors nodemon
 
-TEST: 
+TEST:
 node index.js
 Confirm terminal shows 'SERVER RUNS PERFECTLY!'
