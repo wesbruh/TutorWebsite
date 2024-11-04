@@ -1,0 +1,10 @@
+/*This file should remain global
+ensures that the theme of the project
+is consistent throughout*/
+
+:root {
+    --ffffff: rgba(255, 255, 255, 1);
+    --gray: rgba(72, 73, 68, 1);
+    --green: rgba(70, 99, 70, 1);
+    --style: rgba(28, 73, 232, 1);
+}
