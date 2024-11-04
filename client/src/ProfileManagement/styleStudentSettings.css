@@ -1,0 +1,716 @@
+.student-settings {
+    background-color: #00000033;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.student-settings .overlap-wrapper {
+    background-color: var(--gray);
+    height: 1080px;
+    width: 1920px;
+}
+
+.student-settings .overlap {
+    height: 1025px;
+    left: 36px;
+    position: relative;
+    top: 14px;
+    width: 1614px;
+}
+
+.student-settings .green-rectangle {
+    background-color: var(--green);
+    border-radius: 46px;
+    height: 952px;
+    left: 235px;
+    position: absolute;
+    top: 73px;
+    width: 304px;
+}
+
+.student-settings .whole-dashboard {
+    background: linear-gradient(
+        180deg,
+        rgb(248, 248, 255) 0%,
+        rgb(255, 255, 255) 100%
+    );
+    border-radius: 32px;
+    box-shadow: 0px 49px 32px -19px #37379526;
+    height: 879px;
+    left: 295px;
+    position: absolute;
+    top: 110px;
+    width: 1319px;
+}
+
+.student-settings .text-wrapper-2 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 332px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+}
+
+.student-settings .overlap-2 {
+    background-image: url(./rectangle-2.svg);
+    background-size: 100% 100%;
+    height: 879px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 265px;
+}
+
+.student-settings .log-out {
+    align-items: flex-start;
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 802px;
+    width: 260px;
+}
+
+.student-settings .rectangle {
+    align-self: stretch;
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-settings .div-2 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+}
+
+.student-settings .img {
+    height: 32px;
+    position: relative;
+    width: 32px;
+}
+
+.student-settings .div-3 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-settings .side-bar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    left: 0;
+    padding: 0px 16px;
+    position: absolute;
+    top: 162px;
+    width: 260px;
+}
+
+.student-settings .div-4 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.student-settings .text-wrapper-3 {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-settings .div-5 {
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+}
+
+.student-settings .vector {
+    height: 30px;
+    left: 8524px;
+    position: absolute;
+    top: 6416px;
+    width: 30px;
+}
+
+.student-settings .calendar-icon {
+    height: 30px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 30px !important;
+}
+
+.student-settings .vector-2 {
+    height: 30px;
+    left: 8524px;
+    position: absolute;
+    top: 6362px;
+    width: 30px;
+}
+
+.student-settings .user-interface {
+    height: 24px !important;
+    left: 3px !important;
+    position: absolute !important;
+    top: 3px !important;
+    width: 24px !important;
+}
+
+.student-settings .email-icon-frame {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.student-settings .tutor-icon-frame {
+    height: 32px;
+    position: relative;
+    width: 31px;
+}
+
+.student-settings .tutor-icon {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 32px;
+    left: 1px;
+    position: relative;
+    width: 30px;
+}
+
+.student-settings .graduation-cap {
+    height: 32px !important;
+    position: relative !important;
+    width: 29px !important;
+}
+
+.student-settings .text-wrapper-4 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 44px;
+}
+
+.student-settings .billing {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.student-settings .billing-button-frame {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+    width: 222px;
+}
+
+.student-settings .star-instance {
+    background-image: url(./star-2.svg) !important;
+    left: 3px !important;
+    position: relative !important;
+}
+
+.student-settings .rectangle-2 {
+    align-self: stretch;
+    background-color: #466346;
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-settings .text-wrapper-5 {
+    color: var(--gray);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-settings .profile-topleft {
+    align-items: center;
+    display: inline-flex;
+    gap: 14px;
+    left: 19px;
+    position: absolute;
+    top: 56px;
+}
+
+.student-settings .user-interface-user {
+    height: 55px !important;
+    position: relative !important;
+    width: 55px !important;
+}
+
+.student-settings .frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.student-settings .text-wrapper-6 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-settings .span {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.student-settings .line {
+    height: 2px;
+    left: 267px;
+    position: absolute;
+    top: 347px;
+    width: 1028px;
+}
+
+.student-settings .group-wrapper {
+    background-color: #edf1f6;
+    border: 1px dashed;
+    border-color: #4c535f;
+    border-radius: 18px;
+    height: 133px;
+    left: 309px;
+    position: absolute;
+    top: 199px;
+    width: 130px;
+}
+
+.student-settings .div-wrapper {
+    height: 84px;
+    left: 17px;
+    position: relative;
+    top: 24px;
+    width: 94px;
+}
+
+.student-settings .group-2 {
+    height: 84px;
+    position: relative;
+    width: 96px;
+}
+
+.student-settings .text-wrapper-7 {
+    color: #4c535f;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 51px;
+    width: 94px;
+}
+
+.student-settings .gallery-add {
+    height: 36px;
+    left: 29px;
+    position: absolute;
+    top: 0;
+    width: 36px;
+}
+
+.student-settings .your-profile-picture {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 300px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 166px;
+    white-space: nowrap;
+    width: 162px;
+}
+
+.student-settings .input-fileds {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 85px;
+    left: 284px;
+    position: absolute;
+    top: 363px;
+    width: 250px;
+}
+
+.student-settings .group-3 {
+    height: 81px;
+    margin-bottom: -105.00px;
+    position: relative;
+    width: 250px;
+}
+
+.student-settings .overlap-group-2 {
+    background-color: #edf1f6;
+    border: 1px solid;
+    border-color: #e0e4ec;
+    border-radius: 8px;
+    height: 52px;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    width: 240px;
+}
+
+.student-settings .text-wrapper-8 {
+    color: #8d98aa;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 6px;
+    letter-spacing: 0;
+    line-height: 15.7px;
+    position: absolute;
+    top: 16px;
+    width: 200px;
+}
+
+.student-settings .text-wrapper-9 {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 18.0px;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+    width: 87px;
+}
+
+.student-settings .group-4 {
+    height: 80px;
+    margin-bottom: -209.00px;
+    position: relative;
+    width: 250px;
+}
+
+.student-settings .overlap-3 {
+    background-color: #edf1f6;
+    border: 1px solid;
+    border-color: #e0e4ec;
+    border-radius: 8px;
+    height: 51px;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    width: 240px;
+}
+
+.student-settings .text-wrapper-10 {
+    color: #8d98aa;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 6px;
+    letter-spacing: 0;
+    line-height: 15.7px;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 200px;
+}
+
+.student-settings .text-wrapper-11 {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18.0px;
+    margin-bottom: -250.00px;
+    position: relative;
+    width: 210px;
+}
+
+.student-settings .input-fields {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 85px;
+    left: 670px;
+    position: absolute;
+    top: 363px;
+    width: 250px;
+}
+
+.student-settings .group-5 {
+    height: 85px;
+    position: relative;
+    width: 250px;
+}
+
+.student-settings .john-doe {
+    color: #8d98aa;
+    font-family: "Poppins-MediumItalic", Helvetica;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 15.7px;
+    position: absolute;
+    top: 16px;
+    width: 200px;
+}
+
+.student-settings .text-wrapper-12 {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: 18.0px;
+    position: absolute;
+    top: -1px;
+    width: 152px;
+}
+
+.student-settings .checkbox-instance {
+    background-color: var(--green) !important;
+    left: 484px !important;
+    position: absolute !important;
+    top: 676px !important;
+}
+
+.student-settings .group-6 {
+    height: 155px;
+    left: 492px;
+    position: absolute;
+    top: 171px;
+    width: 559px;
+}
+
+.student-settings .overlap-4 {
+    background-color: #edf1f6;
+    border: 1px solid;
+    border-color: #e0e4ec;
+    border-radius: 8px;
+    height: 127px;
+    left: 0;
+    position: absolute;
+    top: 28px;
+    width: 555px;
+}
+
+.student-settings .text-wrapper-13 {
+    color: #8d98aa;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 15.7px;
+    position: absolute;
+    top: 11px;
+    white-space: nowrap;
+    width: 313px;
+}
+
+.student-settings .text-wrapper-14 {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: 18.0px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 38px;
+}
+
+.student-settings .button {
+    all: unset;
+    box-sizing: border-box;
+    height: 67px;
+    left: 271px;
+    position: absolute;
+    top: 793px;
+    width: 174px;
+}
+
+.student-settings .overlap-5 {
+    background-color: #466346;
+    border-radius: 8px;
+    height: 67px;
+    position: relative;
+    width: 172px;
+}
+
+.student-settings .text-wrapper-15 {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    left: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 19px;
+    width: 137px;
+}
+
+.student-settings .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    height: 21px;
+    left: 493px;
+    position: absolute;
+    top: 815px;
+    width: 84px;
+}
+
+.student-settings .text-wrapper-16 {
+    color: #4c535f;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 82px;
+}
+
+.student-settings .student-dashboard {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 332px;
+    position: absolute;
+    top: 117px;
+}
+
+.student-settings .p {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-settings .top-bar {
+    height: 74px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1315px;
+}
+
+.student-settings .back-logo {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 172px;
+}
+
+.student-settings .logo {
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 70px;
+}
+
+.student-settings .back-button {
+    height: 48px;
+    left: 82px;
+    position: absolute;
+    top: 13px;
+    width: 48px;
+}
+
+.student-settings .TUTOR-TITANS {
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 96px;
+    font-weight: 600;
+    height: 74px;
+    left: 537px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 776px;
+}
+
+.student-settings .text-wrapper-17 {
+    color: #466346;
+}
+
+.student-settings .text-wrapper-18 {
+    color: #424d65;
+}
+
+.student-settings .text-wrapper-19 {
+    color: #e2e2e2;
+}
