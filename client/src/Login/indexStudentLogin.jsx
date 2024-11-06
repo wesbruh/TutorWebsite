@@ -1,9 +1,9 @@
 import React from "react";
 /* IMAGES NEED TO BE SUPPORTED, JUST TESTING RIGHT NOW - JAGROOP*/
 /*import { Frame } from "./Frame";*/
-/*import backButton from "./back-button.png";*/
-/*import greenRectangleDesign from "./green-rectangle-design.png";*/
-/*import logo from "./logo.png";*/
+import backButton from "../assets/BackButton.png";
+import greenRectangleDesign from "../assets/greenbox.png";
+import logo from "../assets/logo.svg";
 import "./styleStudentLogin.css"; // Modified
 
 export const StudentLoginPage = () => {
@@ -11,11 +11,11 @@ export const StudentLoginPage = () => {
         <div className="student-login-page">
             <div className="div">
                 <div className="overlap-group">
-                    {/*<img
+                    <img
                         className="green-rectangle"
                         alt="Green rectangle"
                         src={greenRectangleDesign}
-                    />*/}
+                    />
 
                     <div className="sign-in-box">
                         <div className="div-2">
@@ -65,9 +65,9 @@ export const StudentLoginPage = () => {
 
                 <div className="top-bar">
                     <div className="back-logo">
-                        {/*<img className="logo" alt="Logo" src={logo} />
+                        <img className="logo" alt="Logo" src={logo} />
 
-                        <img className="back-button" alt="Back button" src={backButton} />*/}
+                        <img className="back-button" alt="Back button" src={backButton} />
                     </div>
 
                     <p className="TUTOR-TITANS">
