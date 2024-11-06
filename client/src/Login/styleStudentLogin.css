@@ -114,6 +114,7 @@
 }
 
 .student-login-page .sign-in-button {
+    cursor: pointer;
     align-items: center;
     background-color: #466346;
     border-radius: 4px;
@@ -141,6 +142,7 @@
 }
 
 .student-login-page .text-wrapper-3 {
+    cursor: pointer;
     color: var(--style);
     font-family: "Inter-Medium", Helvetica;
     font-size: 14px;
@@ -152,6 +154,7 @@
 }
 
 .student-login-page .frame-wrapper {
+    cursor: pointer;
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -191,6 +194,7 @@
 }
 
 .student-login-page .sign-up-buttons {
+    cursor: pointer;
     align-items: flex-start;
     display: flex;
     flex: 0 0 auto;
@@ -235,6 +239,7 @@
 }
 
 .student-login-page .back-logo {
+    cursor: pointer;
     height: 71px;
     left: 0;
     position: absolute;
@@ -252,6 +257,7 @@
 }
 
 .student-login-page .back-button {
+    cursor: pointer;
     height: 48px;
     left: 82px;
     position: absolute;
