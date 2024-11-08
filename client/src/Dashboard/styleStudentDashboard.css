@@ -1,0 +1,972 @@
+.student-dashboard {
+    background-color: #00000033;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.student-dashboard .overlap-wrapper {
+    background-color: var(--gray);
+    height: 1080px;
+    width: 1920px;
+}
+
+.student-dashboard .overlap {
+    height: 1025px;
+    left: 36px;
+    position: relative;
+    top: 14px;
+    width: 1614px;
+}
+
+.student-dashboard .green-rectangle {
+    background-color: var(--green);
+    border-radius: 46px;
+    height: 952px;
+    left: 235px;
+    position: absolute;
+    top: 73px;
+    width: 304px;
+}
+
+.student-dashboard .whole-dashboard {
+    background: linear-gradient(
+        180deg,
+        rgb(248, 248, 255) 0%,
+        rgb(255, 255, 255) 100%
+    );
+    border-radius: 32px;
+    box-shadow: 0px 49px 32px -19px #37379526;
+    height: 879px;
+    left: 295px;
+    position: absolute;
+    top: 110px;
+    width: 1319px;
+}
+
+.student-dashboard .frame {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    height: 44px;
+    left: 332px;
+    position: absolute;
+    top: 714px;
+    width: 610px;
+}
+
+.student-dashboard .div-wrapper {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: var(--gray);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 44px;
+    padding: 10px;
+    position: relative;
+    width: 71px;
+}
+
+.student-dashboard .text-wrapper {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .div {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 329px;
+}
+
+.student-dashboard .frame-2 {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: var(--gray);
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    padding: 8px 16px;
+    position: relative;
+    width: 81px;
+}
+
+.student-dashboard .text-wrapper-2 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 332px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+}
+
+.student-dashboard .overlap-group {
+    background-image: url(./rectangle-2.svg);
+    background-size: 100% 100%;
+    height: 879px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 265px;
+}
+
+.student-dashboard .log-out {
+    align-items: flex-start;
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 802px;
+    width: 260px;
+}
+
+.student-dashboard .rectangle {
+    align-self: stretch;
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-dashboard .div-2 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+}
+
+.student-dashboard .img {
+    height: 32px;
+    position: relative;
+    width: 32px;
+}
+
+.student-dashboard .div-3 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .side-bar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    left: 0;
+    padding: 0px 16px;
+    position: absolute;
+    top: 162px;
+    width: 260px;
+}
+
+.student-dashboard .div-4 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.student-dashboard .rectangle-2 {
+    align-self: stretch;
+    background-color: var(--green);
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-dashboard .text-wrapper-3 {
+    color: var(--gray);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .div-5 {
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+}
+
+.student-dashboard .vector {
+    height: 30px;
+    left: 5912px;
+    position: absolute;
+    top: 6399px;
+    width: 30px;
+}
+
+.student-dashboard .calendar-icon {
+    height: 30px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 30px !important;
+}
+
+.student-dashboard .vector-2 {
+    height: 30px;
+    left: 5912px;
+    position: absolute;
+    top: 6345px;
+    width: 30px;
+}
+
+.student-dashboard .user-interface {
+    height: 24px !important;
+    left: 3px !important;
+    position: absolute !important;
+    top: 3px !important;
+    width: 24px !important;
+}
+
+.student-dashboard .email-icon-frame {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.student-dashboard .tutor-icon-frame {
+    height: 32px;
+    position: relative;
+    width: 31px;
+}
+
+.student-dashboard .tutor-icon {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 32px;
+    left: 1px;
+    position: relative;
+    width: 30px;
+}
+
+.student-dashboard .graduation-cap {
+    height: 32px !important;
+    position: relative !important;
+    width: 29px !important;
+}
+
+.student-dashboard .text-wrapper-4 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 44px;
+}
+
+.student-dashboard .billing {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.student-dashboard .billing-button-frame {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+    width: 222px;
+}
+
+.student-dashboard .text-wrapper-5 {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .star-instance {
+    left: 3px !important;
+    position: relative !important;
+}
+
+.student-dashboard .profile-topleft {
+    align-items: center;
+    display: inline-flex;
+    gap: 14px;
+    left: 19px;
+    position: absolute;
+    top: 56px;
+}
+
+.student-dashboard .user-interface-user {
+    height: 55px !important;
+    position: relative !important;
+    width: 55px !important;
+}
+
+.student-dashboard .frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.student-dashboard .text-wrapper-6 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .span {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.student-dashboard .div-6 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 332px;
+    position: absolute;
+    top: 149px;
+}
+
+.student-dashboard .p {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .account-balance {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 332px;
+    position: absolute;
+    top: 643px;
+}
+
+.student-dashboard .progress-report {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 316px;
+    position: absolute;
+    top: 261px;
+}
+
+.student-dashboard .chart {
+    background-color: var(--neutral-colorswhite);
+    border-radius: 20px;
+    box-shadow: var(--general-shadows-shadow-01);
+    height: 338px;
+    position: relative;
+    width: 625.66px;
+}
+
+.student-dashboard .days {
+    height: 30px;
+    left: 35px;
+    position: absolute;
+    top: 299px;
+    width: 585px;
+}
+
+.student-dashboard .text-wrapper-7 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    width: 35px;
+}
+
+.student-dashboard .tue {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 127px;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    width: 41px;
+}
+
+.student-dashboard .text-wrapper-8 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 259px;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    width: 37px;
+}
+
+.student-dashboard .text-wrapper-9 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 399px;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    width: 47px;
+}
+
+.student-dashboard .text-wrapper-10 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 546px;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    width: 29px;
+}
+
+.student-dashboard .overlap-2 {
+    height: 192px;
+    left: 20px;
+    position: absolute;
+    top: 97px;
+    width: 584px;
+}
+
+.student-dashboard .amounts {
+    height: 192px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.student-dashboard .text-wrapper-11 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 172px;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.student-dashboard .text-wrapper-12 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 129px;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.student-dashboard .text-wrapper-13 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 86px;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.student-dashboard .text-wrapper-14 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 43px;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.student-dashboard .text-wrapper-15 {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-300-regular-font-family);
+    font-size: var(--text-single-300-regular-font-size);
+    font-style: var(--text-single-300-regular-font-style);
+    font-weight: var(--text-single-300-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--text-single-300-regular-letter-spacing);
+    line-height: var(--text-single-300-regular-line-height);
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.student-dashboard .chart-lines {
+    height: 171px;
+    left: 19px;
+    position: absolute;
+    top: 8px;
+    width: 565px;
+}
+
+.student-dashboard .line {
+    height: 1px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: -1px;
+    width: 564px;
+}
+
+.student-dashboard .line-2 {
+    height: 1px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 42px;
+    width: 564px;
+}
+
+.student-dashboard .line-3 {
+    height: 1px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 85px;
+    width: 564px;
+}
+
+.student-dashboard .line-4 {
+    height: 1px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 128px;
+    width: 564px;
+}
+
+.student-dashboard .line-5 {
+    height: 1px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 170px;
+    width: 564px;
+}
+
+.student-dashboard .flow-lines {
+    height: 181px;
+    left: 29px;
+    position: absolute;
+    top: 3px;
+    width: 547px;
+}
+
+.student-dashboard .overlap-group-wrapper {
+    height: 181px;
+}
+
+.student-dashboard .overlap-group-2 {
+    height: 185px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+    width: 551px;
+}
+
+.student-dashboard .line-6 {
+    height: 172px;
+    left: 5px;
+    position: absolute;
+    top: 6px;
+    width: 540px;
+}
+
+.student-dashboard .flow-indicator {
+    background-color: var(--neutral-colorswhite);
+    border: 2px solid;
+    border-color: var(--primary-colorspurple);
+    border-radius: 6.27px / 7.09px;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 171px;
+    width: 13px;
+}
+
+.student-dashboard .flow-indicator-2 {
+    background-color: var(--neutral-colorswhite);
+    border: 2px solid;
+    border-color: var(--primary-colorspurple);
+    border-radius: 6.27px / 7.09px;
+    height: 14px;
+    left: 130px;
+    position: absolute;
+    top: 129px;
+    width: 13px;
+}
+
+.student-dashboard .flow-indicator-3 {
+    background-color: var(--neutral-colorswhite);
+    border: 2px solid;
+    border-color: var(--primary-colorspurple);
+    border-radius: 6.27px / 7.09px;
+    height: 14px;
+    left: 273px;
+    position: absolute;
+    top: 0;
+    width: 13px;
+}
+
+.student-dashboard .flow-indicator-4 {
+    background-color: var(--neutral-colorswhite);
+    border: 2px solid;
+    border-color: var(--primary-colorspurple);
+    border-radius: 6.27px / 7.09px;
+    height: 14px;
+    left: 405px;
+    position: absolute;
+    top: 86px;
+    width: 13px;
+}
+
+.student-dashboard .flow-indicator-5 {
+    background-color: var(--neutral-colorswhite);
+    border: 2px solid;
+    border-color: var(--primary-colorspurple);
+    border-radius: 6.27px / 7.09px;
+    height: 14px;
+    left: 538px;
+    position: absolute;
+    top: 43px;
+    width: 13px;
+}
+
+.student-dashboard .divider {
+    height: 1px;
+    left: 19px;
+    object-fit: cover;
+    position: absolute;
+    top: 63px;
+    width: 585px;
+}
+
+.student-dashboard .tab-filters {
+    height: 30px;
+    left: 518px;
+    position: absolute;
+    top: 7px;
+    width: 63px;
+}
+
+.student-dashboard .active-tab {
+    align-items: center;
+    background-color: var(--neutral-colorsblack);
+    border-radius: 13px;
+    display: flex;
+    gap: 10px;
+    height: 30px;
+    justify-content: flex-end;
+    padding: 10px 15px 11px;
+    position: relative;
+    width: 63px;
+}
+
+.student-dashboard .text-wrapper-16 {
+    color: var(--neutral-colorswhite);
+    font-family: var(--text-single-200-medium-font-family);
+    font-size: var(--text-single-200-medium-font-size);
+    font-style: var(--text-single-200-medium-font-style);
+    font-weight: var(--text-single-200-medium-font-weight);
+    letter-spacing: var(--text-single-200-medium-letter-spacing);
+    line-height: var(--text-single-200-medium-line-height);
+    margin-bottom: -2.50px;
+    margin-left: -5.00px;
+    margin-top: -4.50px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.student-dashboard .identifiers {
+    height: 16px;
+    left: 245px;
+    position: absolute;
+    top: 18px;
+    width: 97px;
+}
+
+.student-dashboard .label {
+    align-items: center;
+    border-radius: 10px;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.student-dashboard .identifier {
+    background: linear-gradient(
+        180deg,
+        rgb(74, 58, 255) 0%,
+        rgb(109, 58, 255) 100%
+    );
+    border-radius: 4.14px;
+    height: 8.28px;
+    position: relative;
+    width: 8.28px;
+}
+
+.student-dashboard .name {
+    color: var(--neutral-colorstext-gray);
+    font-family: var(--text-single-200-regular-font-family);
+    font-size: var(--text-single-200-regular-font-size);
+    font-style: var(--text-single-200-regular-font-style);
+    font-weight: var(--text-single-200-regular-font-weight);
+    letter-spacing: var(--text-single-200-regular-letter-spacing);
+    line-height: var(--text-single-200-regular-line-height);
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.student-dashboard .card-info {
+    height: 30px;
+    left: 19px;
+    position: absolute;
+    top: 10px;
+    width: 186px;
+}
+
+.student-dashboard .card-title {
+    color: var(--neutral-colorsblack);
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 28px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 184px;
+}
+
+.student-dashboard .visuals-tab {
+    align-items: flex-start;
+    background-color: var(--green);
+    border-radius: 16px;
+    box-shadow: 0px 8px 19px #dfdffc99;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+    left: 998px;
+    padding: 32px;
+    position: absolute;
+    top: 102px;
+}
+
+.student-dashboard .text-wrapper-17 {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.student-dashboard .you-have-no-upcoming {
+    color: var(--ffffff);
+    font-family: "Poppins-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .frame-5 {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #ffffff80;
+    border-radius: 8px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.student-dashboard .text-wrapper-18 {
+    color: #ffffff;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-dashboard .top-bar {
+    height: 74px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1315px;
+}
+
+.student-dashboard .back-logo {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 172px;
+}
+
+.student-dashboard .logo {
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 70px;
+}
+
+.student-dashboard .back-button {
+    height: 48px;
+    left: 82px;
+    position: absolute;
+    top: 13px;
+    width: 48px;
+}
+
+.student-dashboard .TUTOR-TITANS {
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 96px;
+    font-weight: 600;
+    height: 74px;
+    left: 537px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 776px;
+}
+
+.student-dashboard .text-wrapper-19 {
+    color: #466346;
+}
+
+.student-dashboard .text-wrapper-20 {
+    color: #424d65;
+}
+
+.student-dashboard .text-wrapper-21 {
+    color: #e2e2e2;
+}
