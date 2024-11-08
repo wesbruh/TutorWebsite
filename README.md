@@ -23,3 +23,4 @@ npm install express mongoose cors nodemon
 # TEST:
 node index.js
 # Confirm terminal shows 'SERVER RUNS PERFECTLY!'
+test
