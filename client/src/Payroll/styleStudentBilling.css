@@ -1,0 +1,689 @@
+.student-billing-page {
+    background-color: #00000033;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.student-billing-page .overlap-wrapper {
+    background-color: var(--gray);
+    height: 1080px;
+    width: 1920px;
+}
+
+.student-billing-page .overlap {
+    height: 1025px;
+    left: 36px;
+    position: relative;
+    top: 14px;
+    width: 1614px;
+}
+
+.student-billing-page .rectangle {
+    background-color: var(--green);
+    border-radius: 46px;
+    height: 952px;
+    left: 235px;
+    position: absolute;
+    top: 73px;
+    width: 304px;
+}
+
+.student-billing-page .whole-dashboard {
+    background-color: #d9d9d9;
+    border-radius: 30px;
+    height: 879px;
+    left: 295px;
+    position: absolute;
+    top: 110px;
+    width: 1319px;
+}
+
+.student-billing-page .overlap-group {
+    background: linear-gradient(
+        180deg,
+        rgb(248, 248, 255) 0%,
+        rgb(255, 255, 255) 100%
+    );
+    border-radius: 32px;
+    box-shadow: 0px 49px 32px -19px #37379526;
+    height: 879px;
+    position: relative;
+}
+
+.student-billing-page .frame {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    left: 332px;
+    position: absolute;
+    top: 714px;
+    width: 601px;
+}
+
+.student-billing-page .image-wrapper {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: var(--cbcbd-9);
+    border-radius: 6px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.student-billing-page .image {
+    height: 38px;
+    object-fit: cover;
+    position: relative;
+    width: 67px;
+}
+
+.student-billing-page .text-wrapper {
+    color: var(--x-1a-19-4d);
+    flex: 1;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+}
+
+.student-billing-page .div-wrapper {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: var(--cbcbd-9);
+    border-radius: 8px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.student-billing-page .div {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .text-wrapper-2 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 332px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+}
+
+.student-billing-page .overlap-2 {
+    height: 879px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 266px;
+}
+
+.student-billing-page .img {
+    height: 879px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 265px;
+}
+
+.student-billing-page .frame-2 {
+    align-items: flex-start;
+    display: flex;
+    left: 6px;
+    position: absolute;
+    top: 802px;
+    width: 260px;
+}
+
+.student-billing-page .frame-3 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+    width: 254px;
+}
+
+.student-billing-page .img-2 {
+    height: 32px;
+    position: relative;
+    width: 32px;
+}
+
+.student-billing-page .text-wrapper-3 {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .rectangle-2 {
+    align-self: stretch;
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-billing-page .profile-topleft {
+    align-items: center;
+    display: inline-flex;
+    gap: 14px;
+    left: 19px;
+    position: absolute;
+    top: 56px;
+}
+
+.student-billing-page .user-interface-user {
+    height: 55px !important;
+    position: relative !important;
+    width: 55px !important;
+}
+
+.student-billing-page .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.student-billing-page .text-wrapper-4 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .div-2 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .span {
+    color: #62618f;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.student-billing-page .side-bar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    left: 0;
+    padding: 0px 16px;
+    position: absolute;
+    top: 162px;
+    width: 260px;
+}
+
+.student-billing-page .div-3 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.student-billing-page .div-4 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+}
+
+.student-billing-page .div-5 {
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+}
+
+.student-billing-page .vector {
+    height: 30px;
+    left: 3188px;
+    position: absolute;
+    top: 4749px;
+    width: 30px;
+}
+
+.student-billing-page .calendar-icon {
+    height: 30px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 30px !important;
+}
+
+.student-billing-page .vector-2 {
+    height: 30px;
+    left: 3188px;
+    position: absolute;
+    top: 4695px;
+    width: 30px;
+}
+
+.student-billing-page .user-interface {
+    height: 24px !important;
+    left: 3px !important;
+    position: absolute !important;
+    top: 3px !important;
+    width: 24px !important;
+}
+
+.student-billing-page .email-icon-frame {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.student-billing-page .tutor-icon-frame {
+    height: 32px;
+    position: relative;
+    width: 31px;
+}
+
+.student-billing-page .tutor-icon {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 32px;
+    left: 1px;
+    position: relative;
+    width: 30px;
+}
+
+.student-billing-page .graduation-cap {
+    height: 32px !important;
+    position: relative !important;
+    width: 29px !important;
+}
+
+.student-billing-page .text-wrapper-5 {
+    color: var(--style);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 44px;
+}
+
+.student-billing-page .billing {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.student-billing-page .rectangle-3 {
+    align-self: stretch;
+    background-color: var(--green);
+    border-radius: 24px;
+    position: relative;
+    width: 6px;
+}
+
+.student-billing-page .billing-button-frame {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
+    position: relative;
+    width: 222px;
+}
+
+.student-billing-page .text-wrapper-6 {
+    color: var(--gray);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .star-instance {
+    background-image: url(./star-2.svg) !important;
+    left: 3px !important;
+    position: relative !important;
+}
+
+.student-billing-page .frame-5 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 332px;
+    position: absolute;
+    top: 162px;
+}
+
+.student-billing-page .text-wrapper-7 {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .frame-6 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 332px;
+    position: absolute;
+    top: 643px;
+}
+
+.student-billing-page .frame-7 {
+    height: 261px;
+    left: 316px;
+    position: absolute;
+    top: 261px;
+    width: 617px;
+}
+
+.student-billing-page .frame-8 {
+    height: 21px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 617px;
+}
+
+.student-billing-page .text-wrapper-8 {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 242px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 97px;
+}
+
+.student-billing-page .text-wrapper-9 {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 485px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.student-billing-page .text-wrapper-10 {
+    color: var(--style);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.student-billing-page .frame-9 {
+    border-radius: 8px;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 25px;
+    width: 617px;
+}
+
+.student-billing-page .text-wrapper-11 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 241px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    width: 150px;
+}
+
+.student-billing-page .text-wrapper-12 {
+    color: var(--x-1a-19-4d);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    width: 144px;
+}
+
+.student-billing-page .frame-10 {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: var(--cbcbd-9);
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    left: 485px;
+    padding: 8px 16px;
+    position: absolute;
+    top: 8px;
+    width: 114px;
+}
+
+.student-billing-page .frame-11 {
+    border-radius: 8px;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 85px;
+    width: 617px;
+}
+
+.student-billing-page .frame-12 {
+    border-radius: 8px;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 145px;
+    width: 617px;
+}
+
+.student-billing-page .frame-13 {
+    border-radius: 8px;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 205px;
+    width: 617px;
+}
+
+.student-billing-page .visuals-tab {
+    align-items: flex-start;
+    background-color: var(--green);
+    border-radius: 16px;
+    box-shadow: 0px 8px 19px #dfdffc99;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 208px;
+    left: 998px;
+    padding: 32px;
+    position: absolute;
+    top: 102px;
+    width: 282px;
+}
+
+.student-billing-page .upcoming {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .frame-14 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.student-billing-page .text-wrapper-13 {
+    color: var(--ffffff);
+    font-family: "Poppins-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .frame-15 {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #ffffff80;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 10px;
+    left: 57px;
+    padding: 8px 16px;
+    position: absolute;
+    top: 136px;
+}
+
+.student-billing-page .text-wrapper-14 {
+    color: #ffffff;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-billing-page .top-bar {
+    height: 74px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1315px;
+}
+
+.student-billing-page .back-logo {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 172px;
+}
+
+.student-billing-page .logo {
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 70px;
+}
+
+.student-billing-page .back-button {
+    height: 48px;
+    left: 82px;
+    position: absolute;
+    top: 13px;
+    width: 48px;
+}
+
+.student-billing-page .TUTOR-TITANS {
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 96px;
+    font-weight: 600;
+    height: 74px;
+    left: 537px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 776px;
+}
+
+.student-billing-page .text-wrapper-15 {
+    color: #466346;
+}
+
+.student-billing-page .text-wrapper-16 {
+    color: #424d65;
+}
+
+.student-billing-page .text-wrapper-17 {
+    color: #e2e2e2;
+}
