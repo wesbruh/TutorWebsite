@@ -14,10 +14,6 @@ const userSchema = new mongoose. Schema ({
     password: {
         type:String,
         required: true
-    },
-    Bio: {
-        type:String,
-        required: true
     }
 },{timestamps:true})
 export default mongoose.model ('users', userSchema)
