@@ -17,7 +17,7 @@ export const TutorLoginPage = () => {
         navigate('/tutorsignup');
     };
     const studentLogin = () =>{
-        navigate('/');
+        navigate('/studentlogin');
     };
     const home = () =>{
         navigate('/');
