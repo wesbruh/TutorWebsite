@@ -196,6 +196,7 @@
   }
   
   .student-sign-up .logo {
+    cursor: pointer;
     height: 70px;
     left: 0;
     object-fit: cover;

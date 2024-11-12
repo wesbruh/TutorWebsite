@@ -10,6 +10,12 @@ export const TutorSignUp = () => {
     const studentSignup = () => {
         navigate('/studentsignup');
     };
+    const home = () => {
+        navigate('/');
+    };
+    const back = () => {
+        navigate('/');
+    };
 
     return (
         <div className="tutor-sign-up">
@@ -82,7 +88,7 @@ export const TutorSignUp = () => {
 
             <div className="top-bar">
             <div className="back-logo">
-                <img className="logo" alt="Logo" src={logo} />
+                <button onClick={home}><img className="logo" alt="Logo" src={logo} /></button>
 
                 <img className="back-button" alt="Back button" src={backButton} />
             </div>

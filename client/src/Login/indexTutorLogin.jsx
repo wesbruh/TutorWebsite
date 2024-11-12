@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
-import "./styleStudentLogin.css"; // Modified
+import "./styleTutorLogin.css"; // Modified
 
-export const StudentLoginPage = () => {
+export const TutorLoginPage = () => {
     const navigate = useNavigate();
     // navigation functions used for buttons
     const studentSignup = () =>{
@@ -16,15 +16,18 @@ export const StudentLoginPage = () => {
     const tutorSignup = () =>{
         navigate('/tutorsignup');
     };
+    const studentLogin = () =>{
+        navigate('/');
+    };
     const home = () =>{
         navigate('/');
     };
-    const tutorLogin = () =>{
-        navigate('/tutorlogin');
+    const back = () => {
+        navigate('/');
     };
     
     return (
-        <div className="student-login-page">
+        <div className="tutor-login-page">
             <div className="div">
                 <div className="overlap-group">
                     {/*<img
@@ -36,7 +39,7 @@ export const StudentLoginPage = () => {
                     <div className="sign-in-box">
                         <div className="div-2">
                             <div className="frame-2">
-                                <div className="text-wrapper">Student Login</div>
+                                <div className="text-wrapper">Tutor Login</div>
 
                                 <div className="frame-3">
                                 
@@ -66,7 +69,7 @@ export const StudentLoginPage = () => {
                             <div className="frame-5">
                                 <div className="rectangle" />
 
-                                <button className="text-wrapper-4" onClick={tutorLogin} >Tutor Login</button>
+                                <button className="text-wrapper-4" onClick={studentLogin}>Student Login</button>
 
                                 <div className="rectangle" />
                             </div>
@@ -94,8 +97,7 @@ export const StudentLoginPage = () => {
                             <img className="logo" alt="Logo" src={logo} />
                         </button>
                         
-
-                        <img className="back-button" alt="Back button" src={backButton} />
+                        <button onClick={back}> <img className="back-button" alt="Back button" src={backButton} /> </button>
                     </div>
 
                     <p className="TUTOR-TITANS">

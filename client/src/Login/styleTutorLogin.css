@@ -1,4 +1,4 @@
-.student-login-page {
+.tutor-login-page {
     background-color: #484944;
     display: flex;
     flex-direction: row;
@@ -17,14 +17,14 @@
     position: relative;
 }
 
-.student-login-page .div {
+.tutor-login-page .div {
     background-color: var(--gray);
     height: 1080px;
     position: relative;
     width: 1920px;
 }
 
-.student-login-page .overlap-group {
+.tutor-login-page .overlap-group {
     height: 610px;
     left: 660px;
     position: absolute;
@@ -32,7 +32,7 @@
     width: 537px;
 }
 
-.student-login-page .green-rectangle {
+.tutor-login-page .green-rectangle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@
     width: 300px;*/
 }
 
-.student-login-page .sign-in-box {
+.tutor-login-page .sign-in-box {
     align-items: flex-start;
     background-color: #ffffff;
     border-radius: 31px;
@@ -60,7 +60,7 @@
     top: 15px;
 }
 
-.student-login-page .div-2 {
+.tutor-login-page .div-2 {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -69,7 +69,7 @@
     position: relative;
 }
 
-.student-login-page .frame-2 {
+.tutor-login-page .frame-2 {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -78,7 +78,7 @@
     position: relative;
 }
 
-.student-login-page .text-wrapper {
+.tutor-login-page .text-wrapper {
     color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 18px;
@@ -90,7 +90,7 @@
     width: fit-content;
 }
 
-.student-login-page .frame-3 {
+.tutor-login-page .frame-3 {
     align-items: flex-start;
     display: inline-flex;
     flex: 0 0 auto;
@@ -99,7 +99,7 @@
     position: relative;
 }
 
-.student-login-page .frame-4 {
+.tutor-login-page .frame-4 {
     align-items: flex-start;
     display: inline-flex;
     flex: 0 0 auto;
@@ -107,11 +107,11 @@
     position: relative;
 }
 
-.student-login-page .frame-instance {
+.tutor-login-page .frame-instance {
     flex: 0 0 auto !important;
 }
 
-.student-login-page .input {
+.tutor-login-page .input {
     background: none;
     border: 1px solid;
     border-color: #9ab2cf;
@@ -130,7 +130,7 @@
     width: 314px;
 }
 
-.student-login-page .sign-in-button {
+.tutor-login-page .sign-in-button {
     cursor: pointer;
     align-items: center;
     background-color: #466346;
@@ -145,7 +145,7 @@
     width: 314px;
 }
 
-.student-login-page .text-wrapper-2 {
+.tutor-login-page .text-wrapper-2 {
     color: #ffffff;
     font-family: "Inter-Regular", Helvetica;
     font-size: 16px;
@@ -158,7 +158,7 @@
     width: fit-content;
 }
 
-.student-login-page .text-wrapper-3 {
+.tutor-login-page .text-wrapper-3 {
     cursor: pointer;
     color: #1C49E8;
     font-family: "Inter-Medium", Helvetica;
@@ -170,7 +170,7 @@
     width: fit-content;
 }
 
-.student-login-page .frame-wrapper {
+.tutor-login-page .frame-wrapper {
     cursor: pointer;
     align-items: center;
     display: inline-flex;
@@ -180,7 +180,7 @@
     position: relative;
 }
 
-.student-login-page .frame-5 {
+.tutor-login-page .frame-5 {
     align-items: center;
     display: flex;
     flex: 0 0 auto;
@@ -189,7 +189,7 @@
     width: 314px;
 }
 
-.student-login-page .rectangle {
+.tutor-login-page .rectangle {
     background-color: #9ab2cf;
     flex: 1;
     flex-grow: 1;
@@ -197,7 +197,7 @@
     position: relative;
 }
 
-.student-login-page .text-wrapper-4 {
+.tutor-login-page .text-wrapper-4 {
     color: #1c49e8;
     font-family: "Inter-Regular", Helvetica;
     font-size: 16px;
@@ -210,7 +210,7 @@
     width: fit-content;
 }
 
-.student-login-page .sign-up-buttons {
+.tutor-login-page .sign-up-buttons {
     cursor: pointer;
     align-items: flex-start;
     display: flex;
@@ -220,7 +220,7 @@
     width: 314px;
 }
 
-.student-login-page .div-wrapper {
+.tutor-login-page .div-wrapper {
     align-items: center;
     border: 1px solid;
     border-color: #9ab2cf;
@@ -234,7 +234,7 @@
     position: relative;
 }
 
-.student-login-page .text-wrapper-5 {
+.tutor-login-page .text-wrapper-5 {
     color: #1C49E8;
     font-family: "Inter-Regular", Helvetica;
     font-size: 16px;
@@ -247,7 +247,7 @@
     width: fit-content;
 }
 
-.student-login-page .top-bar {
+.tutor-login-page .top-bar {
     height: 74px;
     left: 36px;
     position: absolute;
@@ -255,7 +255,7 @@
     width: 1315px;
 }
 
-.student-login-page .back-logo {
+.tutor-login-page .back-logo {
     cursor: pointer;
     height: 71px;
     left: 0;
@@ -264,7 +264,7 @@
     width: 172px;
 }
 
-.student-login-page .logo {
+.tutor-login-page .logo {
     cursor: pointer;
     height: 70px;
     left: 0;
@@ -274,7 +274,7 @@
     width: 70px;
 }
 
-.student-login-page .back-button {
+.tutor-login-page .back-button {
     cursor: pointer;
     height: 48px;
     left: 82px;
@@ -283,7 +283,7 @@
     width: 48px;
 }
 
-.student-login-page .TUTOR-TITANS {
+.tutor-login-page .TUTOR-TITANS {
     color: transparent;
     font-family: "Poppins-SemiBold", Helvetica;
     font-size: 96px;
@@ -300,14 +300,14 @@
     width: 776px;
 }
 
-.student-login-page .span {
+.tutor-login-page .span {
     color: #466346;
 }
 
-.student-login-page .text-wrapper-6 {
+.tutor-login-page .text-wrapper-6 {
     color: #424d65;
 }
 
-.student-login-page .text-wrapper-7 {
+.tutor-login-page .text-wrapper-7 {
     color: #e2e2e2;
 }
