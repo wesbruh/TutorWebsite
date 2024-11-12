@@ -1,4 +1,4 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import { StudentLoginPage } from './Login/indexStudentLogin';
 import { StudentSignUp } from './Sign-Up/indexStudentSign-Up';
 import { TutorSignUp } from './Sign-Up/indexTutorSign-Up';
@@ -9,9 +9,13 @@ import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 
 function App() {
   return(
-    <div>
-      <StudentLoginPage></StudentLoginPage>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<StudentLoginPage />} />
+        <Route path="/studentsignup" element={<StudentSignUp />} /> 
+        <Route path="/tutorsignup" element={<TutorSignUp />} /> 
+      </Routes>
+    </Router>
   );
 }
 

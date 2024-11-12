@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 /* IMAGES NEED TO BE SUPPORTED, JUST TESTING RIGHT NOW - JAGROOP*/
 /*import { Frame } from "./Frame";*/
 import backButton from "../assets/BackButton.png";
@@ -7,6 +8,15 @@ import logo from "../assets/logo.svg";
 import "./styleStudentLogin.css"; // Modified
 
 export const StudentLoginPage = () => {
+    const navigate = useNavigate();
+    // navigation functions used for buttons
+    const studentSignup = () =>{
+        navigate('/studentsignup');
+    };
+    const tutorSignup = () =>{
+        navigate('/tutorsignup');
+    };
+    
     return (
         <div className="student-login-page">
             <div className="div">
@@ -61,11 +71,11 @@ export const StudentLoginPage = () => {
 
                             <div className="sign-up-buttons">
                                 <div className="div-wrapper">
-                                    <div className="text-wrapper-5">Student</div>
+                                    <button className="text-wrapper-5" onClick={studentSignup}>Student</button>
                                 </div>
 
                                 <div className="div-wrapper">
-                                    <div className="text-wrapper-5">Tutor</div>
+                                    <button className="text-wrapper-5" onClick={tutorSignup}>Tutor</button>
                                 </div>
                             </div>
                         </div>
