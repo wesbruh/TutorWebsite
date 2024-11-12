@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 /* IMAGES NEED TO BE SUPPORTED, JUST TESTING RIGHT NOW - JAGROOP*/
 /*import { Frame } from "./Frame";*/
 import backButton from "../assets/BackButton.png";
-import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
 import "./styleStudentLogin.css"; // Modified
 
@@ -22,6 +21,9 @@ export const StudentLoginPage = () => {
     const tutorLogin = () =>{
         navigate('/tutorlogin');
     };
+    const studentDashboard = () =>{
+        navigate('/studentdashboard');
+    }
     
     return (
         <div className="student-login-page">
@@ -53,9 +55,9 @@ export const StudentLoginPage = () => {
                                     />
                                 </div>
 
-                                    <div className="sign-in-button">
+                                    <button className="sign-in-button" onClick={studentDashboard}>
                                         <div className="text-wrapper-2">Sign in</div>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
 
