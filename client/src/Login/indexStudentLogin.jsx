@@ -11,11 +11,11 @@ export const StudentLoginPage = () => {
         <div className="student-login-page">
             <div className="div">
                 <div className="overlap-group">
-                    <img
+                    {/*<img
                         className="green-rectangle"
                         alt="Green rectangle"
                         src={greenRectangleDesign}
-                    />
+                    />*/}
 
                     <div className="sign-in-box">
                         <div className="div-2">
@@ -23,10 +23,19 @@ export const StudentLoginPage = () => {
                                 <div className="text-wrapper">Student Login</div>
 
                                 <div className="frame-3">
-                                    <div className="frame-4">
-                                        {/*<Frame className="frame-instance" />*/}
-                                        <input className="input" />
-                                    </div>
+                                
+                                <div className="frame-4">
+                                    <input
+                                        className="input"
+                                        type="text"
+                                        placeholder="Username"
+                                    />
+                                    <input
+                                        className="input"
+                                        type="password"
+                                        placeholder="Password"
+                                    />
+                                </div>
 
                                     <div className="sign-in-button">
                                         <div className="text-wrapper-2">Sign in</div>

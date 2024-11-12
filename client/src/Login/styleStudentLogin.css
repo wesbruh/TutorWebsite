@@ -4,6 +4,17 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+
+}
+
+.overlap-group {
+    width: 300px;
+    max-width: 80%;
+    border-radius: 40px;
+    box-shadow: 0px 10px 32px -19px rgba(70, 99, 70, 0.7);
+    background-color: #466346;
+    padding: 20px;
+    position: relative;
 }
 
 .student-login-page .div {
@@ -22,11 +33,17 @@
 }
 
 .student-login-page .green-rectangle {
-    height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #466346;
+    background-image: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    /*height: 610px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 300px;
+    width: 300px;*/
 }
 
 .student-login-page .sign-in-box {
