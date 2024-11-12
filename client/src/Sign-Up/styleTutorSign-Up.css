@@ -1,0 +1,325 @@
+.tutor-sign-up {
+    background-color: #00000033;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .tutor-sign-up .div {
+    background-color: var(--gray);
+    height: 1080px;
+    position: relative;
+    width: 1920px;
+  }
+  
+  .tutor-sign-up .overlap-group {
+    height: 740px;
+    left: 660px;
+    position: absolute;
+    top: 170px;
+    width: 557px;
+  }
+  
+  .tutor-sign-up .green-rectangle {
+    height: 740px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+  }
+  
+  .tutor-sign-up .frame {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 31px;
+    box-shadow: 0px 24px 60px #241d6d24;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 32px;
+    left: 63px;
+    padding: 80px;
+    position: absolute;
+    top: 21px;
+  }
+  
+  .tutor-sign-up .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .tutor-sign-up .div-wrapper {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #9ab2cf;
+    border-radius: 4px 4px 0px 0px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 16px;
+    position: relative;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .email {
+    background: none;
+    border: 1px solid;
+    border-color: #9ab2cf;
+    border-radius: 0px 0px 4px 4px;
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    padding: 16px;
+    position: relative;
+    white-space: nowrap;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .email-wrapper {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #9ab2cf;
+    border-radius: 0px 0px 4px 4px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 16px;
+    position: relative;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .sign-in-button {
+    all: unset;
+    align-items: center;
+    background-color: var(--green);
+    border-radius: 4px;
+    box-shadow: 0px 4px 9px #5f2bff30;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .text-wrapper-3 {
+    color: var(--ffffff);
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .frame-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 17px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .frame-5 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .rectangle {
+    background-color: #9ab2cf;
+    flex: 1;
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .text-wrapper-4 {
+    color: #1c49e8;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .p {
+    color: var(--x-20-1e-6d);
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .sign-up-buttons {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+    width: 314px;
+  }
+  
+  .tutor-sign-up .tutor-button {
+    align-items: center;
+    border: 1px solid;
+    border-color: #dde4ec;
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .tutor-sign-up .tutor {
+    color: var(--style);
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .tutor-sign-up .top-bar {
+    height: 74px;
+    left: 36px;
+    position: absolute;
+    top: 14px;
+    width: 1315px;
+  }
+  
+  .tutor-sign-up .back-logo {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 172px;
+  }
+  
+  .tutor-sign-up .logo {
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 70px;
+  }
+  
+  .tutor-sign-up .back-button {
+    height: 48px;
+    left: 82px;
+    position: absolute;
+    top: 13px;
+    width: 48px;
+  }
+  
+  .tutor-sign-up .TUTOR-TITANS {
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 96px;
+    font-weight: 600;
+    height: 74px;
+    left: 537px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 776px;
+  }
+  
+  .tutor-sign-up .span {
+    color: #466346;
+  }
+  
+  .tutor-sign-up .text-wrapper-5 {
+    color: #424d65;
+  }
+  
+  .tutor-sign-up .text-wrapper-6 {
+    color: #e2e2e2;
+  }
+  
