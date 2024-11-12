@@ -18,9 +18,9 @@ import line5 from "./line-5.svg";
 import line from "./line.svg";
 import logOutIconFrame from "./log-out-icon-frame.svg";
 import logo from "./logo.png";
-import settingsIconFrame from "./settings-icon-frame.svg";*/
+import settingsIconFrame from "./settings-icon-frame.svg";
 import "./styleStudentDashboard.css";
-import vector from "./vector.svg";
+import vector from "./vector.svg";*/
 
 export const StudentDashboard = () => {
     return (
@@ -49,11 +49,11 @@ export const StudentDashboard = () => {
                                 <div className="rectangle" />
 
                                 <div className="div-2">
-                                    <img
+                                    {/*<img
                                         className="img"
                                         alt="Log out icon frame"
                                         src={logOutIconFrame}
-                                    />
+                                    />*/}
 
                                     <div className="div-3">Log out</div>
                                 </div>
@@ -64,11 +64,11 @@ export const StudentDashboard = () => {
                                     <div className="rectangle-2" />
 
                                     <div className="div-2">
-                                        <img
+                                       {/*} <img
                                             className="img"
                                             alt="Dashboard icon frame"
                                             src={dashboardIconFrame}
-                                        />
+                                        />*/}
 
                                         <div className="text-wrapper-3">Dashboard</div>
                                     </div>
@@ -79,9 +79,9 @@ export const StudentDashboard = () => {
 
                                     <div className="div-2">
                                         <div className="div-5">
-                                            <img className="vector" alt="Vector" src={vector} />
+                                            {/*<img className="vector" alt="Vector" src={vector} />*/}
 
-                                            <CalendarIcon className="calendar-icon" />
+                                            {/*<CalendarIcon className="calendar-icon" />*/}
                                         </div>
 
                                         <div className="div-3">Appointments</div>
@@ -93,9 +93,9 @@ export const StudentDashboard = () => {
 
                                     <div className="div-2">
                                         <div className="div-5">
-                                            <img className="vector-2" alt="Vector" src={image} />
+                                           {/* <img className="vector-2" alt="Vector" src={image} />*/}
 
-                                            <Statistic1 className="user-interface" />
+                                            {/*<Statistic1 className="user-interface" />*/}
                                         </div>
 
                                         <div className="div-3">View Progress</div>
@@ -106,11 +106,11 @@ export const StudentDashboard = () => {
                                     <div className="rectangle" />
 
                                     <div className="div-2">
-                                        <img
+                                        {/*<img
                                             className="email-icon-frame"
                                             alt="Email icon frame"
                                             src={emailIconFrame}
-                                        />
+                                        />*/}
 
                                         <div className="div-3">Notifications</div>
                                     </div>
@@ -122,7 +122,7 @@ export const StudentDashboard = () => {
                                     <div className="div-2">
                                         <div className="tutor-icon-frame">
                                             <div className="tutor-icon">
-                                                <GraduationCap className="graduation-cap" />
+                                                {/*<GraduationCap className="graduation-cap" />*/}
                                             </div>
                                         </div>
 
@@ -134,11 +134,11 @@ export const StudentDashboard = () => {
                                     <div className="rectangle" />
 
                                     <div className="billing-button-frame">
-                                        <img
+                                        {/*<img
                                             className="img"
                                             alt="Billing icon frame"
                                             src={billingIconFrame}
-                                        />
+                                        />*/}
 
                                         <div className="text-wrapper-5">Billing</div>
                                     </div>
@@ -149,7 +149,7 @@ export const StudentDashboard = () => {
 
                                     <div className="div-2">
                                         <div className="img">
-                                            <StarWrapper className="star-instance" />
+                                            {/*<StarWrapper className="star-instance" />*/}
                                         </div>
 
                                         <div className="div-3">Reviews</div>
@@ -160,11 +160,11 @@ export const StudentDashboard = () => {
                                     <div className="rectangle" />
 
                                     <div className="div-2">
-                                        <img
+                                       {/* <img
                                             className="img"
                                             alt="Settings icon frame"
                                             src={settingsIconFrame}
-                                        />
+                                        /> */}
 
                                         <div className="div-3">Account Settings</div>
                                     </div>
@@ -172,7 +172,7 @@ export const StudentDashboard = () => {
                             </div>
 
                             <div className="profile-topleft">
-                                <User className="user-interface-user" />
+                            {/*    <User className="user-interface-user" />*/}
                                 <div className="frame-3">
                                     <div className="text-wrapper-6">John Doe</div>
 
@@ -238,7 +238,7 @@ export const StudentDashboard = () => {
                                     </div>
 
                                     <div className="chart-lines">
-                                        <img className="line" alt="Line" src={line1} />
+                                       {/* <img className="line" alt="Line" src={line1} />
 
                                         <img className="line-2" alt="Line" src={line2} />
 
@@ -246,13 +246,13 @@ export const StudentDashboard = () => {
 
                                         <img className="line-4" alt="Line" src={line4} />
 
-                                        <img className="line-5" alt="Line" src={line5} />
+                                        <img className="line-5" alt="Line" src={line5} /> */}
                                     </div>
 
                                     <div className="flow-lines">
                                         <div className="overlap-group-wrapper">
                                             <div className="overlap-group-2">
-                                                <img className="line-6" alt="Line" src={line} />
+                                              {/*  <img className="line-6" alt="Line" src={line} />*/}
 
                                                 <div className="flow-indicator" />
 
@@ -268,7 +268,7 @@ export const StudentDashboard = () => {
                                     </div>
                                 </div>
 
-                                <img className="divider" alt="Divider" src={divider} />
+                                {/* <img className="divider" alt="Divider" src={divider} /> */}
 
                                 <div className="tab-filters">
                                     <div className="active-tab">
@@ -308,9 +308,9 @@ export const StudentDashboard = () => {
 
                     <div className="top-bar">
                         <div className="back-logo">
-                            <img className="logo" alt="Logo" src={logo} />
+                          {/*  <img className="logo" alt="Logo" src={logo} />*/}
 
-                            <img className="back-button" alt="Back button" src={backButton} />
+                           {/* <img className="back-button" alt="Back button" src={backButton} />*/}
                         </div>
 
                         <p className="TUTOR-TITANS">
