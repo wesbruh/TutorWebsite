@@ -1,21 +1,29 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import logo from "../assets/logo.svg";
 import "./indexHomePage.css";
 
 export const Home = () => {
+    const navigate = useNavigate();
+    const login = () =>{
+        navigate('/studentlogin')
+    }
+    const signup = () =>{
+        navigate('/studentsignup')
+    }
     return (
         <div className="home">
             <div className="div">
                 <div className="button">
-                    <button className="button-sign-in">
+                    <button className="button-sign-in" >
                         <div className="overlap-group">
-                            <div className="text-wrapper">Sign Up</div>
+                            <button className="text-wrapper" onClick={signup}>Sign Up</button>
                         </div>
                     </button>
 
                     <div className="overlap-wrapper">
                         <div className="overlap-group">
-                            <div className="text-wrapper-2">Log in</div>
+                            <button className="text-wrapper-2" onClick={login}>Log in</button>
                         </div>
                     </div>
                 </div>

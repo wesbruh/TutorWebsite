@@ -206,6 +206,7 @@
   }
   
   .student-sign-up .back-button {
+    cursor: pointer;
     height: 48px;
     left: 82px;
     position: absolute;

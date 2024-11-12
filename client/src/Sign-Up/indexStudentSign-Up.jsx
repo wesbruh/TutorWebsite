@@ -40,7 +40,11 @@ export const StudentSignUp = () => {
                         </div>
 
                         <div className="div-wrapper">
-                        <div className="text-wrapper-2">Doe</div>
+                        <input
+                        className="text-wrapper-2"
+                        placeholder="Doe"
+                        type="lastName"
+                        />
                         </div>
 
                         <input
@@ -90,8 +94,8 @@ export const StudentSignUp = () => {
             <div className="top-bar">
             <div className="back-logo">
                 <button onClick={home}><img className="logo" alt="Logo" src={logo} /> </button>
-                
-                    <img className="back-button" alt="Back button" src={backButton} />
+                <button onClick={home}><img className="back-button" alt="Back button" src={backButton} /></button>
+                    
             </div>
 
             <p className="TUTOR-TITANS">

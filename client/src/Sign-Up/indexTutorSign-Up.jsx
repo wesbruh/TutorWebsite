@@ -89,8 +89,10 @@ export const TutorSignUp = () => {
             <div className="top-bar">
             <div className="back-logo">
                 <button onClick={home}><img className="logo" alt="Logo" src={logo} /></button>
-
-                <img className="back-button" alt="Back button" src={backButton} />
+                <button onClick={back}>
+                    <img className="back-button" alt="Back button" src={backButton} />
+                </button>
+                
             </div>
 
             <p className="TUTOR-TITANS">

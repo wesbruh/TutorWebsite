@@ -1,5 +1,5 @@
 .tutor-sign-up {
-    background-color: #00000033;
+    background-color: #484944;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -288,6 +288,7 @@
   }
   
   .tutor-sign-up .back-button {
+    cursor: pointer;
     height: 48px;
     left: 82px;
     position: absolute;
