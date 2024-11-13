@@ -4,16 +4,22 @@ import JWT from "jsonwebtoken";
 
 export const registerController = async (req, res) => {
     try {
-        const {name, email, password} = req.body
+        const {firstName, lastName, email, password, role} = req.body
         //validations
-        if(!name) {
-            return res.send({error: 'Name is Required'})
-        }   
+        if(!firstName) {
+            return res.send({error: 'First name is Required'})
+        } 
+        if(!lastName) {
+            return res.send({error: 'Last name is Required'})
+        }     
         if(!email){
             return res.send({error: 'Email is Required'})
         }
         if(!password){
             return res.send({error: 'Password is Required'})
+        }
+        if (!['student', 'tutor'].includes(role)) {
+            return res.status(400).json({ error: 'Invalid role' });
         }
         //check user
         const exisitingUser = await userModel.findOne({ email })
@@ -27,7 +33,7 @@ export const registerController = async (req, res) => {
         //register user
         const hashedPassword = await hashPassword(password)
         // save
-        const user = await new userModel( {name, email, password:hashedPassword}).save()
+        const user = await new userModel( {firstName, lastName, email, password:hashedPassword, role}).save()
         res.status(201).send({
             success: true,
             message: 'User Register Successfully',
@@ -72,7 +78,7 @@ export const loginController = async (req, res) => {
         }
         //token
         const token = await JWT.sign({_id:user._id}, process.env.JWT_SECRET, {
-                expiresIn: "7d",
+                expiresIn: "1h",
             });
             res.status(200).send({
                 success: true,
@@ -80,6 +86,7 @@ export const loginController = async (req, res) => {
                 user: {
                 name: user.name,
                 email: user.email,
+                role: user.role,
             },
             token,
         });

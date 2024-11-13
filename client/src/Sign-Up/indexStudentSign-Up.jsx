@@ -19,15 +19,15 @@ export const StudentSignUp = () => {
     };
     
     return (
-        <div className="student-sign-up">
+        <div className="tutor-sign-up">
         <div className="div">
             <div className="overlap-group">
             <img
                 className="green-rectangle"
                 alt="Green rectangle"
-                //src={greenRectangleDesign}
+                src={greenRectangleDesign}
             />
-
+                {/*Add placeholders and input*/}
             <div className="frame">
                 <div className="div-2">
                 <div className="frame-2">
@@ -36,25 +36,21 @@ export const StudentSignUp = () => {
                     <div className="frame-3">
                     <div className="frame-4">
                         <div className="div-wrapper">
-                        <div className="text-wrapper-2">John</div>
+                        <div className="text-wrapper-2">Jane</div>
                         </div>
 
                         <div className="div-wrapper">
-                        <input
-                        className="text-wrapper-2"
-                        placeholder="Doe"
-                        type="lastName"
-                        />
+                        <div className="text-wrapper-2">Smith</div>
                         </div>
 
                         <input
                         className="email"
-                        placeholder="JohnDoe@gmail.com"
+                        placeholder="JaneSmith@gmail.com"
                         type="email"
                         />
 
                         <div className="email-wrapper">
-                        <div className="text-wrapper-2">JohnDoe123</div>
+                        <div className="text-wrapper-2">JaneSith123</div>
                         </div>
 
                         <div className="email-wrapper">
@@ -80,7 +76,7 @@ export const StudentSignUp = () => {
                 </div>
 
                 <div className="div-2">
-                <p className="p">Need a tutor account? Sign up here:</p>
+                <p className="p">Need a student account? Sign up here:</p>
 
                 <div className="sign-up-buttons">
                     <div className="tutor-button">
@@ -93,18 +89,20 @@ export const StudentSignUp = () => {
 
             <div className="top-bar">
             <div className="back-logo">
-                <button onClick={home}><img className="logo" alt="Logo" src={logo} /> </button>
-                <button onClick={home}><img className="back-button" alt="Back button" src={backButton} /></button>
-                    
+                <button onClick={home}><img className="logo" alt="Logo" src={logo} /></button>
+                <button onClick={back}>
+                    <img className="back-button" alt="Back button" src={backButton} />
+                </button>
+                
             </div>
 
-            <p className="TUTOR-TITANS">
-                <span className="span">TUTOR</span>
+                    <p className="TUTOR-TITANS">
+                        <span className="span">TUTOR</span>
 
-                <span className="text-wrapper-5">&nbsp;</span>
+                        <span className="text-wrapper-5">&nbsp;</span>
 
-                <span className="text-wrapper-6">TITANS</span>
-            </p>
+                        <span className="text-wrapper-6">TITANS</span>
+                    </p>
             </div>
         </div>
         </div>
