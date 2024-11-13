@@ -94,10 +94,8 @@ export const StudentLoginPage = () => {
                     <div className="back-logo">
                         <button onClick={home}>
                             <img className="logo" alt="Logo" src={logo} />
+                            <img className="back-button" alt="Back button" src={backButton} />
                         </button>
-                        
-
-                        <img className="back-button" alt="Back button" src={backButton} />
                     </div>
 
                     <p className="TUTOR-TITANS">

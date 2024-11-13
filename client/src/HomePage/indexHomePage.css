@@ -516,6 +516,8 @@
     position: absolute;
     top: 40px;
     width: 151px;
+    cursor: pointer;
+
 }
 
 .home .Login-Button {
@@ -528,6 +530,8 @@
     position: absolute;
     top: 40px;
     width: 151px;
+    cursor: pointer;
+
 }
 .home .login-text {
     all: unset;
