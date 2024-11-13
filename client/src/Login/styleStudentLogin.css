@@ -129,9 +129,9 @@
     white-space: nowrap;
     width: 314px;
 }
-
+/*NEEDS WORK*/
 .student-login-page .sign-in-button {
-    cursor: pointer;
+    /*cursor: pointer;
     align-items: center;
     background-color: #466346;
     border-radius: 4px;
@@ -142,7 +142,41 @@
     justify-content: center;
     padding: 16px;
     position: relative;
-    width: 314px;
+    width: 314px;*/
+    align-items: center;
+    appearance: none;
+    background-color: #466346;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 350px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
 }
 
 .student-login-page .text-wrapper-2 {
@@ -198,7 +232,7 @@
 }
 
 .student-login-page .text-wrapper-4 {
-    color: #1c49e8;
+    /*color: #1c49e8;
     font-family: "Inter-Regular", Helvetica;
     font-size: 16px;
     font-weight: 400;
@@ -207,7 +241,37 @@
     margin-top: -1.00px;
     position: relative;
     white-space: nowrap;
-    width: fit-content;
+    width: fit-content;*/
+    /**/
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 120px;
 }
 
 .student-login-page .sign-up-buttons {
@@ -232,19 +296,60 @@
     justify-content: center;
     padding: 16px;
     position: relative;
+    border: none;
 }
 
 .student-login-page .text-wrapper-5 {
-    color: #1C49E8;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
+    /*background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 18px;
+    line-height: 49px;
+    padding: 0 10px 0 11px;
     position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;*/
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     white-space: nowrap;
-    width: fit-content;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 120px;
+  
 }
 
 .student-login-page .top-bar {

@@ -246,6 +246,7 @@ student-sign-up .sign-up-buttons {
   gap: 16px;
   position: relative;
   width: 314px;
+  
   }
 
   .student-sign-up .tutor-button {
@@ -260,19 +261,21 @@ student-sign-up .sign-up-buttons {
     justify-content: center;
     padding: 16px;
     position: relative;
+    
     }
 
   .student-sign-up .tutor {
-color: var(--style);
-font-family: "Inter-Regular", Helvetica;
-font-size: 16px;
-font-weight: 400;
-letter-spacing: 0;
-line-height: normal;
-margin-top: -1.00px;
-position: relative;
-white-space: nowrap;
-width: fit-content;
+    color: var(--style);
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+
   }
 
   .student-sign-up .top-bar {
