@@ -1,3 +1,4 @@
+
 .student-sign-up {
   background-color: #00000033;
   display: flex;
@@ -93,19 +94,24 @@ width: fit-content;
   }
 
 .student-sign-up .div-wrapper {
-align-items: flex-start;
-border: 1px solid;
-border-color: #9ab2cf;
-border-radius: 4px 4px 0px 0px;
-display: flex;
-flex: 0 0 auto;
-gap: 10px;
-padding: 16px;
-position: relative;
-width: 314px;
+  background: none;
+  border: 1px solid;
+  border-color: #9ab2cf;
+  border-radius: 0px 0px 4px 4px;
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 16px;
+  position: relative;
+  white-space: nowrap;
+  width: 314px;
 }
 
-.student-sign-up.text-wrapper-2 {
+/* .student-sign-up.text-wrapper-2 {
 color: #000000;
 font-family: "Inter-Regular", Helvetica;
 font-size: 16px;
@@ -116,7 +122,7 @@ margin-top: -1.00px;
 position: relative;
 white-space: nowrap;
 width: fit-content;
-}
+} */
 
 .student-sign-up.email {
   background: none;
@@ -137,20 +143,24 @@ width: fit-content;
   }
 
 .student-sign-up.email-wrapper {
-align-items: flex-start;
-border: 1px solid;
-border-color: #9ab2cf;
-border-radius: 0px px 4px 4px;
-display: flex;
-flex: 0 0 auto;
-gap: 10px;
-padding: 16px;
-position: relative;
-width: 314px;
+  background: none;
+  border: 1px solid;
+  border-color: #9ab2cf;
+  border-radius: 0px 0px 4px 4px;
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 16px;
+  position: relative;
+  white-space: nowrap;
+  width: 314px;
 }
 
 .student-sign-up.sign-in-button {
-all: unset;
 align-items: center;
 background-color: var(--green);
 border-radius: 4px;
@@ -163,6 +173,7 @@ justify-content: center;
 padding: 16px;
 position: relative;
 width: 314px;
+cursor: pointer;
 }
 
 .student-sign-up.text-wrapper-3 {

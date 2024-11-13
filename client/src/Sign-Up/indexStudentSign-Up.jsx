@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}from "react";
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import backButton from "../assets/BackButton.png";
@@ -17,7 +17,20 @@ export const StudentSignUp = () => {
     const back = () => {
         navigate('/');
     };
+
+    // getter setter 
+    const[firstName, setFirstName] = useState("");
+    const[lastName, setLastName] = useState("");
+    const[name, setName] = useState("");
+    const[email, setEmail] = useState("");
+    const[password, setPassword] = useState("");
     
+    // form function
+    const handleSignUp = (e) => {
+        e.preventDefault()
+        console.log(firstName,lastName,name,email,password);
+    };
+
     return (
         <div className="tutor-sign-up">
         <div className="div">
@@ -33,35 +46,58 @@ export const StudentSignUp = () => {
                 <div className="frame-2">
                     <div className="text-wrapper">Student Sign Up</div>
 
+                    <form onSubmit={handleSignUp}>
                     <div className="frame-3">
                     <div className="frame-4">
-                        <div className="div-wrapper">
-                        <div className="text-wrapper-2">Jane</div>
-                        </div>
-
-                        <div className="div-wrapper">
-                        <div className="text-wrapper-2">Smith</div>
-                        </div>
+                        
+                        <input className="div-wrapper" 
+                        placeholder="First Name"
+                        type ="text"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        required
+                        />
+                        
+                        <input className="div-wrapper" 
+                        placeholder="Last Name"
+                        type ="text"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        required
+                        />
 
                         <input
                         className="email"
-                        placeholder="JaneSmith@gmail.com"
+                        placeholder="Email"
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
                         />
 
-                        <div className="email-wrapper">
-                        <div className="text-wrapper-2">JaneSith123</div>
-                        </div>
+                        <input className="div-wrapper" 
+                        type ="text"
+                        placeholder="Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        />
 
-                        <div className="email-wrapper">
-                        <div className="text-wrapper-2">********</div>
-                        </div>
+                        <input className="div-wrapper" 
+                        type ="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        />
+                        
                     </div>
 
-                    <button className="sign-in-button">
+                    <button className="sign-in-button" type="submit">
                         <div className="text-wrapper-3">Sign Up</div>
                     </button>
                     </div>
+                    </form>
                 </div>
                 </div>
 

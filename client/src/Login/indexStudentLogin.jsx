@@ -45,8 +45,8 @@ export const StudentLoginPage = () => {
                                 <div className="frame-4">
                                     <input
                                         className="input"
-                                        type="text"
-                                        placeholder="Username"
+                                        type="email"
+                                        placeholder="Email"
                                     />
                                     <input
                                         className="input"
