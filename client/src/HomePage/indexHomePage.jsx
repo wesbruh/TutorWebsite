@@ -178,7 +178,7 @@ export const Home = () => {
                     </div>
                 </div>
 
-                <div className="succeed-card">
+                <div className="succeed-card-base">
                     <div className="overlap">
                         <p className="p">
                             Complete your session, gain confidence, and excel in your studies!
