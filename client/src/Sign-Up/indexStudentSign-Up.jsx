@@ -5,6 +5,8 @@ import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
 import "./style.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const StudentSignUp = () => {
   const navigate = useNavigate();
@@ -29,6 +31,8 @@ export const StudentSignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     console.log(firstName, lastName, name, email, password);
+    toast.success("Register Successfully");
+    
   };
 
   return (
@@ -128,6 +132,7 @@ export const StudentSignUp = () => {
         </div>
 
         <div className="top-bar">
+          <ToastContainer />
           <div className="back-logo">
             <button onClick={home}>
               <img className="logo" alt="Logo" src={logo} />

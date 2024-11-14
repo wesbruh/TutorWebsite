@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "concurrently": "^9.1.0",
     "react-router-dom": "^6.28.0"
+  },
+  "scripts": {
+    "_commentClient": "client: npm start at a different directory",
+    "client": "npm start --prefix ./client", 
+    "server": "npm start --prefix ./server",
+    "_commentDev": "dev: Run multiple commands concurrently. ",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }
