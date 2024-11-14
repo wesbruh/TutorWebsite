@@ -5,7 +5,7 @@
   },
   "scripts": {
     "_commentClient": "client: npm start at a different directory",
-    "client": "npm start --prefix ./client", 
+    "client": "npm start --prefix ./client",
     "server": "npm start --prefix ./server",
     "_commentDev": "dev: Run multiple commands concurrently. ",
     "dev": "concurrently \"npm run server\" \"npm run client\""
