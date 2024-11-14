@@ -6,6 +6,7 @@ import { TutorLoginPage } from "./Login/indexTutorLogin";
 import { StudentSignUp } from './Sign-Up/indexStudentSign-Up';
 import { TutorSignUp } from './Sign-Up/indexTutorSign-Up';
 
+
 // Not ready for testing yet, need to add imports
 /*import { StudentSettings } from './ProfileManagement/indexStudentSettings';
 import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
@@ -22,7 +23,7 @@ function App() {
         <Route path="/tutorsignup" element={<TutorSignUp />} /> 
         <Route path="/studentdashboard" element={<StudentDashboard />} />
       </Routes>
-    
+
   );
 }
 
