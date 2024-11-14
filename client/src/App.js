@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { StudentDashboard } from "./Dashboard/indexStudentDashboard";
 import { Home } from './HomePage/indexHomePage';
 import { StudentLoginPage } from './Login/indexStudentLogin';
@@ -13,16 +13,16 @@ import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 
 function App() {
   return(
-    <Router>
+    
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/studentlogin" element={<StudentLoginPage/>} />
+        <Route path="/studentLogIn" element={<StudentLoginPage/>} />
         <Route path="/tutorlogin" element = {<TutorLoginPage/>} />
         <Route path="/studentsignup" element={<StudentSignUp />} /> 
         <Route path="/tutorsignup" element={<TutorSignUp />} /> 
         <Route path="/studentdashboard" element={<StudentDashboard />} />
       </Routes>
-    </Router>
+    
   );
 }
 

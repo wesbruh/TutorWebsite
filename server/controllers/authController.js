@@ -7,19 +7,19 @@ export const registerController = async (req, res) => {
         const {firstName, lastName, name, email, password, role} = req.body
         //validations
         if(!firstName) {
-            return res.send({error: 'First name is Required'})
+            return res.send({message: 'First name is Required'})
         } 
         if(!lastName) {
-            return res.send({error: 'Last name is Required'})
+            return res.send({message: 'Last name is Required'})
         }    
         if(!name) {
-            return res.send({error: 'Name is Required'})
+            return res.send({message: 'Name is Required'})
         }   
         if(!email){
-            return res.send({error: 'Email is Required'})
+            return res.send({message: 'Email is Required'})
         }
         if(!password){
-            return res.send({error: 'Password is Required'})
+            return res.send({message: 'Password is Required'})
         }
         if (!['student', 'tutor'].includes(role)) {
             return res.status(400).json({ error: 'Invalid role' });
@@ -29,7 +29,7 @@ export const registerController = async (req, res) => {
         //exisiting user
         if(exisitingUser){
             return res.status(200).send({
-                success: true,
+                success: false,
                 message: 'Already Register please login',
             })
         }

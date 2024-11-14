@@ -7,6 +7,7 @@ import logo from "../assets/logo.svg";
 import "./style.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 export const StudentSignUp = () => {
   const navigate = useNavigate();
@@ -26,14 +27,28 @@ export const StudentSignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role] = useState("student");
 
   // form function
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-    console.log(firstName, lastName, name, email, password);
-    toast.success("Register Successfully");
-    
+    // console.log(firstName, lastName, name, email, password);
+    // toast.success("Register Successfully");
+    try {
+      const res = await axios.post( `${process.env.REACT_APP_API}/api/v1/auth/register`,{firstName,lastName,name,email,password,role});
+      if( res && res.data.success){
+        toast.success( res && res.data.message);
+        navigate("/studentLogin");
+      }else{
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      console.log(error)
+      toast.error("Something wring")
+    }
+
   };
+  // console.log(process.env.REACT_APP_API);
 
   return (
     <div className="tutor-sign-up">
