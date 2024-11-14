@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
-import "./styleStudentSign-Up.css";
+import "./style.css";
 
 export const StudentSignUp = () => {
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ export const StudentSignUp = () => {
                       />
 
                       <input
-                        className="email"
+                        className="div-wrapper"
                         placeholder="Email"
                         type="email"
                         value={email}
@@ -114,7 +114,7 @@ export const StudentSignUp = () => {
             </div>
 
             <div className="div-2">
-              <p className="p">Need a student account? Sign up here:</p>
+              <p className="p">Need a tutor account? Sign up here:</p>
 
               <div className="sign-up-buttons">
                 <div className="tutor-button">
