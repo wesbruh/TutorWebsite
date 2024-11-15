@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
 import "./style.css";
-import { ToastContainer, toast, Flip} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast, Flip } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export const StudentSignUp = () => {
@@ -35,22 +35,24 @@ export const StudentSignUp = () => {
     // console.log(firstName, lastName, name, email, password);
     // toast.success("Register Successfully");
     try {
-      const res = await axios.post( `${process.env.REACT_APP_API}/api/v1/auth/register`,{firstName,lastName,name,email,password,role});
-      if(res && res.data.success){
+      const res = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/auth/register`,
+        { firstName, lastName, name, email, password, role }
+      );
+      if (res && res.data.success) {
         //console.log("success " + res.data.success);
         toast.success(res && res.data.message);
         setTimeout(() => {
-            navigate("/studentLogIn")
+          navigate("/studentLogIn");
         }, 1500);
-      }else{
+      } else {
         //console.log(res.data.success);
         toast.error(res && res.data.message);
       }
     } catch (error) {
-      console.log(error)
-      toast.error("Something wrong")
+      console.log(error);
+      toast.error("Something wrong");
     }
-
   };
   // console.log(process.env.REACT_APP_API);
   return (
@@ -91,19 +93,19 @@ export const StudentSignUp = () => {
 
                       <input
                         className="div-wrapper"
-                        placeholder="Email"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        type="text"
+                        placeholder="User name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                       />
 
                       <input
                         className="div-wrapper"
-                        type="text"
-                        placeholder="Name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                       />
 
@@ -150,7 +152,6 @@ export const StudentSignUp = () => {
         </div>
 
         <div className="top-bar">
-         
           <div className="back-logo">
             <button onClick={home}>
               <img className="logo" alt="Logo" src={logo} />
@@ -169,7 +170,7 @@ export const StudentSignUp = () => {
           </p>
         </div>
       </div>
-      <ToastContainer hideProgressBar transition={Flip}/>
+      <ToastContainer hideProgressBar transition={Flip} />
     </div>
   );
 };
