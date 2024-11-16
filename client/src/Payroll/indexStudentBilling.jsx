@@ -15,8 +15,8 @@ import image from "./image.svg";
 import logo from "./logo.png";
 import rectangle2 from "./rectangle-2.svg";
 import settingsIconFrame from "./settings-icon-frame.svg";*/
-import "./styleStudentBilling.css";
-import vector from "./vector.svg";
+// import "./styleStudentBilling.css";
+// import vector from "./vector.svg";
 
 export const StudentBillingPage = () => {
     return (
@@ -29,7 +29,7 @@ export const StudentBillingPage = () => {
                         <div className="overlap-group">
                             <div className="frame">
                                 <div className="image-wrapper">
-                                    <img className="image" alt="Image" src={image2} />
+                                    {/* <img className="image" alt="Image" src={image2} /> */}
                                 </div>
 
                                 <div className="text-wrapper">Visa ending in 2255</div>
@@ -42,11 +42,11 @@ export const StudentBillingPage = () => {
                             <div className="text-wrapper-2">Student Billing</div>
 
                             <div className="overlap-2">
-                                <img className="img" alt="Rectangle" src={rectangle2} />
+                                {/* <img className="img" alt="Rectangle" src={rectangle2} /> */}
 
                                 <div className="frame-2">
                                     <div className="frame-3">
-                                        <img className="img-2" alt="Frame" src={frame} />
+                                        {/* <img className="img-2" alt="Frame" src={frame} /> */}
 
                                         <div className="text-wrapper-3">Log out</div>
                                     </div>
@@ -55,7 +55,7 @@ export const StudentBillingPage = () => {
                                 </div>
 
                                 <div className="profile-topleft">
-                                    <User className="user-interface-user" />
+                                    {/* <User className="user-interface-user" /> */}
                                     <div className="frame-4">
                                         <div className="text-wrapper-4">John Doe</div>
 
@@ -84,7 +84,7 @@ export const StudentBillingPage = () => {
                                             <img
                                                 className="img-2"
                                                 alt="Dashboard icon frame"
-                                                src={dashboardIconFrame}
+                                                // src={dashboardIconFrame}
                                             />
 
                                             <div className="text-wrapper-3">Dashboard</div>
@@ -96,9 +96,9 @@ export const StudentBillingPage = () => {
 
                                         <div className="div-4">
                                             <div className="div-5">
-                                                <img className="vector" alt="Vector" src={vector} />
+                                                {/* <img className="vector" alt="Vector" src={vector} /> */}
 
-                                                <CalendarIcon className="calendar-icon" />
+                                                {/* <CalendarIcon className="calendar-icon" /> */}
                                             </div>
 
                                             <div className="div-2">Appointments</div>
@@ -110,9 +110,9 @@ export const StudentBillingPage = () => {
 
                                         <div className="div-4">
                                             <div className="div-5">
-                                                <img className="vector-2" alt="Vector" src={image} />
+                                                {/* <img className="vector-2" alt="Vector" src={image} /> */}
 
-                                                <Statistic1 className="user-interface" />
+                                                {/* <Statistic1 className="user-interface" /> */}
                                             </div>
 
                                             <div className="div-2">View Progress</div>
@@ -126,7 +126,7 @@ export const StudentBillingPage = () => {
                                             <img
                                                 className="email-icon-frame"
                                                 alt="Email icon frame"
-                                                src={emailIconFrame}
+                                                // src={emailIconFrame}
                                             />
 
                                             <div className="div-2">Notifications</div>
@@ -139,7 +139,7 @@ export const StudentBillingPage = () => {
                                         <div className="div-4">
                                             <div className="tutor-icon-frame">
                                                 <div className="tutor-icon">
-                                                    <GraduationCap className="graduation-cap" />
+                                                    {/* <GraduationCap className="graduation-cap" /> */}
                                                 </div>
                                             </div>
 
@@ -154,7 +154,7 @@ export const StudentBillingPage = () => {
                                             <img
                                                 className="img-2"
                                                 alt="Billing icon frame"
-                                                src={billingIconFrame}
+                                                // src={billingIconFrame}
                                             />
 
                                             <div className="text-wrapper-6">Billing</div>
@@ -166,7 +166,7 @@ export const StudentBillingPage = () => {
 
                                         <div className="div-4">
                                             <div className="img-2">
-                                                <StarWrapper className="star-instance" />
+                                                {/* <StarWrapper className="star-instance" /> */}
                                             </div>
 
                                             <div className="div-2">Reviews</div>
@@ -180,7 +180,7 @@ export const StudentBillingPage = () => {
                                             <img
                                                 className="img-2"
                                                 alt="Settings icon frame"
-                                                src={settingsIconFrame}
+                                                // src={settingsIconFrame}
                                             />
 
                                             <div className="div-2">Account Settings</div>
@@ -269,9 +269,9 @@ export const StudentBillingPage = () => {
 
                     <div className="top-bar">
                         <div className="back-logo">
-                            <img className="logo" alt="Logo" src={logo} />
+                            {/* <img className="logo" alt="Logo" src={logo} /> */}
 
-                            <img className="back-button" alt="Back button" src={backButton} />
+                            {/* <img className="back-button" alt="Back button" src={backButton} /> */}
                         </div>
 
                         <p className="TUTOR-TITANS">
