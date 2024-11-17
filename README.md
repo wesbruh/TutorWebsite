@@ -37,3 +37,7 @@ npm install emotion-icons --save
 # this will install correct dependcies and packages in the package-lock.json, if you are waiting for the dependedcies to isntall this a isa good sign, it will take a good 1-3 minutes or so
 # afterwards enter command npm run dev in the project directory to confirm the website runs on the port.
 # to view the side bar add ' /studentdashboard ' in the url. 
+
+Cannot find module 'ajv/dist/compile/codegen' 
+# enter command 
+npm install --save-dev ajv@^7 
