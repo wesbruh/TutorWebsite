@@ -8,6 +8,7 @@ import "./styleStudentLogin.css"; // Modified
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useAuth } from "../context/auth";
 
 export const StudentLoginPage = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export const StudentLoginPage = () => {
   // getter setter
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [auth, setAuth] = useAuth();
 
   // form function
   const handleLogin = async (e) => {
@@ -41,11 +43,18 @@ export const StudentLoginPage = () => {
       const role = res.data.user.role;
       if (res && res.data.success) {
         toast.success(res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        // save user data to localStorage
+        localStorage.setItem("auth", JSON.stringify(res.data));
         //check student or tutor
         if (role === "student") {
           setTimeout(() => {
-            navigate("/StudentDashboard");
-          }, 1500);
+            navigate("/studentDashboard");
+          }, 1000);
         } else if (role === "tutor") {
           // tutorDashboard not yet done, console.log instead
           console.log("navigate tutorDashboard");
