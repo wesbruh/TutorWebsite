@@ -28,7 +28,7 @@ test
 
 11/16/2024 "missing emotion dependcies" or "legacy-deps"
 # start in the project directory and enter command 
-npm config set legacy-peer-dps true 
+npm config set legacy-peer-deps true 
 # this will configure some dependencies in react to work with new SidebarData for the the whole project
 # enter command:
 npm install emotion-icons --save
