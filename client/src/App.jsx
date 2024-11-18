@@ -28,10 +28,9 @@ function App() {
         <Route path="" element={<StudentDashboard />} />
       </Route>
 
-        <Route path="/studentbilling" element={<StudentBillingPage />} />
-        <Route path="/Appointments" element={<StudentAppointments />} />
-      </Routes>
-    </>
+      <Route path="/studentbilling" element={<StudentBillingPage />} />
+      <Route path="/Appointments" element={<StudentAppointments />} />
+    </Routes>
   );
 }
 
