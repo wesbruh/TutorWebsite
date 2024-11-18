@@ -4,7 +4,7 @@ import "./StudentAppointments.css";
 
 function StudentAppointments () {
     return (
-        <div className="Appointments">
+        <div className="appointmentsPage">
             <Sidebar />
         </div>
     );

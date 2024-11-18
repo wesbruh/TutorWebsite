@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 /* IMAGES NEED TO BE SUPPORTED, JUST TESTING RIGHT NOW - JAGROOP*/
 /*import { Frame } from "./Frame";*/
 import backButton from "../assets/BackButton.png";
 import logo from "../assets/logo.svg";
 import "./styleStudentLogin.css"; // Modified
-import { ToastContainer, toast, Flip } from "react-toastify";
+import {ToastContainer, toast, Flip} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { useAuth } from "../context/auth";
+import {useAuth} from "../context/auth";
 
 export const StudentLoginPage = () => {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export const StudentLoginPage = () => {
       //response
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/login`,
-        { email, password }
+        {email, password}
       );
       const role = res.data.user.role;
       if (res && res.data.success) {
