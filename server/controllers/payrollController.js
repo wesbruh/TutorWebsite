@@ -1,5 +1,5 @@
-import Payroll from '../payrollModel.js';
-import Tutor from '../tutorModel.js';
+import Payroll from '../models/payrollModel.js';
+import Tutor from '../models/tutorModel.js';
 
 export const addHoursWorked = async (req, res) => {
     const {tutorId, totalHoursWorked} = req.body;
