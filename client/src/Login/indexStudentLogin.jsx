@@ -43,6 +43,7 @@ export const StudentLoginPage = () => {
       const role = res.data.user.role;
       if (res && res.data.success) {
         toast.success(res.data.message);
+        toast.loading("Dashboard");
         setAuth({
           ...auth,
           user: res.data.user,

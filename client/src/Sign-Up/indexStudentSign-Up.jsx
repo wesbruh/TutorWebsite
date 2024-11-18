@@ -42,6 +42,7 @@ export const StudentSignUp = () => {
       if (res && res.data.success) {
         //console.log("success " + res.data.success);
         toast.success(res && res.data.message);
+        toast.loading("Login");
         setTimeout(() => {
           navigate("/studentLogIn");
         }, 1500);

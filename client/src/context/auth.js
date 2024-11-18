@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -7,6 +8,10 @@ const AuthProvide = ({ children }) => {
     user: null,
     token: "",
   });
+
+  // default axios
+  axios.defaults.headers.common["Authorization"] = auth?.token;
+
   useEffect(() => {
     // Check localStorage for existing user data on load
     const data = localStorage.getItem("auth");
@@ -18,7 +23,8 @@ const AuthProvide = ({ children }) => {
         token: parseData.token,
       });
     }
-  }, [auth]);
+    //eslint-disable-next-line
+  }, []);
   return (
     <AuthContext.Provider value={[auth, setAuth]}>
       {children}
