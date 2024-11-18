@@ -8,6 +8,7 @@ import { TutorSignUp } from "./Sign-Up/indexTutorSign-Up";
 import { StudentBillingPage } from "./Payroll/indexStudentBilling";
 import StudentAppointments from "./Appointments/indexStudentAppointments";
 import PrivateRoute from "./components/routes/Private";
+import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
 
 // Not ready for testing yet, need to add imports
 /*import { StudentSettings } from './ProfileManagement/indexStudentSettings';
@@ -30,6 +31,7 @@ function App() {
 
         <Route path="studentbilling" element={<StudentBillingPage />} />
         <Route path="/Appointments" element={<StudentAppointments />} />
+        <Route path="/StudentReviewPage" element={<StudentReviewPage />} />
       </Routes>
     </>
   );
