@@ -6,6 +6,7 @@ import { TutorLoginPage } from "./Login/indexTutorLogin";
 import { StudentSignUp } from './Sign-Up/indexStudentSign-Up';
 import { TutorSignUp } from './Sign-Up/indexTutorSign-Up';
 import { StudentBillingPage } from './Payroll/indexStudentBilling';
+import StudentAppointments from "./Appointments/indexStudentAppointments";
 
 // Not ready for testing yet, need to add imports
 /*import { StudentSettings } from './ProfileManagement/indexStudentSettings';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/tutorsignup" element={<TutorSignUp />} /> 
         <Route path="/studentDashboard" element={<StudentDashboard />} />
         <Route path="/studentbilling" element= {<StudentBillingPage/>} />
+        <Route path="/Appointments" element= {<StudentAppointments/>} />
       </Routes>
 
   );
