@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import { Outlet, Navigate } from "react-router-dom";
+import { StudentLoginPage } from "../../Login/indexStudentLogin";
 
 export default function PrivateRoute() {
   const [ok, setOk] = useState(false);
@@ -9,7 +10,7 @@ export default function PrivateRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.post(
+      const res = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/auth/user-auth`
       );
       if (res.data.ok) {
@@ -20,5 +21,5 @@ export default function PrivateRoute() {
     };
     if (auth?.token) authCheck();
   }, [auth?.token]);
-  return ok ? <Outlet /> : <Navigate to="/studentLogIn" />;
+  return ok ? <Outlet /> : <StudentLoginPage />;
 }
