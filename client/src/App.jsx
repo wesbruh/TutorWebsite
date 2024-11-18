@@ -7,9 +7,6 @@ import { StudentSignUp } from "./Sign-Up/indexStudentSign-Up";
 import { TutorSignUp } from "./Sign-Up/indexTutorSign-Up";
 import { StudentBillingPage } from "./Payroll/indexStudentBilling";
 import StudentAppointments from "./Appointments/indexStudentAppointments";
-import { StudentSignUp } from "./Sign-Up/indexStudentSign-Up";
-import { TutorSignUp } from "./Sign-Up/indexTutorSign-Up";
-import { StudentBillingPage } from "./Payroll/indexStudentBilling";
 import PrivateRoute from "./components/routes/Private";
 
 // Not ready for testing yet, need to add imports
