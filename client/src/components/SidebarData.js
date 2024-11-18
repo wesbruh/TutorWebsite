@@ -33,7 +33,7 @@ export const SidebarData =[
     {
         title:"Tutors",
         icon: <School />,
-        link: "/Appointments"
+        link: "/Tutors"
     },
     {
         title:"Billing",
