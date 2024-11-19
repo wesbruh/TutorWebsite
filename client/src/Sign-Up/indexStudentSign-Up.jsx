@@ -27,6 +27,7 @@ export const StudentSignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [answer, setAnswer] = useState("");
   const [role] = useState("student");
 
   // form function
@@ -37,7 +38,7 @@ export const StudentSignUp = () => {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/register`,
-        { firstName, lastName, name, email, password, role }
+        { firstName, lastName, name, email, password, role, answer }
       );
       if (res && res.data.success) {
         //console.log("success " + res.data.success);
@@ -116,6 +117,15 @@ export const StudentSignUp = () => {
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+
+                      <input
+                        className="div-wrapper"
+                        type="text"
+                        placeholder="What is your favorite food?"
+                        value={answer}
+                        onChange={(e) => setAnswer(e.target.value)}
                         required
                       />
                     </div>

@@ -1,0 +1,418 @@
+.student-login-page {
+    background-color: #484944;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.overlap-group {
+    width: 300px;
+    max-width: 80%;
+    border-radius: 40px;
+    box-shadow: 0px 10px 32px -19px rgba(70, 99, 70, 0.7);
+    background-color: #466346;
+    padding: 20px;
+    position: relative;
+}
+
+.student-login-page .div {
+    background-color: var(--gray);
+    height: 1080px;
+    position: relative;
+    width: 1920px;
+}
+
+.student-login-page .overlap-group {
+    height: 610px;
+    left: 660px;
+    position: absolute;
+    top: 235px;
+    width: 537px;
+}
+
+.student-login-page .green-rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #466346;
+    background-image: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    /*height: 610px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;*/
+}
+
+.student-login-page .sign-in-box {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 31px;
+    box-shadow: 2px 24px 60px #241d6d24;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 32px;
+    left: 63px;
+    padding: 80px;
+    position: absolute;
+    top: 15px;
+}
+
+.student-login-page .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.student-login-page .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+}
+
+.student-login-page .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+}
+
+.student-login-page .frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.student-login-page .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.student-login-page .frame-instance {
+    flex: 0 0 auto !important;
+}
+
+.student-login-page .input {
+    background: none;
+    border: 1px solid;
+    border-color: #9ab2cf;
+    border-radius: 0px 0px 4px 4px;
+    color: #000000;
+    flex: 0 0 auto;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    padding: 16px;
+    position: relative;
+    white-space: nowrap;
+    width: 314px;
+}
+/*NEEDS WORK*/
+.student-login-page .sign-in-button {
+    /*cursor: pointer;
+    align-items: center;
+    background-color: #466346;
+    border-radius: 4px;
+    box-shadow: 0px 4px 9px #5f2bff30;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    width: 314px;*/
+    align-items: center;
+    appearance: none;
+    background-color: #466346;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 350px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.student-login-page .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.student-login-page .text-wrapper-3 {
+    cursor: pointer;
+    color: #1C49E8;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.student-login-page .frame-wrapper {
+    cursor: pointer;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 17px;
+    position: relative;
+}
+
+.student-login-page .frame-5 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+    width: 314px;
+}
+
+.student-login-page .rectangle {
+    background-color: #9ab2cf;
+    flex: 1;
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+}
+
+.student-login-page .text-wrapper-4 {
+    /*color: #1c49e8;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;*/
+    /**/
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 120px;
+}
+
+.student-login-page .sign-up-buttons {
+    cursor: pointer;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+    width: 314px;
+}
+
+.student-login-page .div-wrapper {
+    align-items: center;
+    border: 1px solid;
+    border-color: #9ab2cf;
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    border: none;
+}
+
+.student-login-page .text-wrapper-5 {
+    /*background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 18px;
+    line-height: 49px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;*/
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter-Regular", Helvetica;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    width: 120px;
+  
+}
+
+.student-login-page .top-bar {
+    height: 74px;
+    left: 36px;
+    position: absolute;
+    top: 14px;
+    width: 1315px;
+}
+
+.student-login-page .back-logo {
+    cursor: pointer;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 172px;
+}
+
+.student-login-page .logo {
+    cursor: pointer;
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 70px;
+}
+
+.student-login-page .back-button {
+    cursor: pointer;
+    height: 48px;
+    left: 82px;
+    position: absolute;
+    top: 13px;
+    width: 48px;
+}
+
+.student-login-page .TUTOR-TITANS {
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 96px;
+    font-weight: 600;
+    height: 74px;
+    left: 537px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 776px;
+}
+
+.student-login-page .span {
+    color: #466346;
+}
+
+.student-login-page .text-wrapper-6 {
+    color: #424d65;
+}
+
+.student-login-page .text-wrapper-7 {
+    color: #e2e2e2;
+}

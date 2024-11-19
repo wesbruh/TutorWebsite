@@ -4,20 +4,17 @@ import { useNavigate } from "react-router-dom";
 /*import { Frame } from "./Frame";*/
 import backButton from "../assets/BackButton.png";
 import logo from "../assets/logo.svg";
-import "./styleStudentLogin.css"; // Modified
+import "./style.css"; // Modified
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 import { useAuth } from "../context/auth";
+import axios from "axios";
 
-export const StudentLoginPage = () => {
+export const ForgotPasswordPage = () => {
   const navigate = useNavigate();
   // navigation functions used for buttons
-  const studentSignup = () => {
-    navigate("/studentsignup");
-  };
-  const tutorSignup = () => {
-    navigate("/tutorsignup");
+  const studentLogin = () => {
+    navigate("/studentlogin");
   };
   const home = () => {
     navigate("/");
@@ -25,55 +22,37 @@ export const StudentLoginPage = () => {
   const tutorLogin = () => {
     navigate("/tutorlogin");
   };
-  const forgotPassword = () => {
-    navigate("/forgotPassword");
-  };
 
   // getter setter
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [auth, setAuth] = useAuth();
+  const [newPassword, setNewPassword] = useState("");
+  const [answer, setAnswer] = useState();
 
   // form function
-  const handleLogin = async (e) => {
+  const handleForgotPassword = async (e) => {
     e.preventDefault();
     try {
-      //response
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/auth/login`,
-        { email, password }
+        `${process.env.REACT_APP_API}/api/v1/auth/forgot-password`,
+        { email, newPassword, answer }
       );
-      const role = res.data.user.role;
       if (res && res.data.success) {
-        toast.success(res.data.message);
-        toast.loading("Dashboard");
-        setAuth({
-          ...auth,
-          user: res.data.user,
-          token: res.data.token,
-        });
-        // save user data to localStorage
-        localStorage.setItem("auth", JSON.stringify(res.data));
-        //check student or tutor
-        if (role === "student") {
-          setTimeout(() => {
-            navigate("/studentDashboard");
-          }, 1000);
-        } else if (role === "tutor") {
-          // tutorDashboard not yet done, console.log instead
-          console.log("navigate tutorDashboard");
-          // setTimeout(() => {
-          //     navigate("/tutorDashboard");
-          //   }, 1500);
-        }
+        //console.log("success " + res.data.success);
+        toast.success(res && res.data.message);
+        toast.loading("Login");
+        setTimeout(() => {
+          navigate("/studentLogIn");
+        }, 1500);
       } else {
-        toast.error("Email or password is wrong");
+        //console.log(res.data.success);
+        toast.error(res && res.data.message);
       }
     } catch (error) {
       console.log(error);
-      toast.error("Huh Something wrong");
+      toast.error("Something wrong: forgot password");
     }
   };
+
   return (
     <div className="student-login-page">
       <div className="div">
@@ -87,14 +66,14 @@ export const StudentLoginPage = () => {
           <div className="sign-in-box">
             <div className="div-2">
               <div className="frame-2">
-                <div className="text-wrapper">Student Login</div>
+                <div className="text-wrapper">Forgot Password</div>
 
-                <form className="frame-3" onSubmit={handleLogin}>
+                <form className="frame-3" onSubmit={handleForgotPassword}>
                   <div className="frame-4">
                     <input
                       className="input"
-                      placeholder="Email"
                       type="email"
+                      placeholder="Email"
                       /*get from user input*/
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -104,53 +83,43 @@ export const StudentLoginPage = () => {
                     <input
                       className="input"
                       type="password"
-                      placeholder="Password"
+                      placeholder="New Password"
                       /*get from user input*/
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
+                      value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      required
+                    />
+
+                    <input
+                      className="input"
+                      type="text"
+                      placeholder="What is your favorite food"
+                      /*get from user input*/
+                      value={answer}
+                      onChange={(e) => setAnswer(e.target.value)}
                       required
                     />
                   </div>
 
                   <button className="sign-in-button" type="submit">
-                    <div className="text-wrapper-2">Login</div>
-                  </button>
-
-                  <button
-                    className="sign-in-button"
-                    type="button"
-                    onClick={forgotPassword}
-                  >
-                    <div className="text-wrapper-2">Forgot Password</div>
+                    <div className="text-wrapper-2">Reset Password</div>
                   </button>
                 </form>
               </div>
             </div>
 
-            <div className="frame-wrapper">
-              <div className="frame-5">
-                <div className="rectangle" />
-
-                <button className="text-wrapper-4" onClick={tutorLogin}>
-                  Tutor Login
-                </button>
-
-                <div className="rectangle" />
-              </div>
-            </div>
-
             <div className="div-2">
-              <p className="text-wrapper">No account? Sign up as a:</p>
+              <p className="text-wrapper">Login:</p>
 
               <div className="sign-up-buttons">
                 <div className="div-wrapper">
-                  <button className="text-wrapper-5" onClick={studentSignup}>
+                  <button className="text-wrapper-5" onClick={studentLogin}>
                     Student
                   </button>
                 </div>
 
                 <div className="div-wrapper">
-                  <button className="text-wrapper-5" onClick={tutorSignup}>
+                  <button className="text-wrapper-5" onClick={tutorLogin}>
                     Tutor
                   </button>
                 </div>
@@ -180,3 +149,5 @@ export const StudentLoginPage = () => {
     </div>
   );
 };
+
+export default ForgotPasswordPage;
