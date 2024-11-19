@@ -131,7 +131,7 @@ export const StudentSignUp = () => {
                     </div>
 
                     <button className="sign-in-button" type="submit">
-                      <div className="text-wrapper-3">Sign Up</div>
+                      <div className="text-wrapper-2">Sign Up</div>
                     </button>
                   </div>
                 </form>
