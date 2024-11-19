@@ -17,10 +17,10 @@ const Spinner = () => {
     zIndex: 1000, // Ensures the spinner is above other content
   };
 
-  const nav = useNavigate();
-  useEffect(() => {
-    setTimeout(() => nav("/studentLogIn"), 5000);
-  }, []);
+  // const nav = useNavigate();
+  // useEffect(() => {
+  //   setTimeout(() => nav("/studentLogIn"), 5000);
+  // }, []);
 
   return (
     <div style={spinnerStyle}>
