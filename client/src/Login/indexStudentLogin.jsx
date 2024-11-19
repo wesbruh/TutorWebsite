@@ -43,7 +43,6 @@ export const StudentLoginPage = () => {
         `${process.env.REACT_APP_API}/api/v1/auth/login`,
         { email, password }
       );
-      const role = res.data.user.role;
       if (res && res.data.success) {
         toast.success(res.data.message);
         toast.loading("Dashboard");
@@ -55,11 +54,11 @@ export const StudentLoginPage = () => {
         // save user data to localStorage
         localStorage.setItem("auth", JSON.stringify(res.data));
         //check student or tutor
-        if (role === "student") {
+        if (res.data.user.role === "student") {
           setTimeout(() => {
             navigate("/studentDashboard");
           }, 1000);
-        } else if (role === "tutor") {
+        } else if (res.data.user.role === "tutor") {
           // tutorDashboard not yet done, console.log instead
           console.log("navigate tutorDashboard");
           // setTimeout(() => {
@@ -67,7 +66,7 @@ export const StudentLoginPage = () => {
           //   }, 1500);
         }
       } else {
-        toast.error("Email or password is wrong");
+        toast.error("Wrong Email or Password");
       }
     } catch (error) {
       console.log(error);

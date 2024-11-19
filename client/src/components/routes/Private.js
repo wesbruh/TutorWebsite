@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import { Outlet, Navigate } from "react-router-dom";
-import { StudentLoginPage } from "../../Login/indexStudentLogin";
 import Spinner from "../Spinner";
-import Sidebar from "../Sidebar";
-
-import ClipLoader from "react-spinners/ClipLoader";
 
 export default function PrivateRoute() {
   const [ok, setOk] = useState(false);

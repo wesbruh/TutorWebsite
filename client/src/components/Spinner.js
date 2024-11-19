@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
+import { useNavigate } from "react-router-dom";
 
 const Spinner = () => {
   const spinnerStyle = {
@@ -12,13 +13,18 @@ const Spinner = () => {
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(255, 255, 255, 0.8)", // Optional: adds a light overlay
+    backgroundColor: "rgb(51, 51, 51)", // Optional: adds a light overlay
     zIndex: 1000, // Ensures the spinner is above other content
   };
 
+  const nav = useNavigate();
+  useEffect(() => {
+    setTimeout(() => nav("/studentLogIn"), 5000);
+  }, []);
+
   return (
     <div style={spinnerStyle}>
-      <span>Loading...</span>
+      <span color="black">Loading Authorization...</span>
       <ClipLoader size={50} color={"#123abc"} />
     </div>
   );
