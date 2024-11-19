@@ -44,6 +44,13 @@ function Sidebar() {
           );
         })}
       </ul>
+      <p className="TUTOR-TITANS">
+            <span className="span">TUTOR</span>
+
+            <span className="text-wrapper-5">&nbsp;</span>
+
+            <span className="text-wrapper-6">TITANS</span>
+          </p>
       <ToastContainer hideProgressBar transition={Flip} />
     </div>
   );

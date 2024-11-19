@@ -1,44 +1,73 @@
 .Sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: #466346;
-    
+  height: 100%;
+  width: 250px;
+  background-color: #466346;
 }
 .SidebarList {
-    height: auto;
-    padding: 0;
-    width: 100%;
+  height: auto;
+  padding: 0;
+  width: 100%;
 }
 
 .SidebarList .row {
-    width: 100%;
-    height: 70px;
-    list-style-type: none;
-    margin: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  height: 70px;
+  list-style-type: none;
+  margin: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.SidebarList .row:hover{
-    cursor: pointer;
-    background-color: #314531;
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #314531;
 }
 
-.SidebarList #active{
-    background-color: #314531;
+.SidebarList #active {
+  background-color: #314531;
 }
-.row #icon{
-    flex: 10%;
-    display: grid;
-    color: white;
-    place-items: center;
+.row #icon {
+  flex: 10%;
+  display: grid;
+  color: white;
+  place-items: center;
 }
 
-.row #title{
-    flex: 75%;
-    color: white;
-    display: grid;
-    place-items: center;
+.row #title {
+  flex: 75%;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.TUTOR-TITANS {
+  color: transparent;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 96px;
+  font-weight: 600;
+  height: 74px;
+  left: 537px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 776px;
+  margin-top: -10px;
+}
+
+.span {
+  color: #466346;
+}
+
+.text-wrapper-5 {
+  color: #424d65;
+}
+
+.text-wrapper-6 {
+  color: #e2e2e2;
 }
