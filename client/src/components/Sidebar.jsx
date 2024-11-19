@@ -1,13 +1,13 @@
 import React from "react";
 import "./Sidebar.css";
-import { SidebarData } from "./SidebarData";
-import { useAuth } from "../context/auth";
-import { ToastContainer, toast, Flip } from "react-toastify";
+import {SidebarData} from "./SidebarData";
+import {useAuth} from "../context/auth";
+import {ToastContainer, toast, Flip} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 function Sidebar() {
   const [auth, setAuth] = useAuth();
+
   // remove user data from localStorage
   const handleLogout = () => {
     setAuth({
@@ -37,20 +37,13 @@ function Sidebar() {
                 } else {
                   window.location.pathname = val.link;
                 }
-              }}
-            >
+              }}>
               <div id="icon">{val.icon}</div> <div id="title">{val.title}</div>
             </li>
           );
         })}
       </ul>
-      <p className="TUTOR-TITANS">
-            <span className="span">TUTOR</span>
 
-            <span className="text-wrapper-5">&nbsp;</span>
-
-            <span className="text-wrapper-6">TITANS</span>
-          </p>
       <ToastContainer hideProgressBar transition={Flip} />
     </div>
   );

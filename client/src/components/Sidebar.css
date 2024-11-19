@@ -71,3 +71,37 @@
 .text-wrapper-6 {
   color: #e2e2e2;
 }
+
+.top-bar {
+  height: 74px;
+  left: 36px;
+  position: absolute;
+  top: 14px;
+  width: 1315px;
+}
+
+.back-logo {
+  height: 71px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 172px;
+}
+
+.logo {
+  height: 70px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.back-button {
+  cursor: pointer;
+  height: 48px;
+  left: 82px;
+  position: absolute;
+  top: 13px;
+  width: 48px;
+}

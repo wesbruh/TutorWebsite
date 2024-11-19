@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
 import "./style.css";
-import { ToastContainer, toast, Flip } from "react-toastify";
+import {ToastContainer, toast, Flip} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
@@ -38,7 +38,7 @@ export const StudentSignUp = () => {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/register`,
-        { firstName, lastName, name, email, password, role, answer }
+        {firstName, lastName, name, email, password, role, answer}
       );
       if (res && res.data.success) {
         //console.log("success " + res.data.success);
