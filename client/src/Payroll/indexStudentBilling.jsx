@@ -1,5 +1,6 @@
 // imports still need to be supported
 import React from "react";
+import Sidebar from "../components/Sidebar";
 /*import { CalendarIcon } from "./CalendarIcon";
 import { GraduationCap } from "./GraduationCap";
 import { StarWrapper } from "./StarWrapper";
