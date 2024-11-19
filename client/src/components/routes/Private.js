@@ -4,6 +4,7 @@ import { useAuth } from "../../context/auth";
 import { Outlet, Navigate } from "react-router-dom";
 import { StudentLoginPage } from "../../Login/indexStudentLogin";
 import Spinner from "../Spinner";
+import Sidebar from "../Sidebar";
 
 import ClipLoader from "react-spinners/ClipLoader";
 
