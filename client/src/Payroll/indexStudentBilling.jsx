@@ -21,11 +21,32 @@ import settingsIconFrame from "./settings-icon-frame.svg";*/
 // import vector from "./vector.svg";
 
 export const StudentBillingPage = () => {
-    const billing = [
+    const studentBilling = [
         { id: 1, subject: "Math", date: "15 October, 2024 11:00 AM" },
         { id: 2, subject: "US History", date: "13 October, 2024 02:00 PM" },
         { id: 3, subject: "Biology", date: "11 October, 2024 02:30 PM" },
         { id: 4, subject: "Math", date: "8 October, 2024 02:00 PM" },
         { id: 5, subject: "English", date: "5 October, 2024 02:00 PM" },
     ]
+
+    return (
+        <div className="Student-Billing-Page">
+          <Sidebar />
+          <main className="main-content">
+            <h1>Student Billing</h1>
+            <p>View billing history.</p>
+            <ul className="student-billing-list">
+              {studentBilling.map((billing) => (
+                <li key={billing.id} className="billing-item">
+                  <div className="billing-icon"></div>
+                  <div>
+                    <p className="billing-title">{billing.subject}</p>
+                    <p className="billing-date">{billing.date}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </main>
+        </div>
+      );
 };
