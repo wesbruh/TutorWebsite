@@ -3,6 +3,9 @@ import axios from "axios";
 import { useAuth } from "../../context/auth";
 import { Outlet, Navigate } from "react-router-dom";
 import { StudentLoginPage } from "../../Login/indexStudentLogin";
+import Spinner from "../Spinner";
+
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function PrivateRoute() {
   const [ok, setOk] = useState(false);
@@ -21,5 +24,5 @@ export default function PrivateRoute() {
     };
     if (auth?.token) authCheck();
   }, [auth?.token]);
-  return ok ? <Outlet /> : <StudentLoginPage />;
+  return ok ? <Outlet /> : <Spinner />;
 }
