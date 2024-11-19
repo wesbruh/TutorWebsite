@@ -9,6 +9,7 @@ import { StudentBillingPage } from "./Payroll/indexStudentBilling";
 import StudentAppointments from "./Appointments/indexStudentAppointments";
 import PrivateRoute from "./components/routes/Private";
 import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
+import NotificationsPage from "./Notifications/indexNotifications";
 
 // Not ready for testing yet, need to add imports
 /*import { StudentSettings } from './ProfileManagement/indexStudentSettings';
@@ -23,6 +24,7 @@ function App() {
       <Route path="/tutorlogin" element={<TutorLoginPage />} />
       <Route path="/studentsignup" element={<StudentSignUp />} />
       <Route path="/tutorsignup" element={<TutorSignUp />} />
+      <Route path="/Notifications" element={<NotificationsPage />} />
 
       <Route path="/studentDashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
