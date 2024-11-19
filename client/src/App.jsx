@@ -13,8 +13,8 @@ import NotificationsPage from "./Notifications/indexNotifications";
 import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
 
 // Not ready for testing yet, need to add imports
-/*import { StudentSettings } from './ProfileManagement/indexStudentSettings';
-import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
+import { StudentSettings } from './ProfileManagement/indexStudentSettings';
+/*import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
 import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <Route path="/studentDashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>
-
+      <Route path="/AccountSettings" element={<StudentSettings />} />
       <Route path="/studentbilling" element={<StudentBillingPage />} />
       <Route path="/Appointments" element={<StudentAppointments />} />
       <Route path="/Reviews" element={<StudentReviewPage />} />
