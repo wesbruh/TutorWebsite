@@ -31,7 +31,7 @@ export const SidebarData =[
     {
         title: "Reviews",
         icon: <Reviews />,
-        link: "/studentreviewpage"
+        link: "/FeedbackSystem"
     },
     {
         title: "Account Settings",

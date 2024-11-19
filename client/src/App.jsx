@@ -30,6 +30,7 @@ function App() {
 
       <Route path="/studentbilling" element={<StudentBillingPage />} />
       <Route path="/Appointments" element={<StudentAppointments />} />
+      <Route path="/FeedbackSystem" element={<StudentReviewPage />} />
     </Routes>
   );
 }

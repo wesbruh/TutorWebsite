@@ -4,7 +4,7 @@ import "./styleStudentReview.css";
 
 function StudentReviewPage () {
     return (
-        <div className="studentReviewPage">
+        <div className="StudentReviewPage">
             <Sidebar />
         </div>
     );
