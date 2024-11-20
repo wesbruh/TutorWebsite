@@ -11,6 +11,7 @@ import PrivateRoute from "./components/routes/Private";
 import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
 import NotificationsPage from "./Notifications/indexNotifications";
 import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
+import TutorPayrollPage from "./Payroll/indexTutorPayroll";
 
 // Not ready for testing yet, need to add imports
 import { StudentSettings } from './ProfileManagement/indexStudentSettings';
@@ -35,6 +36,7 @@ function App() {
       <Route path="/studentbilling" element={<StudentBillingPage />} />
       <Route path="/Appointments" element={<StudentAppointments />} />
       <Route path="/Reviews" element={<StudentReviewPage />} />
+      <Route path="/tutorPayroll" element={<TutorPayrollPage />} />
     </Routes>
   );
 }
