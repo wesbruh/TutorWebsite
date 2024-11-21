@@ -9,6 +9,8 @@ import tutorRoutes from "./routes/tutorRoute.js";
 import cors from "cors";
 import passport from "./passport.js";
 import session from "express-session";
+import { googleCallbackController } from "./controllers/authController.js";
+import { requireSignIn } from "./middlewares/authMiddleware.js";
 //configure env
 dotenv.config();
 
@@ -56,10 +58,9 @@ app.get(
 
 app.get(
   "/google/callback",
-  passport.authenticate("google", {
-    successRedirect: "/google/success",
-    failureRedirect: "/google/failure",
-  })
+  passport.authenticate("google", { session: false }),
+  googleCallbackController,
+  requireSignIn
 );
 
 app.get("/google/success", (req, res) => {

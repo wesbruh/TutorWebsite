@@ -1,6 +1,7 @@
 import userModel from "../models/userModel.js";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
+import passport from "passport";
 
 export const registerController = async (req, res) => {
   try {
@@ -156,4 +157,34 @@ export const forgotPasswordController = async (req, res) => {
 //test controller
 export const testController = (req, res) => {
   res.send("Protect route");
+};
+
+// Handle Google OAuth Callback
+export const googleCallbackController = async (req, res) => {
+  try {
+    const user = req.user; // User attached by Passport.js
+    const token = await JWT.sign({ _id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
+
+    // res.status(200).send({
+    //   success: true,
+    //   message: "login successfully",
+    //   user: {
+    //     _id: user._id,
+    //     name: user.name,
+    //     email: user.email,
+    //     role: user.role,
+    //   },
+    //   token,
+    // });
+
+    // Redirect to frontend with token (or send it directly)
+    res.redirect(`http://localhost:3000/studentDashboard`);
+  } catch (error) {
+    console.error("Google Callback Error:", error);
+    res
+      .status(500)
+      .send({ success: false, message: "Error during Google login", error });
+  }
 };
