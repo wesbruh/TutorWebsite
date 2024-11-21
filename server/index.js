@@ -5,6 +5,7 @@ import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import payrollRoutes from "./routes/payrollRoute.js";
+import tutorRoutes from "./routes/tutorRoute.js";
 import cors from "cors";
 import passport from "./passport.js";
 import session from "express-session";
@@ -28,6 +29,7 @@ app.use(morgan("dev"));
 //routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/payroll", payrollRoutes);
+app.use("/api/v1/tutorRoute", tutorRoutes);
 
 //rest api
 app.get("/", (req, res) => {
