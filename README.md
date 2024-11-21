@@ -67,3 +67,5 @@ Cannot find module 'ajv/dist/compile/codegen'
 npm install --save-dev ajv@^7
 
 Can't resolve 'react- spinners/C1ipLoader' ---> npm install --save react-spinners
+
+cd server ---> npm install passport passport-oauth2 passport-google-oauth20 express-session

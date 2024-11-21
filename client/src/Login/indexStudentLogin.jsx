@@ -73,6 +73,11 @@ export const StudentLoginPage = () => {
       toast.error("Huh Something wrong");
     }
   };
+
+  const loginWithGoogle = () => {
+    window.location.href = "http://localhost:8080/auth/google";
+  };
+
   return (
     <div className="student-login-page">
       <div className="div">
@@ -126,6 +131,7 @@ export const StudentLoginPage = () => {
               </div>
             </div>
 
+            <button onClick={loginWithGoogle}>google</button>
             <div className="frame-wrapper">
               <div className="frame-5">
                 <div className="rectangle" />
