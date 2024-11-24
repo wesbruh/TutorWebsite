@@ -29,7 +29,7 @@ function App() {
       <Route path="/tutorsignup" element={<TutorSignUp />} />
       <Route path="/Notifications" element={<NotificationsPage />} />
       <Route path="/forgotPassword" element={<ForgotPasswordPage />} />
-      <Route path="/studentDashboard" element={<PrivateRoute />}>
+      <Route path="/studentdashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>
       <Route path="/AccountSettings" element={<StudentSettings />} />

@@ -56,7 +56,7 @@ export const StudentLoginPage = () => {
         //check student or tutor
         if (res.data.user.role === "student") {
           setTimeout(() => {
-            navigate("/studentDashboard");
+            navigate("/studentdashboard");
           }, 1000);
         } else if (res.data.user.role === "tutor") {
           // tutorDashboard not yet done, console.log instead

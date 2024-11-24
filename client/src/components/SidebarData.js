@@ -6,14 +6,10 @@ import { Payments } from "@emotion-icons/material/Payments";
 import { Reviews } from "@emotion-icons/material-rounded/Reviews";
 import { Settings } from "@emotion-icons/fluentui-system-filled/Settings";
 import { LogOut } from "@emotion-icons/boxicons-regular/LogOut";
-import { ArrowBack } from "@emotion-icons/boxicons-regular/ArrowBack";
+
 
 export const SidebarData = [
-  {
-    title: "Go Back",
-    icon: <ArrowBack />,
-    link: "", /* link is not set up yet, routes to landing page*/ 
-  },
+
   {
     title: "Dashboard",
     icon: <Home />,
