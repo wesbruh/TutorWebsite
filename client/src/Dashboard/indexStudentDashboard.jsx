@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Sidebar from "../components/Sidebar";
 import "./StudentDashboard.css";
-import { useAuth } from "../context/auth";
 //import user controller
 
 function StudentDashboard () {
@@ -21,7 +20,7 @@ function StudentDashboard () {
         <div className="dashboard">
             <Sidebar />
             <main className="main-content">
-                <h1>Hello, NAME WILL GO HERE.</h1>
+                <h1>Hello, Billy Joel.</h1>
                 <p>Welcome to your student dashboard.</p>
                 <div className="appointments">
                     <h2>Upcoming Sessions</h2>

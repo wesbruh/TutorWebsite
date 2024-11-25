@@ -18,23 +18,33 @@ body {
 }
 
 .appointments{
+    color: #466346;
     padding:0px;
+    padding-bottom: 180px;
     display:flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .oldAppointments{
+    color: #466346;
     padding: 0px;
-    padding-top: 30px;
+    padding-bottom: 180px;
     display:flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .billing{
+    color: #466346;
+    width: 80%;
     padding: 0px;
-    padding-bottom:30px;
+    padding-bottom:10px;    
     display:flex;
     position: absolute;
     bottom: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
+
 
 /* Wes create a new SideBar.css and fix associated imports (dashboard.css), 
 test this idea to see if it works. should import the side bar across the pages and .jsx include .css */
