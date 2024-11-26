@@ -1,22 +1,44 @@
-/* General styles */
+/* Appointments Page Styling */
+
+.appointments-page {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.appointments-content {
+  flex: 1; /* Takes the remaining space beside the sidebar */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* header and text styling */
+.appointment-header {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #466346;
+  text-align: start;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #484944;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  color: #468FAF;
-  margin-top: 20px;
+
+h1, p{
+  margin-top: 0;
 }
 
 p {
   text-align: center;
   font-size: 14px;
   color: #777;
+  text-align: center;
 }
 
 /* Tutor card styles */
@@ -66,15 +88,25 @@ p {
 
 /* Empty state */
 .empty-state {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   text-align: center;
   font-size: 1.2rem;
-  color: #888;
+  color: #777;
+
+  /* centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
 }
 
-/* Styling for the current time */
+/* current time styling */
 .current-time {
-  text-align: center;
-  font-size: 1.1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   margin-bottom: 20px;
-  color: #468FAF;
+  font-size: 1rem;
+  color: #777;
+  text-align: start;
 }

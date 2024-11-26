@@ -22,8 +22,10 @@ const StudentAppointments = () => {
     }, []);
 
     return (
-        <div>
+
+        <div className="appointments-page">
             <Sidebar />
+            <div className="appointments-content">
             <h1 className="appointment-header">Book An Appointment</h1>
             <p className="current-time">Current Time: {currentTime.toLocaleString()}</p>
 
@@ -45,6 +47,8 @@ const StudentAppointments = () => {
             ) : (
                 <p className="empty-state">No available tutors at this time.</p>
             )}
+            </div>
+            
         </div>
     );
 };

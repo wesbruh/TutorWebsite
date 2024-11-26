@@ -44,15 +44,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // import routes
 import logo from "../assets/logo.svg"; // titans logo
-import succeedIcon from "../assets/succeedIcon.svg"; // succeedIcon image of succeed card
 import star1 from "../assets/star-1.svg"; // star rating
 import "./indexHomePage.css"; // HomePage.css
-import scheduleIcon from "../assets/scheduleIcon.svg"; // schedule icon
 import tutorcard1PersonaPhoto from "../assets/tutorcard-1-persona-photo.png"; // tutor 1 photo
 import tutorcard2PersonaPhoto from "../assets/tutorcard-2-persona-photo.png"; // tutor 2 photo
 import tutorcard3PersonaPhoto from "../assets/tutorcard-3-persona-photo.png"; // tutor 3 photo
-import signUpCardIcon from "../assets/signUpCardIcon.svg"; // part of
 import { useAuth } from "../context/auth";
+
 export const Home = () => {
   const navigate = useNavigate();
   const login = () => {
@@ -143,68 +141,12 @@ export const Home = () => {
           </div>
         </div>
 
-        <div className="how-it-works">HOW IT WORKS</div>
+        {/* <div className="how-it-works">HOW IT WORKS</div> */}
 
-        <p className="simple-steps">Simple steps to get started</p>
+        {/* <p className="simple-steps">Simple steps to get started</p> */}
 
-        <div className="signup-card">
-          <div className="overlap">
-            <div className="text-wrapper-4">Sign Up</div>
+      
 
-            <p className="p">
-              Start your educational journey by creating an account today!
-            </p>
-
-            <div className="signup-card-icon">
-              <img
-                className="signUpCardIcon"
-                alt="signUpCardIcon"
-                src={signUpCardIcon}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="schedule-card">
-          <div className="overlap">
-            <p className="schedule">
-              <span className="span">Schedule</span>
-
-              <span className="text-wrapper-5">&nbsp;</span>
-            </p>
-
-            <p className="p">
-              Choose a time that works for you and book your appointment with
-              our experienced tutors!
-            </p>
-
-            <div className="schedule-card-icon">
-              <img
-                className="scheduleIcon"
-                alt="scheduleIcon"
-                src={scheduleIcon}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="succeed-card-base">
-          <div className="overlap">
-            <p className="p">
-              Complete your session, gain confidence, and excel in your studies!
-            </p>
-
-            <div className="text-wrapper-6">Succeed</div>
-
-            <div className="succeedIcon">
-              <img
-                className="succeedIcon"
-                alt="succeedIcon"
-                src={succeedIcon}
-              />
-            </div>
-          </div>
-        </div>
 
         <div className="text-wrapper-7">Meet Our Tutors</div>
 
@@ -213,16 +155,16 @@ export const Home = () => {
         </p>
 
         <p className="learning-made-simple">
-          <span className="text-wrapper-9">Learning </span>
+          <span className="tutor-learning-success-texts">Learning </span>
 
-          <span className="text-wrapper-10">
+          <span className="other-title-text">
             Made Simple
             <br />
           </span>
 
-          <span className="text-wrapper-9">Success </span>
+          <span className="tutor-learning-success-texts">Success </span>
 
-          <span className="text-wrapper-10">
+          <span className="other-title-text">
             Made Possible
             <br />
           </span>
@@ -245,11 +187,11 @@ export const Home = () => {
         <img className="logo" alt="Logo" src={logo} />
 
         <p className="TUTOR-TITANS">
-          <span className="text-wrapper-9">TUTOR</span>
+          <span className="tutor-learning-success-texts">TUTOR</span>
 
           <span className="text-wrapper-12">&nbsp;</span>
 
-          <span className="text-wrapper-10">TITANS</span>
+          <span className="other-title-text">TITANS</span>
         </p>
       </div>
     </div>
