@@ -46,8 +46,8 @@ export const StudentSettings = () => {
                         <p className="title">Enter Username</p>
                         <input 
                         className="input" 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         />
                         </div>
                     </div>
@@ -56,8 +56,8 @@ export const StudentSettings = () => {
                         <p className="title">Enter Email</p>
                         <input 
                         className="input" 
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         />
                         </div>
                     </div>
