@@ -1,10 +1,24 @@
-.StudentReviewPage {
-    width: 100vw;
-    height: 100vh;
-    background-color: #484944;
-}
-
 body {
     margin: 0;
     padding: 0;
+    background-color: #466346;
 }
+.reviews-page {
+    display: flex;
+    height: 100vh;
+}
+.main-content {
+    flex: 1; /* Takes the remaining space beside the sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+}
+/* leave a review message */
+.main-content p{
+    display: flex;
+    font-size: 1.1rem;
+}
+

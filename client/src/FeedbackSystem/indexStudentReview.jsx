@@ -21,36 +21,21 @@ function StudentReviewPage() {
       }
     };
 
-    fetchUsers();
   }, []);
 
   console.log(users);
 
   return (
-    <div className="StudentReviewPage">
-      <Sidebar />
-      <table className="table">
-        {" "}
-        {/* Corrected className */}
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Subject</th> {/* Adjusted to display tutor's subject */}
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              {" "}
-              {/* Added a unique key */}
-              <td>{user.name}</td>
-              <td>{user.subject || "N/A"}</td>{" "}
-              {/* Added fallback for missing subject */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+      <div className = "reviews-page">
+        <Sidebar />
+        <main className = "main-content">
+          <h1>Tutor Reviews</h1>
+          <p>Leave a review of your past appointments!</p>
+          <div>
+            {}
+          </div>
+        </main>
+      </div>
   );
 }
 
