@@ -5,7 +5,12 @@ const tutorSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     hourlyRate: { type: Number, required: true },
     workHours: { type: Number, default: 0 },
-});
+    subject: {type: String, required: true},
+    available: {type: Boolean, required: true},
+    slots_booked: {type:Object, default:{}},
+    createdAt: {type: Date}
+}, { minimize:false })
 
-const Tutor = mongoose.model('Tutor', tutorSchema);
+const Tutor = mongoose.models.tutor || mongoose.model('Tutor', tutorSchema);
+
 export default Tutor;

@@ -11,6 +11,10 @@ import passport from "./passport.js";
 import session from "express-session";
 import { googleCallbackController } from "./controllers/authController.js";
 import { requireSignIn } from "./middlewares/authMiddleware.js";
+import userRoute from "./routes/userRoute.js";
+import userModel from "./models/userModel.js";
+import reviewRoutes from './routes/reviewRoutes.js'; // Import review routes
+
 //configure env
 dotenv.config();
 
@@ -33,10 +37,17 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/payroll", payrollRoutes);
 app.use("/api/v1/tutorRoute", tutorRoutes);
 
+app.use("/api/v1/reviews", reviewRoutes);
 //rest api
 app.get("/", (req, res) => {
   res.send("<h1>Welcome</h1>");
   //res.send('<a href ="/auth/google"> Google </a>');
+});
+
+app.get('/userRoute', (req, res) => {
+  userModel.find()
+  .then(users => res.json(users))
+  .catch(err => res.json(err))
 });
 
 //PORT

@@ -5,7 +5,7 @@ import { StudentLoginPage } from "./Login/indexStudentLogin";
 import { TutorLoginPage } from "./Login/indexTutorLogin";
 import { StudentSignUp } from "./Sign-Up/indexStudentSign-Up";
 import { TutorSignUp } from "./Sign-Up/indexTutorSign-Up";
-import { StudentBillingPage } from "./Payroll/indexStudentBilling";
+import StudentBillingPage from "./Payroll/indexStudentBilling";
 import StudentAppointments from "./Appointments/indexStudentAppointments";
 import PrivateRoute from "./components/routes/Private";
 import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
@@ -31,7 +31,7 @@ function App() {
       <Route path="/Notifications" element={<NotificationsPage />} />
       <Route path="/forgotPassword" element={<ForgotPasswordPage />} />
       <Route path="/google-success" element={<GoogleSuccess />} />
-      <Route path="/studentDashboard" element={<PrivateRoute />}>
+      <Route path="/studentdashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>
       <Route path="/AccountSettings" element={<StudentSettings />} />

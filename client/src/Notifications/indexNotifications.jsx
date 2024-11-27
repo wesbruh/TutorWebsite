@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import Sidebar from "../components/Sidebar";
 import "./notificationsStyles.css";
 
 const NotificationsPage = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
   const notifications = [
-    { id: 1, title: "Cancellation of Appointment with Jane Smith", date: "15 October, 2024 11:00 AM" },
-    { id: 2, title: "Confirmation of Appointment with Jane Smith", date: "14 October, 2024 02:00 PM" },
-    { id: 3, title: "Cancellation of Appointment with Clark Kent", date: "13 October, 2024 02:32 PM" },
-    { id: 4, title: "Confirmation of Appointment with Clark Kent", date: "13 October, 2024 02:00 PM" },
-    { id: 5, title: "Completion of Appointment with Clark Kent", date: "11 October, 2024 02:00 PM - 03:00 PM" },
+    { id: 1, title: "Account Creation", date: "26 November, 2024 "},
   ];
 
   return (
@@ -23,7 +20,8 @@ const NotificationsPage = () => {
               <div className="notification-icon"></div>
               <div>
                 <p className="notification-title">{notification.title}</p>
-                <p className="notification-date">{notification.date}</p>
+                <p className="notification-date">{notification.date} 
+                   {currentTime.toLocaleString([], {hour: '2-digit', minute: '2-digit'})}</p>
               </div>
             </li>
           ))}
