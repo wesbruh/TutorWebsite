@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Sidebar from "../components/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
+import { star } from "@emotion-icons/bootstrap/Star";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 function StudentReviewPage() {
@@ -57,12 +58,13 @@ function StudentReviewPage() {
                         </div>
                     </div>
                     <div className = "input-item">
-                        <p className="title">Tutor Rating:</p>
+                        <p className="title">Tutor Rating:
                         <label><input type="radio" name="rating" value="option1" /> 5</label>
                         <label><input type="radio" name="rating" value="option2" defaultChecked={true} /> 4</label>
                         <label><input type="radio" name="rating" value="option3" /> 3</label>
                         <label><input type="radio" name="rating" value="option3" /> 2</label>
                         <label><input type="radio" name="rating" value="option3" /> 1</label>
+                        </p>
                     </div>
                     <button className="input" type="submit">Submit</button>
                 </div>
