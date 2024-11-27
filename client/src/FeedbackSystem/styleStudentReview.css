@@ -212,17 +212,22 @@ body {
 
 form input,
 form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form textarea {
     resize: none;
     height: 80px;
+    width: 100%;
+    padding: 10px; /* Add consistent padding */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Match the style of the dropdown */
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
+
+form textarea:focus {
+    border-color: #27ae60; /* Match focus style with the dropdown */
+    outline: none; /* Remove the default focus outline */
+}
+
 
 /* Dropdown */
 form select {
