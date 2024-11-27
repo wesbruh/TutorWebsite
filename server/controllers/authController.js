@@ -180,7 +180,9 @@ export const googleCallbackController = async (req, res) => {
     // });
 
     // Redirect to frontend with token (or send it directly)
-    res.redirect(`http://localhost:3000/studentDashboard`);
+    res.redirect(
+      `http://localhost:3000/google-success?token=${token}&name=${user.name}`
+    );
   } catch (error) {
     console.error("Google Callback Error:", error);
     res

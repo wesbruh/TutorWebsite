@@ -12,9 +12,10 @@ import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
 import NotificationsPage from "./Notifications/indexNotifications";
 import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
 import TutorPayrollPage from "./Payroll/indexTutorPayroll";
+import GoogleSuccess from "./components/routes/GoolgeSuccess";
 
 // Not ready for testing yet, need to add imports
-import { StudentSettings } from './ProfileManagement/indexStudentSettings';
+import { StudentSettings } from "./ProfileManagement/indexStudentSettings";
 /*import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
 import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 
@@ -29,6 +30,7 @@ function App() {
       <Route path="/tutorsignup" element={<TutorSignUp />} />
       <Route path="/Notifications" element={<NotificationsPage />} />
       <Route path="/forgotPassword" element={<ForgotPasswordPage />} />
+      <Route path="/google-success" element={<GoogleSuccess />} />
       <Route path="/studentDashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>

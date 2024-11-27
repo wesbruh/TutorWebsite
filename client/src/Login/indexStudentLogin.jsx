@@ -74,7 +74,8 @@ export const StudentLoginPage = () => {
     }
   };
 
-  const loginWithGoogle = () => {
+  const loginWithGoogle = async (e) => {
+    e.preventDefault();
     window.location.href = "http://localhost:8080/auth/google";
   };
 
@@ -120,6 +121,10 @@ export const StudentLoginPage = () => {
                     <div className="text-wrapper-2">Login</div>
                   </button>
 
+                  <button className="sign-in-button" onClick={loginWithGoogle}>
+                    <div className="text-wrapper-2">Google Login</div>
+                  </button>
+
                   <button
                     className="sign-in-button"
                     type="button"
@@ -131,7 +136,6 @@ export const StudentLoginPage = () => {
               </div>
             </div>
 
-            <button onClick={loginWithGoogle}>google</button>
             <div className="frame-wrapper">
               <div className="frame-5">
                 <div className="rectangle" />
