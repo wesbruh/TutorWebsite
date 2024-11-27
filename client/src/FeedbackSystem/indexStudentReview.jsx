@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
-<<<<<<< HEAD
-=======
-import { star } from "@emotion-icons/bootstrap/Star";
-//import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> bcdac5efcd434dce776b89c07645556214e9ec2e
 
 function StudentReviewPage() {
   const [reviews, setReviews] = useState([]);
@@ -60,7 +55,6 @@ function StudentReviewPage() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="reviews-page">
       <Sidebar />
       <main className="main-content">
@@ -91,46 +85,6 @@ function StudentReviewPage() {
                     <p className="review-author-name">{review.tutorName}</p>
                     <p className="review-author-role">Student</p>
                   </div>
-=======
-      <div className = "reviews-page">
-        <Sidebar />
-        <main className = "main-content">
-          <h1>Tutor Reviews</h1>
-          <p>Leave a review of your past appointments!</p>
-          <div>
-          <form onSubmit={UpdateInfo}>
-                <div className="input-fields">
-                    <div className = "input-item">
-                        <div>
-                        <p className="title">Tutor Name</p>
-                        <input 
-                        className="input" 
-                        value={firstName}
-                        onChange={(e) => setTutorName(e.target.value)}
-                        />
-                        </div>
-                    </div>
-                    <div className = "input-item">
-                        <div>
-                        <p className="title">How was your experience?</p>
-                        <input 
-                        className="input" 
-                        value={lastName}
-                        onChange={(e) => setReview(e.target.value)}
-                        />
-                        </div>
-                    </div>
-                    <div className = "input-item">
-                        <p className="title">Tutor Rating:
-                        <label><input type="radio" name="rating" value="option1" /> 5</label>
-                        <label><input type="radio" name="rating" value="option2" defaultChecked={true} /> 4</label>
-                        <label><input type="radio" name="rating" value="option3" /> 3</label>
-                        <label><input type="radio" name="rating" value="option3" /> 2</label>
-                        <label><input type="radio" name="rating" value="option3" /> 1</label>
-                        </p>
-                    </div>
-                    <button className="input" type="submit">Submit</button>
->>>>>>> bcdac5efcd434dce776b89c07645556214e9ec2e
                 </div>
               </div>
             ))}
