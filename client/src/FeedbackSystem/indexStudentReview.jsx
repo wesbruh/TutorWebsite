@@ -24,7 +24,9 @@ function StudentReviewPage() {
   }, []);
 
   console.log(users);
-
+  const [firstName, setTutorName] = useState("");
+  const [lastName, setReview] = useState("");
+  const UpdateInfo = async (e) => { };
   return (
       <div className = "reviews-page">
         <Sidebar />
@@ -32,7 +34,32 @@ function StudentReviewPage() {
           <h1>Tutor Reviews</h1>
           <p>Leave a review of your past appointments!</p>
           <div>
-            {}
+          <form onSubmit={UpdateInfo}>
+                <div className="input-fields">
+                    <div className = "input-item">
+                        <div>
+                        <p className="title">Tutor Name</p>
+                        <input 
+                        className="input" 
+                        value={firstName}
+                        onChange={(e) => setTutorName(e.target.value)}
+                        />
+                        </div>
+                    </div>
+                    <div className = "input-item">
+                        <div>
+                        <p className="title">How was your experience?</p>
+                        <input 
+                        className="input" 
+                        value={lastName}
+                        onChange={(e) => setReview(e.target.value)}
+                        />
+                        </div>
+                    </div>
+                    
+                    <button className="input" type="submit">Submit</button>
+                </div>
+                </form>
           </div>
         </main>
       </div>

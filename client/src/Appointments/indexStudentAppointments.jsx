@@ -27,7 +27,7 @@ const StudentAppointments = () => {
             <Sidebar />
             <div className="appointments-content">
             <h1 className="appointment-header">Book An Appointment</h1>
-            <p className="current-time">Current Time: {currentTime.toLocaleString()}</p>
+            <p className="current-time">Current Time: {currentTime.toLocaleString([], {hour: '2-digit', minute: '2-digit'})}</p>
 
             {tutors.length > 0 ? (
                 tutors.map((tutor, index) => (

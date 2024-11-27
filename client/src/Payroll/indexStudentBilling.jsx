@@ -4,8 +4,8 @@ import "./styleStudentBilling.css";
 
 const StudentBillingPage = () => {
   const payroll = [
-    { id: 1, amount: 60, title: "Student Payment for October", date: "1 October, 2024"},
-    { id: 2, amount: 115, title: "Student Payment for November", date: "14 November, 2024" },
+    // { id: 1, amount: 60, title: "Student Payment for October", date: "1 October, 2024"},
+    { id: 2, amount:"", title: "Student Payment For November", date: "You have no payments for this month" },
   ];
 
   return (
@@ -21,7 +21,7 @@ const StudentBillingPage = () => {
               <div>
                 <p className="payroll-title">{payroll.title}</p>
                 <p className="payroll-date">{payroll.date}</p>
-                <p className="payroll-amount"> Total Amount: ${payroll.amount}</p>
+                <p className="payroll-amount"> Total Amount: {/*$*/}{payroll.amount}</p>
               </div>
             </li>
           ))}
