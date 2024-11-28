@@ -280,6 +280,7 @@ export const TutorSettings = () => {
     const [lastName, setLastName] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [bio, setBio] = useState(""); //needs fixing because larger text box is needed
 
     const UpdateInfo = async (e) => { };
 
@@ -328,6 +329,16 @@ export const TutorSettings = () => {
                         className="input" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        />
+                        </div>
+                    </div>
+                    <div className = "input-item">
+                        <div>
+                        <p className="title">Enter Bio</p>
+                        <input 
+                        className="input" 
+                        value={bio}
+                        onChange={(e) => setBio(e.target.value)}
                         />
                         </div>
                     </div>
