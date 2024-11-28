@@ -360,8 +360,9 @@ export const TutorDashboardPage = () => {
 /*
 
 const TutorDashboard = () => {
-  const appointments = [
-    { id: 1, date: "1 October, 2024, time: "10:00", subject: "Calculus", studentName: "John Doe"},
+    //placeholder data for upcoming appointments
+  const tutorAppointments = [
+    { id: 1, date: "1 October, 2024, time: "10:30", subject: "Calculus", studentName: "John Doe"},
     { id: 2, date: "2 October, 2024, time: "12:30", subject: "Statistics", studentName: "Mary Jones"},
   ];
 
@@ -373,19 +374,19 @@ const TutorDashboard = () => {
             <p>Welcome to your Tutor dashboard.</p>
         <ul className="appointments-list">
         <h2>Upcoming Sessions</h2>
-          {appointments.map((appointments) => (
-            <li key={appointments.id} className="appointments-item">
+          {tutorAppointments.map((tutorAppointments) => (
+            <li key={tutorAppointments.id} className="appointments-item">
               <div className="appointments-icon"></div>
-              <div>
-                <p className="appointments-date">{appointments.date}</p>
-                <p className="appointments-time">{appointments.time}</p>
-                <p className="appointments-subject">{appointments.subject}</p>
-                <p className="appointments-studentName">{appointments.studentName}</p>
+              <div> //map the data onto the student tutor dashboard
+                <p className="appointments-date">{tutorAppointments.date}</p>
+                <p className="appointments-time">{tutorAppointments.time}</p>
+                <p className="appointments-subject">{tutorAppointments.subject}</p>
+                <p className="appointments-studentName">{tutorAppointments.studentName}</p>
               </div>
             </li>
           ))}
         </ul>
-        <div className="payroll">
+        <div className="payroll"> //add preview paystub for tutor
             <h2>Recent Paystub: $85</h2>
             <p>Your biweekly paystub has been posted to your account.</p>
         </div>
