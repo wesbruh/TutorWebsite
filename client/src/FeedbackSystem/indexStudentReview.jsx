@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
 

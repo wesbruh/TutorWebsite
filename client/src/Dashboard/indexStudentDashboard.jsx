@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentDashboard.css";
 //import user controller
 

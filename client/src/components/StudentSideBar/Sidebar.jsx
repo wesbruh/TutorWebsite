@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import {SidebarData} from "./SidebarData";
-import {useAuth} from "../context/auth";
+import {useAuth} from "../../context/auth";
 import {ToastContainer, toast, Flip} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

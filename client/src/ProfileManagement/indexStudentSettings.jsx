@@ -1,7 +1,7 @@
 // Support images
 // Update global styleguide
 import React, {useState} from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentSettings.css";
 import axios from "axios";
 

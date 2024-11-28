@@ -80,7 +80,7 @@
 // export default StudentAppointments;
 
 import React, { useEffect, useState } from 'react';
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentAppointments.css";
 import axios from 'axios';
 

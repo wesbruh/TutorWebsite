@@ -13,32 +13,32 @@ export const SidebarData = [
   {
     title: "Dashboard",
     icon: <Home />,
-    link: "/studentdashboard",
+    link: "/StudentDashboard",
   },
   {
     title: "Appointments",
     icon: <Calendar />,
-    link: "/Appointments",
+    link: "/StudentAppointments",
   },
   {
     title: "Notifications",
     icon: <Email />,
-    link: "/Notifications",
+    link: "/StudentNotifications",
   },
   {
     title: "Billing",
     icon: <Payments />,
-    link: "/studentbilling",
+    link: "/StudentBilling",
   },
   {
     title: "Reviews",
     icon: <Reviews />,
-    link: "/Reviews",
+    link: "/StudentReviews",
   },
   {
     title: "Account Settings",
     icon: <Settings />,
-    link: "/AccountSettings",
+    link: "/StudentSettings",
   },
   {
     title: "Logout",

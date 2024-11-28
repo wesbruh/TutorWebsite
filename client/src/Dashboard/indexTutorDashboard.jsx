@@ -34,7 +34,7 @@ import star52 from "./star-5-2.svg";
 import star53 from "./star-5-3.svg";
 import star54 from "./star-5-4.svg";
 import star5 from "./star-5.svg";*/
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleTutorDashboard.css";
 //import vector from "./vector.svg";
 

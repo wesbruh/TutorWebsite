@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./notificationsStyles.css";
 
-const NotificationsPage = () => {
+const StudentNotificationsPage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const notifications = [
     { id: 1, title: "Account Creation", date: "26 November, 2024 "},
@@ -31,4 +31,4 @@ const NotificationsPage = () => {
   );
 };
 
-export default NotificationsPage;
+export default StudentNotificationsPage;
