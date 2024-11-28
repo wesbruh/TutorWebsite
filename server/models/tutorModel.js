@@ -17,4 +17,4 @@ const tutorSchema = new mongoose.Schema({
     ]
 });
 
-module.exports = mongoose.model('Tutor', tutorSchema);
+export default mongoose.model('Tutor', tutorSchema);
