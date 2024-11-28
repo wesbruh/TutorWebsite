@@ -65,7 +65,7 @@ export const TutorLoginPage = () => {
         // save user data to localStorage
         localStorage.setItem("auth", JSON.stringify(res.data));
         setTimeout(() => {
-          navigate("/tutordashboard");
+          navigate("/TutorDashboard"); //Updated so that sidebar highlights correctly
         }, 1000);
       }
     } catch (error) {

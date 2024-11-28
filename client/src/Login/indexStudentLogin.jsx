@@ -62,7 +62,7 @@ export const StudentLoginPage = () => {
         localStorage.setItem("auth", JSON.stringify(res.data));
         // if (res.data.user.role === "student") {
         setTimeout(() => {
-          navigate("/studentdashboard");
+          navigate("/StudentDashboard"); //Updated so that the sidebar would highlight the dashboard correctly upon logging in.
         }, 1000);
       }
     } catch (error) {
