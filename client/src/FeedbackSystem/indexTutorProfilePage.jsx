@@ -283,3 +283,17 @@ export const TutorProfilePage = () => {
         </div>
     );
 };
+/*
+//add tutor bio from tutor settings page
+
+export const TutorProfilePage = () => {
+    return (
+        <div className="tutor-profile-page">
+
+        //add tutor bio from tutor settings page stored in database
+
+        </div>
+    );
+};
+
+*/
