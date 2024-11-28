@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import backButton from "../assets/BackButton.png";
 import greenRectangleDesign from "../assets/greenbox.png";
 import logo from "../assets/logo.svg";
 import "./style.css";
-import {ToastContainer, toast, Flip} from "react-toastify";
+import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
@@ -13,6 +13,9 @@ export const StudentSignUp = () => {
   const navigate = useNavigate();
   const tutorSignup = () => {
     navigate("/tutorsignup");
+  };
+  const studentlogin = () => {
+    navigate("/studentLogIn");
   };
   const home = () => {
     navigate("/");
@@ -38,7 +41,7 @@ export const StudentSignUp = () => {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/register`,
-        {firstName, lastName, name, email, password, role, answer}
+        { firstName, lastName, name, email, password, role, answer }
       );
       if (res && res.data.success) {
         //console.log("success " + res.data.success);
@@ -146,18 +149,22 @@ export const StudentSignUp = () => {
 
                 <div className="rectangle" />
               </div>
+              <button className="tutor" onClick={studentlogin}>
+                Student Login
+              </button>
             </div>
 
             <div className="div-2">
-              <p className="p">Need a tutor account? Sign up here:</p>
+              <div className="frame-5">
+                <div className="rectangle" />
 
-              <div className="sign-up-buttons">
-                <div className="tutor-button">
-                  <button className="tutor" onClick={tutorSignup}>
-                    Tutor Sign Up
-                  </button>
-                </div>
+                <div className="text-wrapper-4">or Tutor Sign up</div>
+
+                <div className="rectangle" />
               </div>
+              <button className="tutor" onClick={tutorSignup}>
+                Tutor Sign Up
+              </button>
             </div>
           </div>
         </div>

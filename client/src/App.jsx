@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import StudentDashboard from "./Dashboard/indexStudentDashboard";
+import TutorDashboard from "./Dashboard/indexTutorDashboard";
 import { Home } from "./HomePage/indexHomePage";
 import { StudentLoginPage } from "./Login/indexStudentLogin";
 import { TutorLoginPage } from "./Login/indexTutorLogin";
@@ -34,6 +35,10 @@ function App() {
       <Route path="/studentdashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>
+      <Route path="/tutordashboard" element={<PrivateRoute />}>
+        <Route path="" element={<TutorDashboard />} />
+      </Route>
+
       <Route path="/AccountSettings" element={<StudentSettings />} />
       <Route path="/studentbilling" element={<StudentBillingPage />} />
       <Route path="/Appointments" element={<StudentAppointments />} />

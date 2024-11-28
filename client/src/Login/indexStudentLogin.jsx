@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 /*import { Frame } from "./Frame";*/
 import backButton from "../assets/BackButton.png";
 import logo from "../assets/logo.svg";
-import "./styleStudentLogin.css"; // Modified
+import "./style.css"; // Modified
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -43,7 +43,14 @@ export const StudentLoginPage = () => {
         `${process.env.REACT_APP_API}/api/v1/auth/login`,
         { email, password }
       );
-      if (res && res.data.success) {
+      //check student or tutor
+      if (res.data.user.role === "tutor") {
+        toast.error("Wrong login page");
+        toast.loading("tutor login page");
+        setTimeout(() => {
+          navigate("/tutorlogin");
+        }, 1000);
+      } else if (res.data.success) {
         toast.success(res.data.message);
         toast.loading("Dashboard");
         setAuth({
@@ -53,24 +60,18 @@ export const StudentLoginPage = () => {
         });
         // save user data to localStorage
         localStorage.setItem("auth", JSON.stringify(res.data));
-        //check student or tutor
-        if (res.data.user.role === "student") {
-          setTimeout(() => {
-            navigate("/studentdashboard");
-          }, 1000);
-        } else if (res.data.user.role === "tutor") {
-          // tutorDashboard not yet done, console.log instead
-          console.log("navigate tutorDashboard");
-          // setTimeout(() => {
-          //     navigate("/tutorDashboard");
-          //   }, 1500);
-        }
-      } else {
-        toast.error("Wrong Email or Password");
+        // if (res.data.user.role === "student") {
+        setTimeout(() => {
+          navigate("/studentdashboard");
+        }, 1000);
       }
     } catch (error) {
-      console.log(error);
-      toast.error("Huh Something wrong");
+      if (error.response) {
+        toast.error("Wrong Email or Password");
+      } else {
+        console.log(error);
+        toast.error("Huh Something wrong");
+      }
     }
   };
 
@@ -80,7 +81,7 @@ export const StudentLoginPage = () => {
   };
 
   return (
-    <div className="student-login-page">
+    <div className="tutor-login-page">
       <div className="div">
         <div className="overlap-group">
           {/*<img
@@ -118,11 +119,11 @@ export const StudentLoginPage = () => {
                   </div>
 
                   <button className="sign-in-button" type="submit">
-                    <div className="text-wrapper-2">Login</div>
+                    <div className="text-wrapper-2">Sign in</div>
                   </button>
 
                   <button className="sign-in-button" onClick={loginWithGoogle}>
-                    <div className="text-wrapper-2">Google Login</div>
+                    <div className="text-wrapper-2">Google Sign in</div>
                   </button>
 
                   <button

@@ -13,7 +13,7 @@ import { googleCallbackController } from "./controllers/authController.js";
 import { requireSignIn } from "./middlewares/authMiddleware.js";
 // import userRoute from "./routes/userRoute.js";
 import userModel from "./models/userModel.js";
-import reviewRoutes from './routes/reviewRoutes.js'; // Import review routes
+import reviewRoutes from "./routes/reviewRoutes.js"; // Import review routes
 
 //configure env
 dotenv.config();
@@ -45,10 +45,11 @@ app.get("/", (req, res) => {
   //res.send('<a href ="/auth/google"> Google </a>');
 });
 
-app.get('/userRoute', (req, res) => {
-  userModel.find()
-  .then(users => res.json(users))
-  .catch(err => res.json(err))
+app.get("/userRoute", (req, res) => {
+  userModel
+    .find()
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
 });
 
 //PORT
@@ -71,8 +72,7 @@ app.get(
 app.get(
   "/google/callback",
   passport.authenticate("google", { session: false }),
-  googleCallbackController,
-  requireSignIn
+  googleCallbackController
 );
 
 app.get("/google/success", (req, res) => {
