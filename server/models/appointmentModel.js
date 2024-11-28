@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const AppointmentSchema = new mongoose.Schema({
   tutorId: {
@@ -6,11 +6,20 @@ const AppointmentSchema = new mongoose.Schema({
     ref: 'Tutor',
     required: true
   },
-  studentId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Student',
+  tutorName: {
+    type: String,
     required: true
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: {
+    type: String,
+    required: true
+  },
+  
   subject: {
     type: String,
     required: true
@@ -28,14 +37,14 @@ const AppointmentSchema = new mongoose.Schema({
     enum: ['scheduled', 'completed', 'canceled'],
     default: 'scheduled'
   },
-  notes: {
-    type: String, // Optional notes for the appointment
-    default: ''
-  },
   createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
     type: Date,
     default: Date.now
   }
 });
 
-module.exports = mongoose.model('Appointment', AppointmentSchema);
+export default mongoose.model('Appointment', AppointmentSchema);

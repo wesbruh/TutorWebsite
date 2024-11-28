@@ -1,4 +1,5 @@
 /* Appointments Page Styling */
+
 .appointments-page {
   display: flex;
   height: 100vh;
@@ -12,81 +13,67 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Add a small gap between elements */
+  gap: 20px; /*Add a small gap between elements on page*/
 }
 
-/* Header and current time styling */
+/* Header And Current Time Styling */
 .appointment-header {
   font-size: 2rem;
   color: #466346;
   text-align: center;
+  margin-bottom: 5px;   /*Brings current time closer to header*/
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 }
 
 .current-time {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1.1rem;
+  color: #484844;
   text-align: center;
+  margin-top: 0;    /*Removes top margin of current time text, brings closer to header*/
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 }
 
-/* Calendly container adjustment */
-.calendly-inline-widget {
-  width: 100%;
-  max-width: 800px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center align the widget */
-}
 
-/* Tutor card styles */
-.tutor-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.tutor-card h3 {
-  color: #468FAF;
+/* Schedule Appointment Container */
+.dropdown-container{
+  color: #466346;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  min-width: 20%;   /*Minimum width of appointments page*/
+  gap: 40px;        /*Gap between subject, tutor, time*/
+  padding: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 }
 
-.tutor-card p {
-  color: #555;
-  font-size: 1rem;
-  margin: 5px 0;
+/* Subject, Tutor, Time */
+.dropdown-container label{
+ font-weight: bold;
+ padding-top: 8px;
+ gap: 20px;
 }
 
-.tutor-card h4 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 10px;
+/* Dropdown Select */
+.dropdown-container select{
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;  /*Rounded corners*/
+  min-width: 100%;     /*Takes full width of container*/
+  margin-top: 5px;     /*Gap between label and dropdown*/
 }
 
-.tutor-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.tutor-card li {
-  padding: 5px 0;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.tutor-card li:not(:last-child) {
-  border-bottom: 1px solid #f0f0f0;
-}
-
-/* Empty state styling */
-.empty-state {
-  font-size: 1.2rem;
-  color: #777;
-  text-align: center;
+/* Submit Button */
+.dropdown-container button{
+  padding: 8px;
+  width: 100%;          /*Ensures button is same width as dropdowns*/
+  font-size: 16px;
+  background-color: #466346;
+  color: #f5f5f5;   /*Text color*/
+  border-radius: 6px;   /*Rounded corners*/
+  
 }

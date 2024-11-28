@@ -12,7 +12,8 @@ const tutorSchema = new mongoose.Schema({
     bookedAppointments: [
       {
         date: { type: Date, required: true },
-        studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'Student' }
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
+        userName: { type: String, required: true },
       }
     ]
 });

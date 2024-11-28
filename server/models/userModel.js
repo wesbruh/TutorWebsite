@@ -33,15 +33,8 @@ const userSchema = new mongoose.Schema(
       enum: ["student", "tutor"],
       required: true,
     },
-    bio: {
-      type: String,
-      trim: true,
-      default: "",
-    },
-    profilePicture: {
-      type: String, // Store the URL or path
-      default: "", // Optional: Provide a default value if needed
-    },
+      /*no need for bio or profile picture*/
+
     answer: {
       type: String,
       required: function () {
@@ -52,4 +45,4 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-export default mongoose.model("users", userSchema);
+export default mongoose.model("User", userSchema);

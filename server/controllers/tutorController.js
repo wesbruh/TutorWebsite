@@ -21,17 +21,17 @@ export const getTutorSubject = async (req, res) => {
     const {tutorId} = req.body;
 
     try{
-        const tutor = await Tutor.findById(tutorId, 'subject');
+        const tutor = await Tutor.findById(tutorId, 'Subject');
         // returns subject of tutor based on id
         if (tutor){
             res.json({
                     subject: tutor.subject
             });
         } else {
-            res.status(500).json({ error: 'Error fetching tutor subject' });
+            res.status(500).json({ error: 'Error fetching tutor Subject' });
         } 
     } catch (error){
-        res.status(500).json({ error: 'Error fetching tutor subject' });
+        res.status(500).json({ error: 'Error fetching tutor Subject' });
     }
 };
 
