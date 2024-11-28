@@ -1,17 +1,41 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
-const appointmentSchema = new mongoose.Schema({
-    userId: {type: String, required: true},
-    tutorId: {type: String, required: true},
-    slotDate: {type: String, required: true},
-    slotTime: {type: String, required: true},
-    userData: {type: Object, required: true},
-    tutorData:{type: Object, required: true},
-    amount: {type: Number, required: true},
-    date: {type: Number, required: true},
-    cancelled: {type: Boolean, default: false},
-    isCompleted: {type: Boolean, default: false},
-})
+const AppointmentSchema = new mongoose.Schema({
+  tutorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Tutor',
+    required: true
+  },
+  studentId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Student',
+    required: true
+  },
+  subject: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    required: true
+  },
+  duration: {
+    type: Number, // Duration in minutes (e.g., 60 for 1 hour)
+    required: true
+  },
+  status: {
+    type: String,
+    enum: ['scheduled', 'completed', 'canceled'],
+    default: 'scheduled'
+  },
+  notes: {
+    type: String, // Optional notes for the appointment
+    default: ''
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-const appointmentModel = mongoose.models.appointment || mongoose.model('appointment', appointmentSchema);
-export default appointmentModel
+module.exports = mongoose.model('Appointment', AppointmentSchema);

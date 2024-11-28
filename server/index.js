@@ -33,9 +33,10 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //routes
-app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/payroll", payrollRoutes);
-app.use("/api/v1/tutorRoute", tutorRoutes);
+app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/payroll", payrollRoute);
+app.use("/api/v1/tutorRoute", tutorRoute);
+app.use("/api/v1/subjectsRoute", subjectsRoute);
 
 app.use("/api/v1/reviews", reviewRoutes);
 //rest api
@@ -80,4 +81,46 @@ app.get("/google/success", (req, res) => {
 
 app.get("/google/gaiure", (req, res) => {
   res.send("google failure");
+});
+
+const Subject = mongoose.model('Subject', new mongoose.Schema({ name: String }));
+const Tutor = mongoose.model('Tutor', new mongoose.Schema({
+    name: String,
+    subjectId: mongoose.Schema.Types.ObjectId,
+    availableTimes: [Date],
+}));
+const Appointment = mongoose.model('Appointment', new mongoose.Schema({
+    tutorId: mongoose.Schema.Types.ObjectId,
+    time: Date,
+}));
+
+// Get all subjects
+app.get('/api/subjects', async (req, res) => {
+    const subjects = await Subject.find();
+    res.json(subjects);
+});
+
+// Get tutors by subject
+app.get('/api/v1/tutorRoute/:subjectId', async (req, res) => {
+    const tutors = await Tutor.find({ subjectId: req.params.subjectId });
+    res.json(tutors);
+});
+
+// Get available times for a tutor
+app.get('/api/times/:tutorId', async (req, res) => {
+    const tutor = await Tutor.findById(req.params.tutorId);
+    const appointments = await Appointment.find({ tutorId: req.params.tutorId });
+    const bookedTimes = appointments.map(app => app.time.toISOString());
+    const availableTimes = tutor.availableTimes.filter(
+        time => !bookedTimes.includes(new Date(time).toISOString())
+    );
+    res.json(availableTimes);
+});
+
+// Book an appointment
+app.post('/api/appointments', async (req, res) => {
+    const { tutorId, time } = req.body;
+    const appointment = new Appointment({ tutorId, time });
+    await appointment.save();
+    res.json({ message: 'Appointment booked!' });
 });
