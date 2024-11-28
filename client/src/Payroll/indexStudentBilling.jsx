@@ -4,8 +4,8 @@ import "./styleStudentBilling.css";
 
 const StudentBillingPage = () => {
   const payroll = [
-    // { id: 1, amount: 60, title: "Student Payment for October", date: "1 October, 2024"},
-    { id: 2, amount:"", title: "Student Payment For November", date: "You have no payments for this month" },
+    // { id: 2, amount: 60, title: "Student Payment for October", date: "1 October, 2024"},
+    { id: 1, amount:"", title: "Student Payment For November", date: "You have no payments for this month" },
   ];
 
   return (

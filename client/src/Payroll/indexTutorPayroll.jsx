@@ -4,7 +4,7 @@ import "./styleTutorPayroll.css";
 
 const TutorPayrollPage = () => {
   const payroll = [
-    { id: 1, amount: 213, title: "Tutor Payment for October", date: "1 October, 2024"},
+    { id: 1, amount: 215, title: "Tutor Payment for October", date: "1 October, 2024"},
     { id: 2, amount: 85, title: "Tutor Payment for November", date: "14 November, 2024" },
   ];
 
