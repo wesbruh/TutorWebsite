@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const tutorSchema = new mongoose.Schema({
-    tutorId: {type: mongoose.Schema.Types.ObjectId, required: true}, //This may or may not be a necessary addition
     name: {type: String, required: true},
     email: { type: String, required: true, unique: true },
     hourlyRate: { type: Number, required: true },
