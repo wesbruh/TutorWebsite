@@ -21,6 +21,7 @@ import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
 
 /*IMPORT TUTOR PAGES*/
 import TutorDashboard from "./Dashboard/indexTutorDashboard";
+import TutorAppointmentsPage from "./Appointments/tutorAppointmentsPage";
 import TutorPayrollPage from "./Payroll/indexTutorPayroll";
 
 
@@ -33,6 +34,7 @@ import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 function App() {
   return (
     <Routes>
+      {/**Home Page, Login, Sign up */}
       <Route path="/" element={<Home />} />
       <Route path="/StudentLogIn" element={<StudentLoginPage />} />
       <Route path="/StudentSignup" element={<StudentSignUp />} />
@@ -40,6 +42,8 @@ function App() {
       <Route path="/TutorSignup" element={<TutorSignUp />} />
       <Route path="/forgotPassword" element={<ForgotPasswordPage />} />
       <Route path="/google-success" element={<GoogleSuccess />} />
+      
+      {/**Student Pages */}
       <Route path="/StudentDashboard" element={<PrivateRoute />}>
         <Route path="" element={<StudentDashboard />} />
       </Route>
@@ -49,10 +53,11 @@ function App() {
       <Route path="/StudentReviews" element={<StudentReviewPage />} />
       <Route path="/StudentSettings" element={<StudentSettings />} />
 
+      {/**Tutor Pages */}
       <Route path="/TutorDashboard" element={<PrivateRoute />}>
         <Route path="" element={<TutorDashboard />} />
       </Route>
-
+      <Route path="/TutorAppointments" element={<TutorAppointmentsPage />} />   {/*currently uses student files, will adjust later*/ } 
       <Route path="/TutorPayroll" element={<TutorPayrollPage />} />
     </Routes>
   );
