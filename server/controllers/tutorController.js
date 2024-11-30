@@ -52,3 +52,13 @@ export const getTutorPay = async (req, res) => {
         res.status(500).json({ error: 'Error fetching tutor amountDue' });
     }
 };
+
+export const getAllTutors = async (req, res) => {
+    try {
+        const tutors = await Tutor.find({}, 'name'); // Fetch only name
+        res.status(200).json({ success: true, data: tutors });
+    } catch (error) {
+        console.error("Error fetching tutors:", error.message);
+        res.status(500).json({ success: false, error: 'Error fetching tutors' });
+    }
+};

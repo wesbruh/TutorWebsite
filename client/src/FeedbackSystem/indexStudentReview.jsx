@@ -4,20 +4,40 @@ import "./styleStudentReview.css";
 import axios from "axios";
 
 function StudentReviewPage() {
+  // Use States
   const [reviews, setReviews] = useState([]);
+  const [tutors, setTutors] = useState([]); // Initialize state for tutors
   const [showModal, setShowModal] = useState(false);
   const [selectedTutor, setSelectedTutor] = useState(""); // Dropdown state
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
 
   // Dummy data for tutors
-  const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
+  //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
+  useEffect(() => {
+    const fetchTutors = async () => {
+        try {
+            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getall");
+            const data = await response.json();
+            if (data.success) {
+                setTutors(data.data); // Store the array of tutors in state
+            } else {
+                console.error("Failed to fetch tutors:", data.error);
+            }
+        } catch (error) {
+            console.error("Error fetching tutors:", error);
+        }
+    };
+
+    fetchTutors();
+}, []); // This runs only on component mount
+
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const response = await axios.get("http://localhost:8080/api/v1/reviews");
-        setReviews(response.data); // Assuming response.data is an array
+        setReviews(response.data.data);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }
@@ -73,16 +93,16 @@ function StudentReviewPage() {
             {reviews.map((review, index) => (
               <div className="review-card" key={index}>
                 <div className="review-rating">⭐ {review.rating}/5</div>
-                <p className="review-text">{review.reviewText}</p>
+                <p className="review-text">{review.content}</p>
                 <div className="review-author">
                   <div className="review-author-initials">
-                    {review.tutorName
+                    {review.tutor
                       .split(" ")
                       .map((name) => name[0])
                       .join("")}
                   </div>
                   <div>
-                    <p className="review-author-name">{review.tutorName}</p>
+                    <p className="review-author-name">{review.author}</p>
                     <p className="review-author-role">Student</p>
                   </div>
                 </div>
@@ -119,9 +139,9 @@ function StudentReviewPage() {
                     required
                   >
                     <option value="">Select a tutor</option>
-                    {tutors.map((tutor, index) => (
-                      <option key={index} value={tutor}>
-                        {tutor}
+                    {tutors.map((tutor) => (
+                      <option key={tutor._id} value={tutor._id}>
+                      {tutor.name}
                       </option>
                     ))}
                   </select>
