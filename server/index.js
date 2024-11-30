@@ -16,6 +16,7 @@ import userModel from "./models/userModel.js";
 import reviewRoutes from "./routes/reviewRoutes.js"; // Import review routes
 import appointmentRoutes from './routes/appointmentRoutes.js';
 import subjectRoutes from './routes/subjectRoutes.js';
+import tutorModel from "./models/tutorModel.js";
 
 //configure env
 dotenv.config();
@@ -85,4 +86,11 @@ app.get("/google/success", (req, res) => {
 
 app.get("/google/gaiure", (req, res) => {
   res.send("google failure");
+});
+
+// tutor data
+app.get('/getTutorData', (req, res) => {
+  tutorModel.find({}, 'name')
+    .then(tutors => res.json(tutors))
+    .catch(err => res.status(500).json({ error: "Failure" }));
 });
