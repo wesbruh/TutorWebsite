@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from "../components/StudentSideBar/Sidebar";
-import "./StudentAppointments.css";
+import Sidebar from "../components/TutorSideBar/Sidebar";
+import "./tutorAppointments.css"
 import axios from 'axios';
 
-const ScheduleAppointment = () => {
-    const [subjects, setSubjects] = useState([]);
-    const [tutors, setTutors] = useState([]);
-    const [times, setTimes] = useState([]);
-    const [selectedSubject, setSelectedSubject] = useState('');
-    const [selectedTutor, setSelectedTutor] = useState('');
-    const [selectedTime, setSelectedTime] = useState('');
+const TutorAppointmentsPage = () => {
+    // const [subjects, setSubjects] = useState([]);
+    // const [tutors, setTutors] = useState([]);
+    // const [times, setTimes] = useState([]);
+    // const [selectedSubject, setSelectedSubject] = useState('');
+    // const [selectedTutor, setSelectedTutor] = useState('');
+    // const [selectedTime, setSelectedTime] = useState('');
     const [currentTime, setCurrentTime] = useState(new Date());
 
     // CAUSES ERROR will fix later on
@@ -17,23 +17,23 @@ const ScheduleAppointment = () => {
     //     axios.get('http://localhost:8080/api/v1/subjectsRoute').then(response => setSubjects(response.data));
     // }, []);
 
-    useEffect(() => {
-        if (selectedSubject) {
-            axios.get(`http://localhost:8080/api/v1/tutorRoute/${selectedSubject}`).then(response => setTutors(response.data));
-        }
-    }, [selectedSubject]);
+    // useEffect(() => {
+    //     if (selectedSubject) {
+    //         axios.get(`http://localhost:8080/api/v1/tutorRoute/${selectedSubject}`).then(response => setTutors(response.data));
+    //     }
+    // }, [selectedSubject]);
 
-    useEffect(() => {
-        if (selectedTutor) {
-            axios.get(`http://localhost:8080/api/v1/tutorRoute:times/${selectedTutor}`).then(response => setTimes(response.data));
-        }
-    }, [selectedTutor]);
+    // useEffect(() => {
+    //     if (selectedTutor) {
+    //         axios.get(`http://localhost:8080/api/v1/tutorRoute:times/${selectedTutor}`).then(response => setTimes(response.data));
+    //     }
+    // }, [selectedTutor]);
 
-    const handleSubmit = () => {
-        axios.post('http://localhost:8080/api/v1/appointmentRoutes/appointments', { tutorId: selectedTutor, time: selectedTime })
-            .then(() => alert('Appointment booked!'))
-            .catch(err => console.error(err));
-    };
+    // const handleSubmit = () => {
+    //     axios.post('http://localhost:8080/api/v1/appointmentRoutes/appointments', { tutorId: selectedTutor, time: selectedTime })
+    //         .then(() => alert('Appointment booked!'))
+    //         .catch(err => console.error(err));
+    // };
 
     
 
@@ -41,7 +41,7 @@ const ScheduleAppointment = () => {
         <div className="appointments-page">
             <Sidebar />
             <div className="appointments-content">
-                <h1 className="appointment-header">Schedule an Appointment</h1>
+                <h1 className="appointment-header">View Your Upcoming Appointments</h1>
                 <p className="current-time">
                 Current Time: {`${currentTime.toLocaleDateString([], {
                     year: 'numeric',
@@ -53,7 +53,7 @@ const ScheduleAppointment = () => {
                     hour12: true,
                 })}`}
                 </p>
-            <div className="dropdown-container">
+            {/* <div className="dropdown-container">
                 <label>
                     Subject: 
                     <select  onChange={e => setSelectedSubject(e.target.value)} value={selectedSubject}>
@@ -82,10 +82,10 @@ const ScheduleAppointment = () => {
                  </select>
              </label>
              <button onClick={handleSubmit} disabled={!selectedTime}>Book Appointment</button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
 };
 
-export default ScheduleAppointment;
+export default TutorAppointmentsPage;

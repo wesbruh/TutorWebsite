@@ -1,0 +1,80 @@
+/* Tutor Appointments Page Styling */
+
+.appointments-page {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .appointments-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /*Add a small gap between elements on page*/
+  }
+  
+  /* Header And Current Time Styling */
+  .appointment-header {
+    font-size: 2rem;
+    color: #466346;
+    text-align: center;
+    margin-bottom: 5px;   /*Brings current time closer to header*/
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  }
+  
+  .current-time {
+    font-size: 1.1rem;
+    color: #484844;
+    text-align: center;
+    margin-top: 0;    /*Removes top margin of current time text, brings closer to header*/
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  }
+  
+  
+  /* These are not called on as they are commented out in .jsx file */ 
+  /* Schedule Appointment Container */ 
+  .dropdown-container{
+    color: #466346;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    min-width: 20%;   /*Minimum width of appointments page*/
+    gap: 40px;        /*Gap between subject, tutor, time*/
+    padding: 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  }
+  
+  /* Subject, Tutor, Time */
+  .dropdown-container label{
+   font-weight: bold;
+   padding-top: 8px;
+   gap: 20px;
+  }
+  
+  /* Dropdown Select */
+  .dropdown-container select{
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;  /*Rounded corners*/
+    min-width: 100%;     /*Takes full width of container*/
+    margin-top: 5px;     /*Gap between label and dropdown*/
+  }
+  
+  /* Submit Button */
+  .dropdown-container button{
+    padding: 8px;
+    width: 100%;          /*Ensures button is same width as dropdowns*/
+    font-size: 16px;
+    background-color: #466346;
+    color: #f5f5f5;   /*Text color*/
+    border-radius: 6px;   /*Rounded corners*/
+    
+  }
