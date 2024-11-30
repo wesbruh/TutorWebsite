@@ -25,8 +25,6 @@ import TutorPayrollPage from "./Payroll/indexTutorPayroll";
 
 
 
-// Not ready for testing yet, need to add imports
-
 /*import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
 import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 

@@ -1,5 +1,7 @@
 import Tutor from '../models/tutorModel.js';
 
+// const tutorId = 123;
+
 export const getTutorName = async (req, res) => {
     const {tutorId} = req.body;
 
@@ -15,23 +17,24 @@ export const getTutorName = async (req, res) => {
     } catch (error){
         res.status(500).json({ error: 'Error fetching tutor name' });
     }
+    
 };
 
 export const getTutorSubject = async (req, res) => {
     const {tutorId} = req.body;
 
     try{
-        const tutor = await Tutor.findById(tutorId, 'Subject');
+        const tutor = await Tutor.findById(tutorId, 'subject');
         // returns subject of tutor based on id
         if (tutor){
             res.json({
                     subject: tutor.subject
             });
         } else {
-            res.status(500).json({ error: 'Error fetching tutor Subject' });
+            res.status(500).json({ error: 'Error fetching tutor subject' });
         } 
     } catch (error){
-        res.status(500).json({ error: 'Error fetching tutor Subject' });
+        res.status(500).json({ error: 'Error fetching tutor subject' });
     }
 };
 
@@ -52,3 +55,15 @@ export const getTutorPay = async (req, res) => {
         res.status(500).json({ error: 'Error fetching tutor amountDue' });
     }
 };
+
+export const getTutorData = async (req, res) => {
+    try {
+      const tutors = await Tutor.find();
+      res.json(tutors);
+    } catch (error) {
+      console.error("Error in getTutorName:", error);
+      res.status(500).json({ error: "Internal Server Error"});
+    }
+  };
+  
+
