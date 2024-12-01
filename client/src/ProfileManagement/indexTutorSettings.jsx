@@ -10,6 +10,8 @@ export const TutorSettings = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [bio, setBio] = useState(""); //needs fixing because larger text box is needed
+    const [selectedSubject, setSelectedSubject] = useState('');
+    const [subjects, setSubjects] = useState([]);
 
     const UpdateInfo = async (e) => { };
 
@@ -17,18 +19,29 @@ export const TutorSettings = () => {
         <div className="tutor-settings">
             <Sidebar />
             <main className="main-content">
+                
                 <h1>Account Settings</h1>
                 <p>Change your profile picture, bio, and settings.</p>
+                <label>
+                    Subject: 
+                    <select  onChange={e => setSelectedSubject(e.target.value)} value={selectedSubject}>
+                        <option value="">Select a subject</option>
+                        {subjects.map(subject => (
+                           <option key={subject._id} value={subject._id}>{subject.name}</option>
+                        ))}
+                    </select>
+                </label>
                 <form onSubmit={UpdateInfo}>
                 <div className="input-fields">
                     <div className = "input-item">
                         <div>
-                        <p className="title">Enter First Name</p>
-                        <input 
-                        className="input" 
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                        />
+                        <p className="title">Subjects</p>
+                        <select  onChange={e => setSelectedSubject(e.target.value)} value={selectedSubject}>
+                        <option value="">Select a subject</option>
+                        {subjects.map(subject => (
+                           <option key={subject._id} value={subject._id}>{subject.name}</option>
+                        ))}
+                        </select>
                         </div>
                     </div>
                     <div className = "input-item">
