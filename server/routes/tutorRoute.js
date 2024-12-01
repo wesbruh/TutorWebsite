@@ -1,5 +1,6 @@
 import express from 'express';
-import { getTutorName, getTutorPay, getTutorSubject, getTutorData, getAllTutorNames, addTutor } from '../controllers/tutorController.js';
+import { getTutorName, getTutorPay, getTutorSubject, getTutorData, getAllTutorNames, addTutor, getTutorSubjectForAppointment } from '../controllers/tutorController.js';
+
 
 const router = express.Router();
 
@@ -12,5 +13,6 @@ router.get('/getname', getTutorName);
 router.post('/newtutor', addTutor);
 
 router.get('/getTutorData', getTutorData);
+router.get('/getsubject/:subjectId', getTutorSubjectForAppointment);                 //For appointment booking, fetches tutors absed on subject selected.
 router.get('/getAllTutorNames', getAllTutorNames)
 export default router;

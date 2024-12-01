@@ -93,3 +93,17 @@ export const addTutor = async(req, res) => {
         res.status(500).json({ sucess: false, message: 'Server error. Please try again later.' });
     }
 };
+export const getTutorSubjectForAppointment = async (req, res) => {
+    const { subjectId } = req.params;  // Access subjectId from the URL parameter
+    
+    try {
+        const tutors = await Tutor.find({ subjectId: subjectId }); // Find tutors based on subjectId
+        if (tutors.length > 0) {
+            res.json(tutors);
+        } else {
+            res.status(404).json({ error: 'No tutors found for this subject' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching tutors by subject' });
+    }
+};

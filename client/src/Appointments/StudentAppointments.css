@@ -67,6 +67,11 @@
   margin-top: 5px;     /*Gap between label and dropdown*/
 }
 
+/* Dropdown options */
+option{
+  color: black;
+}
+
 /* Submit Button */
 .dropdown-container button{
   padding: 8px;
