@@ -52,9 +52,6 @@ const TutorPayrollPage = () => {
               ))
             )}
           </div>
-        /*</ul>
-      </main>
-    </div>*/
   );
 };
 
