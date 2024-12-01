@@ -4,10 +4,29 @@ import Sidebar from "../components/TutorSideBar/Sidebar";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styleTutorDashboard.css";
 
+
+
+
+
+
 //Currently prints from the whole array of users. This is incorrect and does not have the desired result.
 const TutorDashboard = () => {
   const [users, setUsers] = useState([]);
-  
+  const [user, setUser] = useState([]);
+
+const token = localStorage.getItem('token'); // assuming it's stored in localStorage
+
+axios.get('http://localhost:8080/api/v1/userRoute/getname', {
+  headers: {
+    Authorization: `Bearer ${token}`  // Ensure the token is being sent this way
+  }
+})
+.then((response) => {
+  console.log(response.data);  // Check what data is returned from the backend
+})
+.catch((err) => console.log(err));
+
+
   //Grabs all users
   useEffect(() => {
     axios
@@ -15,6 +34,18 @@ const TutorDashboard = () => {
       .then((response) => setUsers(response.data))
       .catch((err) => console.log(err));
   }, []);
+
+  useEffect(() => {
+    axios
+    .get('http://localhost:8080/api/vi/userRoute/getUserName')
+    .then((response) => setUser(response.data))
+    .catch((err) => console.log(err));
+  }
+)
+
+
+
+
 
   return (
     <div className="dashboard">
@@ -24,6 +55,8 @@ const TutorDashboard = () => {
           ? `Hello, ${users[13].name}` //Need to develop way to specify by _id. 
           : 'Loading...'}
       </h1>
+      <ul></ul>
+      <h1>{user.name}</h1>
     </div>
   );
 };

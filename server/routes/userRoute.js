@@ -12,7 +12,14 @@ const router = express.Router();
 });
 // Fetch User Data
 router.get('/user/:id', requireSignIn, getUserController);*/
-router.get('/getname', getUserName);
+router.get('/test', verifyJWT, (req, res) => {
+    res.jason({
+        message: 'Token verified successfull',
+        user: req.user,
+    });
+});
+
+router.get('/getname', verifyJWT, getUserName);
 router.get('/getUserData', getUserData);
 
 export default router;
