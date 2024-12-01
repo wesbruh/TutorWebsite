@@ -17,25 +17,8 @@ const TutorPayrollPage = () => {
     .catch(err => console.log(err))
   }, [])
 
-  
-  
   return (
-    /*<div className="payroll-page">
-      <Sidebar />
-      <main className="main-content">
-        <h1>Payroll</h1>
-        <p>View Your Billing Information.</p>
-        <ul className="payroll-list">
-          {payroll.map((payroll) => (
-            <li key={payroll.id} className="payroll-item">
-              <div className="payroll-icon"></div>
-              <div>
-                <p className="payroll-title">{payroll.title}</p>
-                <p className="payroll-date">{payroll.date}</p>
-                <p className="payroll-amount"> Total Amount: ${payroll.amount}</p>
-              </div>
-            </li>
-          ))}*/
+
          <div className = "payroll-page">
           <Sidebar />
             {tutors.length === 0 ? (
