@@ -7,6 +7,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import payrollRoutes from "./routes/payrollRoute.js";
 import tutorRoutes from "./routes/tutorRoute.js";
+import userRoutes from "./routes/userRoute.js"; //aaaaaaaaaaaaaaaaaaaaaaaaa
 import passport from "./passport.js";
 import session from "express-session";
 import { googleCallbackController } from "./controllers/authController.js";
@@ -39,6 +40,7 @@ app.use(passport.session());
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/payroll", payrollRoutes);
 app.use("/api/v1/tutorRoute", tutorRoutes);
+app.use("/api/v1/userRoute", userRoutes); //aaaaaaaaaaaaaaaaa
 app.use("/api/v1/appointmentRoutes", appointmentRoutes);
 app.use("/api/v1/subjectRoutes", subjectRoutes);
 
