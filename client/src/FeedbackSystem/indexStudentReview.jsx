@@ -17,7 +17,7 @@ function StudentReviewPage() {
   useEffect(() => {
     const fetchTutors = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getall");
+            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getAllTutorNames");
             const data = await response.json();
             if (data.success) {
                 setTutors(data.data); // Store the array of tutors in state
@@ -30,7 +30,7 @@ function StudentReviewPage() {
     };
 
     fetchTutors();
-}, []); // This runs only on component mount
+}, []);
 
 
   useEffect(() => {

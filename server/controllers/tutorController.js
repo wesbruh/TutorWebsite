@@ -64,4 +64,14 @@ export const getTutorData = async (req, res) => {
       console.error("Error in getTutorName:", error);
       res.status(500).json({ error: "Internal Server Error"});
     }
-  };
+};
+
+export const getAllTutorNames = async (req, res) => {
+    try {
+        const tutors = await Tutor.find({}, 'name _id'); // Fetch only `name` and `_id`
+        res.status(200).json({ success: true, data: tutors });
+    } catch (error) {
+        console.error("Error fetching tutors:", error.message);
+        res.status(500).json({ success: false, error: 'Error fetching tutors' });
+    }
+};

@@ -12,6 +12,6 @@ const router = express.Router();
 });
 // Fetch User Data
 router.get('/user/:id', requireSignIn, getUserController);*/
-router.post('/getname', getUserName);
+router.get('/getname', getUserName);
 
 export default router;
