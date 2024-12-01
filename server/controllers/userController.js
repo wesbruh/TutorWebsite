@@ -13,7 +13,7 @@ export const getUserName = async (req, res) => {
       } else {
           res.status(404).json({ error: 'User not found' });
       } 
-  } catch (error){
+  } catch (error) { 
       res.status(500).json({ error: 'Error fetching user info' });
   }
 };

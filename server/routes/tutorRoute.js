@@ -1,5 +1,5 @@
 import express from 'express';
-import { getTutorName, getTutorPay, getTutorSubject, getTutorData, getAllTutorNames } from '../controllers/tutorController.js';
+import { getTutorName, getTutorPay, getTutorSubject, getTutorData, getAllTutorNames, addTutor } from '../controllers/tutorController.js';
 
 const router = express.Router();
 
@@ -8,6 +8,8 @@ router.post('/getsubject', getTutorSubject);
 router.post('/gettutorpay', getTutorPay);
 
 router.get('/getname', getTutorName);
+
+router.post('/newtutor', addTutor);
 
 router.get('/getTutorData', getTutorData);
 router.get('/getAllTutorNames', getAllTutorNames)

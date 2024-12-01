@@ -75,3 +75,21 @@ export const getAllTutorNames = async (req, res) => {
         res.status(500).json({ success: false, error: 'Error fetching tutors' });
     }
 };
+
+export const addTutor = async(req, res) => {
+    const { name, email } = req.body; // Declare the individual fields as the req.body.
+    // Validation
+    if (!name || !email) {
+        return res.status(400).json({ message: 'All fields are required.' });
+    }
+    // Set a new review with the valid fields.
+    const newTutor = new Tutor({ name, email });
+    // Try to save the review.
+    try {
+        await newTutor.save();
+        res.status(201).json({ sucess: true, data: newTutor });
+    } catch (error) {
+        console.error('Error saving tutor:', error.message);
+        res.status(500).json({ sucess: false, message: 'Server error. Please try again later.' });
+    }
+};
