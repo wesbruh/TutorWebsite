@@ -42,11 +42,11 @@ const TutorPayrollPage = () => {
               <p>No tutors available.</p>
             ) : (
               tutors.map((tutor) => (
-                <li key={tutor._id} className="tutor-item">
+                <li key={tutor._id} className="tutor-payroll">
                   <div>
                     <p className="tutor-name">{tutor.name}</p>
-                    <p className="tutor-name">{tutor.email}</p>
-                    <p className="tutor-name">{tutor.amountDue}</p>
+                    <p className="tutor-email">{tutor.email}</p>
+                    <p className="tutor-payment">{tutor.amountDue}</p>
                   </div>
                 </li>
               ))

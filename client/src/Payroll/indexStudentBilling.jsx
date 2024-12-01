@@ -4,10 +4,41 @@ import "./styleStudentBilling.css";
 
 const StudentBillingPage = () => {
   const payroll = [
-    // { id: 2, amount: 60, title: "Student Payment for October", date: "1 October, 2024"},
-    { id: 1, amount:"", title: "Student Payment For November", date: "You have no payments for this month" },
+    // { id: 2, payment: 60, title: "Student Payment for October", date: "1 October, 2024"},
+    { id: 1, payment:"", title: "Student Payment For November", date: "You have no payments for this month" },
   ];
+  /*
+  //code based on tutor payroll
+  const [student, setStudent] = useState([])
+    useEffect(() => {
+    //routing needs fixing
+    axios.get('http://localhost:8080/api/v1/studentRoute/getStudentData')
+    .then(students => setStudents(students.data))
+    .catch(err => console.log(err))
+  }, [])
 
+  return (
+  <div className = "payroll-page">
+          <Sidebar />
+            {student.length === 0 ? (
+              <p>No payment due.</p>
+            ) : (
+              tutors.map((tutor) => (
+                <li key={student._id} className="student-billing">
+                  <div>
+                    <p className="student-id">{student.id}</p>
+                    <p className="student-payment">{student.payment}</p>
+                    <p className="student-name">{student.title}</p>
+                    <p className="student-email">{student.date}</p>
+                  </div>
+                </li>
+              ))
+            )}
+          </div>
+   );
+};
+export default StudentBillingPage;
+  */
   return (
     <div className="payroll-page">
       <Sidebar />
