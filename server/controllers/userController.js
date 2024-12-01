@@ -11,12 +11,22 @@ export const getUserName = async (req, res) => {
                   email: user.email
           });
       } else {
-          res.status(500).json({ error: 'Error fetching user info' });
+          res.status(404).json({ error: 'User not found' });
       } 
   } catch (error){
-      res.status(500).json({ error: 'Error fetching tutor info' });
+      res.status(500).json({ error: 'Error fetching user info' });
   }
 };
+
+export const getUserData = async (req, res) => {
+    try {
+      const users = await User.find();
+      res.json(users);
+    } catch (error) {
+      console.error("Error in getUserName:", error);
+      res.status(500).json({ error: "Internal Server Error"});
+    }
+  };
 
 /*export const getTutorSubject = async (req, res) => {
   const {tutorId} = req.body;

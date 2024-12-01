@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from "../components/TutorSideBar/Sidebar";
 import "./styleTutorPayroll.css";
 
@@ -36,7 +36,8 @@ const TutorPayrollPage = () => {
               </div>
             </li>
           ))}*/
-         <div>
+         <div className = "payroll-page">
+          <Sidebar />
             {tutors.length === 0 ? (
               <p>No tutors available.</p>
             ) : (

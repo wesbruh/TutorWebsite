@@ -1,5 +1,5 @@
 import express from 'express';
-import { getUserName } from '../controllers/userController.js';
+import { getUserName,getUserData } from '../controllers/userController.js';
 import { requireSignIn } from '../middlewares/authMiddleware.js';
 import verifyJWT from '../middlewares/getJwt.js'; // Import the verifyJWT middleware
 
@@ -13,5 +13,6 @@ const router = express.Router();
 // Fetch User Data
 router.get('/user/:id', requireSignIn, getUserController);*/
 router.get('/getname', getUserName);
+router.get('/getUserData', getUserData);
 
 export default router;
