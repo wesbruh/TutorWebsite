@@ -23,11 +23,7 @@ import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
 import TutorDashboard from "./Dashboard/indexTutorDashboard";
 import TutorAppointmentsPage from "./Appointments/tutorAppointmentsPage";
 import TutorPayrollPage from "./Payroll/indexTutorPayroll";
-
-
-
-/*import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
-import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
+import TutorSettingsPage from './ProfileManagement/indexTutorSettings';
 
 function App() {
   return (
@@ -57,6 +53,7 @@ function App() {
       </Route>
       <Route path="/TutorAppointments" element={<TutorAppointmentsPage />} />   {/*currently uses student files, will adjust later*/ } 
       <Route path="/TutorPayroll" element={<TutorPayrollPage />} />
+      <Route path="TutorSettings" element={<TutorSettingsPage />} />
     </Routes>
   );
 }
