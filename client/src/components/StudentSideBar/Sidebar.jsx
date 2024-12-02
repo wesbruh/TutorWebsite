@@ -16,7 +16,7 @@ function Sidebar() {
       token: "",
     });
     localStorage.removeItem("auth");
-    toast.success("Logout Successfully");
+    toast.success("Logged Out Successfully!");
     setTimeout(() => {
       window.location.pathname = "/";
     }, 1000);

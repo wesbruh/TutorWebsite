@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 const tutorSchema = new mongoose.Schema({
     name: {type: String, required: true},
     email: { type: String, required: true, unique: true },
-    hourlyRate: { type: Number, required: true },
+    hourlyRate: { type: Number, required: false },
     workHours: { type: Number, default: 0 },
     amountDue: { type: Number, required: true },
-    subject: {type: String, required: true},
-    subjectId: { type: mongoose.Schema.Types.ObjectId, ref: 'Subject', required: true },
+    subjectName: {type: String, required: true},
+    subjectId: {type: mongoose.Schema.Types.ObjectId, ref: 'subjects', required: true},
     availableTimes: { type: [Date], default: [] },
     bookedAppointments: [
       {
@@ -18,4 +18,4 @@ const tutorSchema = new mongoose.Schema({
     ]
 });
 
-export default mongoose.model('Tutor', tutorSchema);
+export default mongoose.model('tutors', tutorSchema);

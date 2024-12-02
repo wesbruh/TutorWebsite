@@ -43,6 +43,16 @@ export const TutorSignUp = () => {
         `${process.env.REACT_APP_API}/api/v1/auth/register`,
         { firstName, lastName, name, email, password, role, answer }
       );
+      // Step 2: Create the tutor entry if role is tutor
+      if (role === "tutor") {
+        const tutorRes = await axios.post(
+          `${process.env.REACT_APP_API}/api/v1/tutorRoute/newTutor`,
+          { 
+            name: `${firstName} ${lastName}`,
+            email: `${email}`
+          }
+        );
+      }
       if (res && res.data.success) {
         //console.log("success " + res.data.success);
         toast.success(res && res.data.message);
@@ -96,14 +106,14 @@ export const TutorSignUp = () => {
                         required
                       />
 
-                      {/*<input
+                      {<input
                         className="div-wrapper"
                         type="text"
                         placeholder="User name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                      />*/}
+                      />}
 
                       <input
                         className="div-wrapper"

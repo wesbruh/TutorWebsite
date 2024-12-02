@@ -1,0 +1,40 @@
+.card1-container {
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 8px #999;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    background-color: #466346;
+    height: fit-content;
+
+}
+
+.tutorcard1-img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tutor1card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    margin: 0rem 3%;
+}
+
+.tutor1card-subject {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0rem 3%;
+    font-variant: small-caps;
+}
+
+.tutorcard1-description {
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    color: white;
+    margin: 0.5rem 3%;
+    font-variant: small-caps;
+}

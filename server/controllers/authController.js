@@ -1,4 +1,4 @@
-import studentModel from "../models/studentModel.js";
+import tutorModel from "../models/tutorModel.js";
 import userModel from "../models/userModel.js";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
@@ -52,11 +52,12 @@ export const registerController = async (req, res) => {
       answer,
     }).save();
 
-    /*if (role === "student") {
-      const student = new studentModel({
-        name: "firstName + lastName", // Default value; update later when the student chooses
-      });
-      await student.save();
+    /*if (role === "tutor") {
+      const tutor = new tutorModel({
+        name: `${firstName} ${lastName}`,
+        email: `${email}`
+      }).save();
+      
     }*/
     res.status(201).send({
       success: true,

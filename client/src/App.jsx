@@ -13,7 +13,7 @@ import { TutorSignUp } from "./Sign-Up/indexTutorSign-Up";
 /*IMPORT STUDENT PAGES*/
 import StudentDashboard from "./Dashboard/indexStudentDashboard";
 import StudentAppointments from "./Appointments/indexStudentAppointments";
-import StudentNotificationsPage from "./Notifications/indexNotifications";
+import StudentNotificationsPage from "./Notifications/StudentNotifications";
 import StudentBillingPage from "./Payroll/indexStudentBilling";
 import StudentReviewPage from "./FeedbackSystem/indexStudentReview";
 import { StudentSettings } from "./ProfileManagement/indexStudentSettings";
@@ -22,12 +22,10 @@ import ForgotPasswordPage from "./ForgotPassword/indexforgotPassword";
 /*IMPORT TUTOR PAGES*/
 import TutorDashboard from "./Dashboard/indexTutorDashboard";
 import TutorAppointmentsPage from "./Appointments/tutorAppointmentsPage";
+import TutorNotificationsPage from "./Notifications/TutorNotifcationsPage";
 import TutorPayrollPage from "./Payroll/indexTutorPayroll";
+import TutorSettingsPage from './ProfileManagement/indexTutorSettings';
 
-
-
-/*import { TutorProfilePage } from './ProfileManagement/indexTutorProfilePage';
-import { TutorSettingsPage } from './ProfileManagement/indexTutorSettings';*/
 
 function App() {
   return (
@@ -56,7 +54,9 @@ function App() {
         <Route path="" element={<TutorDashboard />} />
       </Route>
       <Route path="/TutorAppointments" element={<TutorAppointmentsPage />} />   {/*currently uses student files, will adjust later*/ } 
+      <Route path="/TutorNotifications" element={<TutorNotificationsPage />} /> 
       <Route path="/TutorPayroll" element={<TutorPayrollPage />} />
+      <Route path="/TutorSettings" element={<TutorSettingsPage />} />
     </Routes>
   );
 }

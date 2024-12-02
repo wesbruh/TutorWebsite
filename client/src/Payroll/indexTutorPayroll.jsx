@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from "../components/TutorSideBar/Sidebar";
 import "./styleTutorPayroll.css";
 
@@ -49,7 +50,7 @@ const TutorPayrollPage = () => {
               <p>No tutors available.</p>
             ) : (
               tutors.map((tutor) => (
-                <li key={tutor._id} className="tutor-item">
+                <li key={tutor._id} className="tutor-payroll">
                   <div>
                     {/*<p className="tutor-name">{tutor.name}</p>
                     <p className="tutor-name">{tutor.email}</p>

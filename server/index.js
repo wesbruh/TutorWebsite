@@ -7,6 +7,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import payrollRoutes from "./routes/payrollRoute.js";
 import tutorRoutes from "./routes/tutorRoute.js";
+import userRoutes from "./routes/userRoute.js"; //aaaaaaaaaaaaaaaaaaaaaaaaa
 import passport from "./passport.js";
 import session from "express-session";
 import { googleCallbackController } from "./controllers/authController.js";
@@ -39,8 +40,9 @@ app.use(passport.session());
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/payroll", payrollRoutes);
 app.use("/api/v1/tutorRoute", tutorRoutes);
+app.use("/api/v1/userRoute", userRoutes); //aaaaaaaaaaaaaaaaa
 app.use("/api/v1/appointmentRoutes", appointmentRoutes);
-app.use("/api/v1/subjectRoutes", subjectRoutes);
+app.use("/api/v1", subjectRoutes);
 
 app.use("/api/v1/reviews", reviewRoutes);
 
@@ -93,4 +95,19 @@ app.get('/getTutorData', (req, res) => {
   tutorModel.find({}, 'name')
     .then(tutors => res.json(tutors))
     .catch(err => res.status(500).json({ error: "Failure" }));
+});
+
+app.get('/api/v1/tutorRoute/availableTimes/:tutorId', (req, res) => {
+  const tutorId = req.params.tutorId;
+  
+  tutorModel.findById(tutorId)
+      .then(tutor => {
+          if (tutor) {
+              // Assuming tutor has an "availableTimes" array containing available time slots
+              res.json(tutor.availableTimes);  // Return the available times for the tutor
+          } else {
+              res.status(404).json({ error: 'Tutor not found' });
+          }
+      })
+      .catch(err => res.status(500).json({ error: 'Server error' }));
 });

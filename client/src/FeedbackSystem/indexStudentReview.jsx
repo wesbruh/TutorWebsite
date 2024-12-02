@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
+import HomeTutorCard from "../components/TutorCards/tutorCard";
 
 function StudentReviewPage() {
   // Use States
@@ -12,12 +13,16 @@ function StudentReviewPage() {
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
 
+  const bio = "This is my bio.";
+  const tutorName = "Jane Doe"
+  const subject = "Math";
+
   // Dummy data for tutors
   //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
   useEffect(() => {
     const fetchTutors = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getall");
+            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getAllTutorNames");
             const data = await response.json();
             if (data.success) {
                 setTutors(data.data); // Store the array of tutors in state
@@ -30,7 +35,7 @@ function StudentReviewPage() {
     };
 
     fetchTutors();
-}, []); // This runs only on component mount
+}, []);
 
 
   useEffect(() => {
@@ -178,6 +183,10 @@ function StudentReviewPage() {
             </div>
           </div>
         )}
+
+        <div classname= "tutor-cards">
+
+        </div>
       </main>
     </div>
   );

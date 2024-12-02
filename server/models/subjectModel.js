@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const subjectsSchema = new mongoose.Schema({
-    _id: {
+    subjectId: {
         type: mongoose.Schema.Types.ObjectId,
         // ref: "Subject", //references to subjects model id ! 
         required: true
@@ -13,4 +13,4 @@ const subjectsSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Subject", subjectsSchema);
+export default mongoose.model("subjects", subjectsSchema);
