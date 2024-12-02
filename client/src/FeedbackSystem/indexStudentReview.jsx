@@ -8,14 +8,11 @@ function StudentReviewPage() {
   // Use States
   const [reviews, setReviews] = useState([]);
   const [tutors, setTutors] = useState([]); // Initialize state for tutors
+  const [tutorCards, setTutorCards] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedTutor, setSelectedTutor] = useState(""); // Dropdown state
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
-
-  const bio = "This is my bio.";
-  const tutorName = "Jane Doe"
-  const subject = "Math";
 
   // Dummy data for tutors
   //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
@@ -35,6 +32,24 @@ function StudentReviewPage() {
     };
 
     fetchTutors();
+}, []);
+
+  useEffect(() => {
+    const fetchCardInfo = async () => {
+        try {
+            const response = await fetch("http://localhost:8080/api/v1/tutorRoute/getTutorCardInfo");
+            const data = await response.json();
+            if (data.success) {
+                setTutorCards(data.data); // Store the array of tutors in state
+            } else {
+                console.error("Failed to fetch card info:", data.error);
+            }
+        } catch (error) {
+            console.error("Error fetching card info:", error);
+        }
+    };
+
+    fetchCardInfo();
 }, []);
 
 
@@ -183,13 +198,23 @@ function StudentReviewPage() {
             </div>
           </div>
         )}
-
-        <div classname= "tutor-cards">
-
+        <div className= "tutor-card-title">
+          <h2>Meet Our Tutors</h2>
         </div>
+        <div className= "tutor-cards">
+            {tutorCards.filter((tutor) => tutor.subjectName)
+            .slice(0,3)
+            .map((tutor) => (
+              <HomeTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
+            ))}
+        </div>
+        
       </main>
+
     </div>
   );
+
+
 }
 
 export default StudentReviewPage;

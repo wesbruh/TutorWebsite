@@ -1,4 +1,4 @@
-.card1-container {
+.card-container {
     width: 15rem;
     border-radius: 1rem;
     box-shadow: 0px 10px 8px #999;
@@ -6,19 +6,18 @@
     flex-direction: column;
     margin: 0.5rem;
     background-color: #466346;
-    height: fit-content;
-
-}
-
-.tutorcard1-img {
-    width: 100%;
-    border-radius: 1rem 1rem 0 0;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    
 }
 
 .tutor1card-title {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
     font-variant: small-caps;
     margin: 0rem 3%;
+    color: #ffffff; /* Set text color to white or a contrasting color */
+    
 }
 
 .tutor1card-subject {
@@ -26,7 +25,8 @@
     font-weight: normal;
     font-size: 18px;
     margin: 0rem 3%;
-    font-variant: small-caps;
+    font-variant: normal;
+    color: #f5f5f5;
 }
 
 .tutorcard1-description {
