@@ -57,6 +57,8 @@ export const StudentLoginPage = () => {
           ...auth,
           user: res.data.user,
           token: res.data.token,
+          firstName: res.data.user.firstName,
+          lastName: res.data.user.lastName,
         });
         // save user data to localStorage
         localStorage.setItem("auth", JSON.stringify(res.data));

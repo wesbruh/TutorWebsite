@@ -1,18 +1,82 @@
-.dashboard {
-    width: 100vw;
-    height: 100vh;
-    background-color: #f5f5f5;
-    color: #466346;
-}
-
 body {
     margin: 0;
     padding: 0;
+    background-color: #466346;
 }
 
-.Sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: #466346;
-    
+/*browser view */
+.dashboard{
+    display: flex;
+    height: 100vh;
+}
+
+/* main dashboard page */
+.main-content {
+    flex: 1; /* Takes the remaining space beside the sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+}
+
+/* welcome message */
+.main-content p{
+    display: flex;
+    font-size: 1.1rem;
+}
+
+/* upcoming session box*/
+.appointments {
+    color: #466346;
+    padding: 4px;
+    padding-bottom: 10%;
+    display: flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+/* upcoming session text styling*/
+.appointments h2{
+    margin: 0;
+    width: 100%;
+    text-align: start;
+}
+
+
+/* past session box */
+.oldAppointments{
+    color: #466346;
+    padding: 10px;
+    padding-bottom: 10%;
+    display: flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+/* past session text styling */
+.oldAppointments h2{
+    margin: 0;
+    width: 100%;
+    text-align: start;
+}
+
+
+/* balance due box */
+.billing{
+    color: #466346;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;  /* space from the oldAppointments section */
+    border-radius: 5px; /* Optional: Rounded corners */
+    height: 30px;
+    width: 30%;
+}
+/* balance due text styling */
+.billing h2{ 
+    margin: 0;
+    width: 100%;
+    text-align: start;
 }

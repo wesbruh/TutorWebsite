@@ -7,6 +7,8 @@ const AuthProvide = ({ children }) => {
   const [auth, setAuth] = useState({
     user: null,
     token: "",
+    firstName: "",
+    lastName: "",
   });
 
   // default axios
@@ -21,6 +23,8 @@ const AuthProvide = ({ children }) => {
         ...auth,
         user: parseData.user,
         token: parseData.token,
+        firstName: parseData.firstName,
+        lastName: parseData.lastName,
       });
     }
     //eslint-disable-next-line
