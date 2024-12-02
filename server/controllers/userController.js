@@ -7,7 +7,7 @@ export const getUserName = async (req, res) => {
       const user = await User.findById(userId, 'firstName email');
       // returns name and email of user based on id
       if (user){
-          res.json({ firstName: user.name,
+          res.json({ firstName: user.firstName,
                   email: user.email
           });
       } else {

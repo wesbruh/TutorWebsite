@@ -10,7 +10,7 @@ function StudentDashboard() {
   const auth = JSON.parse(localStorage.getItem("auth"));
   const id = auth?.user?._id;
   const token = auth?.token;
-  const name = auth?.firstName;
+  const name = auth?.user?.firstName;
 
   //Not functioning properly.
   const [user, setUser] = useState([]);
@@ -34,7 +34,7 @@ function StudentDashboard() {
     <div className="dashboard">
       <Sidebar />
       <main className="main-content">
-        <h1>Hello, {name}{id}.</h1>
+        <h1>Hello, {name}.</h1>
         <p>Welcome to your student dashboard.</p>
         <div className="appointments">
           <h2>Upcoming Sessions</h2>

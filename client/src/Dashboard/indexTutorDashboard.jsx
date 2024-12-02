@@ -35,8 +35,7 @@ const TutorDashboard = () => {
     <div className="dashboard">
       <Sidebar />
       <main className="main-content">
-        <h1>Hello, {name}{id}.</h1>
-        <p>{token}</p>
+        <h1>Hello, {name}.</h1>
         <p>Welcome to your student dashboard.</p>
         <div className="appointments">
           <h2>Upcoming Sessions</h2>

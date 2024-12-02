@@ -13,7 +13,7 @@ const router = express.Router();
 // Fetch User Data
 router.get('/user/:id', requireSignIn, getUserController);*/
 router.get('/test', verifyJWT, (req, res) => {
-    res.jason({
+    res.json({
         message: 'Token verified successfull',
         user: req.user,
     });
