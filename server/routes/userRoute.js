@@ -19,7 +19,7 @@ router.get('/test', verifyJWT, (req, res) => {
     });
 });
 
-router.get('/getname', verifyJWT, getUserName);
+router.get('/getUserName', verifyJWT, getUserName);
 router.get('/getUserData', getUserData);
 
 export default router;

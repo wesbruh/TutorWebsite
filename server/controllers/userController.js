@@ -1,13 +1,13 @@
 import User from '../models/userModel.js';
 
 export const getUserName = async (req, res) => {
-  const {userId} = req.user?.id;
-
+  
   try{
-      const user = await User.findById(userId, 'name');
-      // returns name of tutor based on id
+      const userId = req.user?.id;
+      const user = await User.findById(userId, 'firstName email');
+      // returns name and email of user based on id
       if (user){
-          res.json({ name: user.name,
+          res.json({ firstName: user.name,
                   email: user.email
           });
       } else {
