@@ -298,3 +298,18 @@ form button[type="button"] {
 form button[type="button"]:hover {
     background-color: #ccc;
 }
+
+.tutor-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;  /* Center the content horizontally */
+    justify-content: center;  /* Center the content vertically */
+       
+}
+
+.tutor-card-title {
+    text-align: center;   /* Center the text horizontally */
+    margin-bottom: 1rem;  /* Optional: Add some space below the title */
+  }
+
+
