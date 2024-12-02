@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
-import HomeTutorCard from "../components/TutorCards/tutorCard";
+import ReviewTutorCard from "../components/TutorCards/ReviewTutorCard";
 
 function StudentReviewPage() {
   // Use States
@@ -205,7 +205,7 @@ function StudentReviewPage() {
             {tutorCards.filter((tutor) => tutor.subjectName)
             .slice(0,3)
             .map((tutor) => (
-              <HomeTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
+              <ReviewTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
             ))}
         </div>
         

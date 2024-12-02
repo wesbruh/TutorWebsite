@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // import routes
 import logo from "../assets/logo.svg"; // titans logo
-
 import "./indexHomePage.css"; // HomePage.css
-
+import  {HomeTutorCard}  from "../components/TutorCards/HomeTutorCard";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -16,9 +15,12 @@ export const Home = () => {
 
   return (
     <div className="home-page">
+      <img className="logo" alt="Logo" src={logo} />
       
       <div className="top-section">
-        <h1>TUTOR TITANS</h1>
+        <h1>
+          <span className="TUTOR-title">TUTOR</span><span className="TITANS-title">TITANS</span>
+        </h1>
       </div>
       <div className="button">
           <button className="button-text" onClick={signup}>
@@ -29,7 +31,14 @@ export const Home = () => {
           </button>
         </div>
 
-      <h3>Learning Made Simple&nbsp;Success Made Possible</h3>
+      <h3>Learning Made Simple<br/>
+          Success Made Possible
+      </h3>
+      <HomeTutorCard 
+        imgAlt="Tutor1 Image" 
+        title="Jane Smith"
+        subject="Math" 
+        description="My goal is to build relationships with each student that I come across utilizing my empathy, emotion, and values shared in my work."/>
     </div>
   );
 };
