@@ -7,6 +7,8 @@ import "./style.css";
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { UserInjured } from "emotion-icons/fa-solid";
+import { UserInjuredDimensions } from "@emotion-icons/fa-solid/UserInjured";
 
 export const TutorSignUp = () => {
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ export const TutorSignUp = () => {
       );
       // Step 2: Create the tutor entry if role is tutor
       if (role === "tutor") {
+        const userId = res.data.data._id;
         const tutorRes = await axios.post(
           `${process.env.REACT_APP_API}/api/v1/tutorRoute/newTutor`,
           { 
