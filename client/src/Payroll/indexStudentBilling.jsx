@@ -4,7 +4,6 @@ import "./styleStudentBilling.css";
 
 const StudentBillingPage = () => {
   const payroll = [
-    // { id: 2, payment: 60, title: "Student Payment for October", date: "1 October, 2024"},
     { id: 1, payment:"", title: "Student Payment For November", date: "You have no payments for this month" },
   ];
   /*
@@ -21,6 +20,8 @@ const StudentBillingPage = () => {
   <div className = "payroll-page">
           <Sidebar />
             {student.length === 0 ? (
+              <h1>Student Fees</h1>
+              <p>View Your Billing Information.</p>
               <p>No payment due.</p>
             ) : (
               tutors.map((tutor) => (

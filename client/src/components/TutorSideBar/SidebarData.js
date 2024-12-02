@@ -31,11 +31,6 @@ export const SidebarData = [
     link: "/TutorPayroll",
   },
   {
-    title: "Reviews",
-    icon: <Reviews />,
-    link: "/TutorReviews",
-  },
-  {
     title: "Account Settings",
     icon: <Settings />,
     link: "/TutorSettings",
