@@ -9,26 +9,42 @@ const TutorDashboard = () => {
   
   //The following two lines successfully retrieve the token
   const auth = JSON.parse(localStorage.getItem("auth"));
-  const token = auth?.token;
   const id = auth?.user?._id;
-  
-  
-  const [users, setUsers] = useState([]);
+  const token = auth?.token;
+
   const [user, setUser] = useState([]);
 
-  //Grabs user
-  useEffect(() => {
+
+// Fetch user info using the token
+useEffect(() => {
+  if (token) {
     axios
-    .get('http://localhost:8080/api/vi/userRoute/getUserName')
-    .then((response) => setUser(response.data))
-    .catch((err) => console.log(err));
+      .get("http://localhost:8080/api/v1/userRoute/getUserName", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Send token in the Authorization header
+        },
+      })
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((err) => console.error("Error fetching user:", err));
   }
-)
+}, [token]);
+
+
+//   //Grabs user
+//   useEffect(() => {
+//     axios
+//     .get('http://localhost:8080/api/v1/userRoute/getUserName')
+//     .then((response) => setUser(response.data))
+//     .catch((err) => console.log(err));
+//   }
+// )
 
   return (
     <div className="dashboard">
       <Sidebar />
-      <h1> {user?.firstName} {id}
+      <h1> {user.firstName} {id} {token}
         {/* {users.length > 0
           ? Hello, ${users[12].name} ${user.name} ${token} //First prints from array, second prints from token
           : 'Loading...'} */}
