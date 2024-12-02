@@ -1,448 +1,69 @@
 
 /* HomePage css*/
-.home {
-    background-color: rgba(255, 255, 255, 1.0);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.home .div {
-    background: linear-gradient(
+.home-page {
+    background-color: rgba(255, 255, 255, 1.0);background: linear-gradient(
         180deg,
         rgb(72, 73, 68) 20.5%,
         rgb(70, 99, 70) 100%
     );
-    /*background-color: rgba(255, 255, 255, 1.0);*/
-    height: 2160px;
-    position: relative;
-    width: 1920px;
-}
-
-.home .tutorcard {
-    background-color: #466346;
-    border-radius: 16px;
-    box-shadow: 0px 0px 4px 2px #f2f2f24c;
-    height: 492px;
-    left: 263px;
-    position: absolute;
-    top: 885px;
-    width: 433px;
-}
-
-.home .tutorcard-persona {
-    height: 333px;
-    left: 7px;
-    position: absolute;
-    top: 6px;
-    width: 420px;
-}
-
-.home .tutorcard-quote {
-    height: 87px;
-    left: 21px;
-    position: absolute;
-    top: 388px;
-    width: 394px;
-}
-
-.home .my-goal-is-to-build {
-    color: #ffffff;
-    font-family: "Poppins-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    height: 87px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    width: 392px;
-}
-
-.home .text-wrapper {
-    font-family: "Poppins-Italic", Helvetica;
-    font-style: italic;
-}
-
-.home .tutorcard-rating {
-    align-items: center;
     display: flex;
-    gap: 16px;
-    left: 7px;
-    position: absolute;
-    top: 347px;
-    width: 269px;
-}
-
-.home .rating {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 4px;
+    height: 100vh;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
     position: relative;
 }
 
-.home .star {
-    height: 20.87px;
-    position: relative;
-    width: 21.89px;
+h1{
+    margin-top: 10px;
+    font-size: 4rem;
 }
 
-.home .text-wrapper-2 {
-    color: #f2f2f2;
-    font-family: "Poppins-SemiBold", Helvetica;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 24px;
-    margin-top: -1.00px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
 }
 
-.home .tutorcard-2 {
+.top-section {
+    display: flex; /* Enable horizontal alignment */
+    justify-content: center; /* Space out elements to the edges */
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px 0; /* Add padding around the section */
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.button {
+    position: absolute; /* Use absolute positioning to align to the corner */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    gap: 10px; /* Add spacing between the buttons */
+}
+
+.button button:hover{
+    background-color: #314531;
+}
+
+.button button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     background-color: #466346;
-    border-radius: 16px;
-    box-shadow: 0px 0px 4px 2px #f2f2f240;
-    height: 492px;
-    left: 744px;
-    position: absolute;
-    top: 885px;
-    width: 433px;
-}
-
-.home .tutorcard-3 {
-    background-color: #466346;
-    border-radius: 16px;
-    box-shadow: 0px 0px 4px 2px #f2f2f240;
-    height: 492px;
-    left: 1225px;
-    position: absolute;
-    top: 885px;
-    width: 433px;
-}
-
-.home .how-it-works {
-    color: #e2e2e2;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 50px;
-    font-weight: 700;
-    left: 662px;
-    letter-spacing: 8.50px;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 1480px;
-    width: 598px;
-}
-
-.home .simple-steps {
-    color: #e2e2e2;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 42px;
-    font-weight: 700;
-    left: 648px;
-    letter-spacing: -1.00px;
-    line-height: 60px;
-    position: absolute;
-    text-align: center;
-    top: 1540px;
-    width: 624px;
-}
-
-.home .signup-card {
-    color: #484944;
-    height: 363px;
-    left: 280px;
-    position: absolute;
-    top: 1671px;
-    width: 372px;
-}
-
-.home .overlap-group {
-    
-    border-radius: 16px;
-    height: 363px;
-    
-    position: absolute;
-    width: 368px;
-}
-
-.home .text-wrapper-4 {
-    color: #f2f2f2;
-    font-family: "Poppins-SemiBold", Helvetica;
-    font-size: 22px;
-    font-weight: 600;
-    left: 129px;
-    letter-spacing: -0.58px;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 168px;
-    width: 110px;
-}
-
-.home .p {
-    color: #f2f2f2;
-    font-family: "Poppins-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    left: 38px;
-    letter-spacing: 0;
-    line-height: 26px;
-    position: absolute;
-    text-align: center;
-    top: 235px;
-    width: 292px;
-}
-
-.home .signup-card-icon {
-    background-color: #eaddfc;
-    border-radius: 43.95px / 41.63px;
-    height: 83px;
-    left: 140px;
-    position: absolute;
-    top: 47px;
-    width: 88px;
-}
-
-.home .signUpCardIcon {
-    height: 34px;
-    left: 30px;
-    position: absolute;
-    top: 24px;
-    width: 33px;
-}
-
-.home .schedule-card {
-    height: 363px;
-    left: 777px;
-    position: absolute;
-    top: 1671px;
-    width: 372px;
-}
-
-.home .schedule {
-    color: #f2f2f2;
-    font-family: "Poppins-SemiBold", Helvetica;
-    font-size: 22px;
-    font-weight: 400;
-    left: 129px;
-    letter-spacing: -0.58px;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 168px;
-    width: 110px;
-}
-
-.home .span {
-    font-weight: 600;
-    letter-spacing: -0.13px;
-}
-
-.home .text-wrapper-5 {
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    letter-spacing: -0.13px;
-}
-
-.home .schedule-card-icon {
-    background-color: #d4e6ff;
-    border-radius: 43.95px / 41.63px;
-    height: 83px;
-    left: 139px;
-    position: absolute;
-    top: 47px;
-    width: 88px;
-}
-
-.home .scheduleIcon {
-    height: 40px;
-    left: 27px;
-    position: absolute;
-    top: 22px;
-    width: 33px;
-}
-
-.home .succeed-card-base {
-    background-color: #484944;
-    border-radius: 16px;
-    height: 363px;
-    left: 1275px;
-    position: absolute;
-    top: 1671px;
-    width: 372px;
-}
-
-.home .text-wrapper-6 {
-    color: #f2f2f2;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-size: 22px;
-    font-weight: 600;
-    left: 128px;
-    letter-spacing: -0.58px;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 168px;
-    width: 110px;
-}
-
-
-
-.home .text-wrapper-7 {
-    color: #ffffff;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 48px;
-    font-weight: 700;
-    left: 663px;
-    letter-spacing: -1.00px;
-    line-height: 60px;
-    position: absolute;
-    text-align: center;
-    top: 759px;
-    width: 593px;
-}
-
-.home .text-wrapper-8 {
-    color: #f5f5f5;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 50px;
-    font-weight: 700;
-    left: 525px;
-    letter-spacing: 0;
-    line-height: 90px;
-    position: absolute;
-    text-align: center;
-    top: 521px;
-    width: 871px;
-}
-
-.home .learning-made-simple {
-    color: transparent;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 92px;
-    font-weight: 700;
-    left: 383px;
-    letter-spacing: 0;
-    line-height: 115px;
-    position: absolute;
-    text-align: center;
-    top: 236px;
-    width: 1154px;
-}
-
-.home .tutor-learning-success-texts {
-    color: #466346;
-}
-
-.home .other-title-text {
-    color: #f5f5f5;
-}
-
-.home .overlap {
-    border-radius: 8px;
-    height: 34px;
-    left: 500px;
-    position: absolute;
-    top: 39px;
-    width: 151px;
-}
-
-.home .signup-text {
-    all: unset;
-    box-sizing: border-box;
-    background-color: #466346;
-    color: #f5f5f5;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 8px;
-    width: 151px;
-    
-}
-
-.home .Sign-Up-Button {
-    all: unset;
-    box-sizing: border-box;
-    background-color: #466346;
-    border-radius: 8px;
-    height: 34px;
-    left: 1700px;
-    position: absolute;
-    top: 40px;
-    width: 151px;
+    border-radius: 4px;
+    padding: 8px 40px;
+    border: none;
+    outline: none;
     cursor: pointer;
-    
-
 }
 
-.home .Login-Button {
-    all: unset;
-    box-sizing: border-box;
-    background-color: #466346;
-    border-radius: 8px;
-    height: 34px;
-    left: 1517px;
-    position: absolute;
-    top: 40px;
-    width: 151px;
-    cursor: pointer;
-
-}
-.home .login-text {
-    all: unset;
-    box-sizing: border-box;
-    background-color: #466346;
+.button-text{
+    font-size: 14px;
     color: #f5f5f5;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 8px;
-    width: 151px;
-    
-}
-
-.home .logo {
-    height: 70px;
-    left: 49px;
-    object-fit: cover;
-    position: absolute;
-    top: 21px;
-    width: 70px;
-}
-
-.home .TUTOR-TITANS {
-    color: transparent;
-    font-family: "Poppins-SemiBold", Helvetica;
-    font-size: 96px;
-    font-weight: 600;
-    height: 74px;
-    left: 572px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 23px;
-    white-space: nowrap;
-    width: 776px;
-    
-}
-
-.home .text-wrapper-12 {
-    color: #424d65;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 }
