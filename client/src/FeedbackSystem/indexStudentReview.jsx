@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
+import HomeTutorCard from "../components/TutorCards/tutorCard";
 
 function StudentReviewPage() {
   // Use States
@@ -11,6 +12,10 @@ function StudentReviewPage() {
   const [selectedTutor, setSelectedTutor] = useState(""); // Dropdown state
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
+
+  const bio = "This is my bio.";
+  const tutorName = "Jane Doe"
+  const subject = "Math";
 
   // Dummy data for tutors
   //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
@@ -178,6 +183,10 @@ function StudentReviewPage() {
             </div>
           </div>
         )}
+
+        <div classname= "tutor-cards">
+
+        </div>
       </main>
     </div>
   );
