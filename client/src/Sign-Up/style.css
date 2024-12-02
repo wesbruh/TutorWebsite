@@ -63,8 +63,9 @@
 
 .tutor-sign-up .text-wrapper {
   color: #000000;
-  font-family: "Inter-Medium", Helvetica;
-  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 0;
   line-height: normal;
@@ -91,12 +92,10 @@
 }
 
 .tutor-sign-up .div-wrapper {
-  background: none;
-  border: 1px solid;
   border-color: #9ab2cf;
-  border-radius: 0px 0px 4px 4px;
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
+  border-radius: 4px 4px 4px 4px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -106,11 +105,13 @@
   position: relative;
   white-space: nowrap;
   width: 314px;
+  height: 2.6rem;
 }
 
 .tutor-sign-up .text-wrapper-2 {
   color: #ffffff;
-    font-family: "Inter-Regular", Helvetica;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
@@ -119,6 +120,7 @@
     position: relative;
     white-space: nowrap;
     width: fit-content;
+    
 }
 
 /* .tutor-sign-up .email {
@@ -140,6 +142,7 @@
 } */
 
 .tutor-sign-up .email-wrapper {
+  
   align-items: flex-start;
   border: 1px solid;
   border-color: #9ab2cf;
@@ -166,10 +169,15 @@
   position: relative;
   width: 314px;
 }
+.tutor-sign-up .sign-in-button:hover{
+  background-color: #314531;
+}
+
 
 .tutor-sign-up .text-wrapper-3 {
   color: var(--ffffff);
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -207,8 +215,9 @@
 }
 
 .tutor-sign-up .text-wrapper-4 {
-  color: #1c49e8;
-  font-family: "Inter-Medium", Helvetica;
+  color: #494948bd;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0;
@@ -220,7 +229,8 @@
 
 .tutor-sign-up .p {
   color: var(--x-20-1e-6d);
-  font-family: "Inter-Medium", Helvetica;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0;
@@ -262,10 +272,11 @@
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #36395a;
+  color: blue;
   cursor: pointer;
   display: inline-flex;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -322,7 +333,8 @@
 
 .tutor-sign-up .TUTOR-TITANS {
   color: transparent;
-  font-family: "Poppins-SemiBold", Helvetica;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   font-size: 96px;
   font-weight: 600;
   height: 74px;

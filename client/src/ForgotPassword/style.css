@@ -80,7 +80,8 @@
 
 .student-login-page .text-wrapper {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0;
@@ -107,18 +108,15 @@
     position: relative;
 }
 
-.student-login-page .frame-instance {
-    flex: 0 0 auto !important;
-}
 
-.student-login-page .input {
-    background: none;
-    border: 1px solid;
+.student-login-page input {
+    height: 2.7rem;
     border-color: #9ab2cf;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
     color: #000000;
     flex: 0 0 auto;
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
@@ -131,18 +129,6 @@
 }
 /*NEEDS WORK*/
 .student-login-page .sign-in-button {
-    /*cursor: pointer;
-    align-items: center;
-    background-color: #466346;
-    border-radius: 4px;
-    box-shadow: 0px 4px 9px #5f2bff30;
-    display: flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    justify-content: center;
-    padding: 16px;
-    position: relative;
-    width: 314px;*/
     align-items: center;
     appearance: none;
     background-color: #466346;
@@ -153,7 +139,8 @@
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -171,7 +158,7 @@
     white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 18px;
-    width: 350px;
+    width: 100%;
     display: flex;
     flex: 0 0 auto;
     gap: 10px;
@@ -180,8 +167,9 @@
 }
 
 .student-login-page .text-wrapper-2 {
-    color: #ffffff;
-    font-family: "Inter-Regular", Helvetica;
+    color: #f5f5f5;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
@@ -191,11 +179,15 @@
     white-space: nowrap;
     width: fit-content;
 }
+.student-login-page .sign-in-button:hover{
+    background-color: #314531;
+}
 
 .student-login-page .text-wrapper-3 {
     cursor: pointer;
     color: #1C49E8;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0;
@@ -253,7 +245,8 @@
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -300,26 +293,6 @@
 }
 
 .student-login-page .text-wrapper-5 {
-    /*background-color: #fff;
-    border: 1px solid #d5d9d9;
-    border-radius: 8px;
-    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-    box-sizing: border-box;
-    color: #0f1111;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Amazon Ember",sans-serif;
-    font-size: 18px;
-    line-height: 49px;
-    padding: 0 10px 0 11px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    width: 100px;*/
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -327,10 +300,11 @@
     border-width: 0;
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #36395A;
+    color: blue;
     cursor: pointer;
     display: inline-flex;
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -390,7 +364,8 @@
 
 .student-login-page .TUTOR-TITANS {
     color: transparent;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     font-size: 96px;
     font-weight: 600;
     height: 74px;

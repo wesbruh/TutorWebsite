@@ -96,14 +96,14 @@ export const StudentSignUp = () => {
                         required
                       />
 
-                      {/*<input
+                      <input
                         className="div-wrapper"
                         type="text"
-                        placeholder="User name"
+                        placeholder="Username"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                      />*/}
+                      />
 
                       <input
                         className="div-wrapper"
