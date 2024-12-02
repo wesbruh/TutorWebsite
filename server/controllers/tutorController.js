@@ -77,13 +77,13 @@ export const getAllTutorNames = async (req, res) => {
 };
 
 export const addTutor = async(req, res) => {
-    const { name, email } = req.body; // Declare the individual fields as the req.body.
+    const { name, email, ...optionalFields } = req.body; // Declare the individual fields as the req.body.
     // Validation
     if (!name || !email) {
         return res.status(400).json({ message: 'All fields are required.' });
     }
     // Set a new review with the valid fields.
-    const newTutor = new Tutor({ name, email });
+    const newTutor = new Tutor({ name, email, ...optionalFields });
     // Try to save the review.
     try {
         await newTutor.save();
@@ -107,3 +107,13 @@ export const getTutorSubjectForAppointment = async (req, res) => {
         res.status(500).json({ error: 'Error fetching tutors by subject' });
     }
 };
+
+export const getTutorCardInfo = async (req, res) => {
+    try {
+        const tutors = await Tutor.find({}, 'name subjectName'); // Fetch only `name` and `_id`
+        res.status(200).json({ success: true, data: tutors });
+    } catch (error) {
+        console.error("Error fetching tutor info:", error.message);
+        res.status(500).json({ success: false, error: 'Error fetching tutor info' });
+    }
+}

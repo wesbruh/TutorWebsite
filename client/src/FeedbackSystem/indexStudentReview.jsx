@@ -2,9 +2,19 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentReview.css";
 import axios from "axios";
-import HomeTutorCard from "../components/TutorCards/tutorCard";
+import ReviewTutorCard from "../components/TutorCards/ReviewTutorCard";
 
 function StudentReviewPage() {
+
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    axios
+    .get('http://localhost:8080/api/vi/userRoute/getUserName')
+    .then((response) => setUser(response.data))
+    .catch((err) => console.log(err));
+  }
+)
+
   // Use States
   const [reviews, setReviews] = useState([]);
   const [tutors, setTutors] = useState([]); // Initialize state for tutors
@@ -99,6 +109,7 @@ function StudentReviewPage() {
       <Sidebar />
       <main className="main-content">
         <div className="reviews-header">
+        <h1> {user?.firstName}</h1>
           <h1>Reviews</h1>
           <p className="reviews-subtitle">Tutor Reviews</p>
           <p className="reviews-description">
@@ -203,9 +214,9 @@ function StudentReviewPage() {
         </div>
         <div className= "tutor-cards">
             {tutorCards.filter((tutor) => tutor.subjectName)
-            .slice(0,3)
+            .slice(0,9)
             .map((tutor) => (
-              <HomeTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
+              <ReviewTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
             ))}
         </div>
         

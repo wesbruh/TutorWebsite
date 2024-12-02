@@ -3,7 +3,7 @@
 .home-page {
     background-color: rgba(255, 255, 255, 1.0);background: linear-gradient(
         180deg,
-        rgb(72, 73, 68) 20.5%,
+        rgb(72, 73, 68) 40.5%,
         rgb(70, 99, 70) 100%
     );
     display: flex;
@@ -13,17 +13,36 @@
     position: relative;
 }
 
+.home-page .logo{
+    height: 70px;
+    left: 1.9%; /* Keeps logo aligned with the height and location of the logo in the sign up/login pages*/
+    object-fit: cover;
+    position: relative;
+    padding-top: 16px ;
+    top: 0;
+    width: 70px;
+}
+
 h1{
-    margin-top: 10px;
-    font-size: 4rem;
+    margin-top: -16px;
+    font-size: 6rem;
 }
 
 h3 {
-    text-align: center;
-    margin-top: 20px;
-    justify-content: center;
+    text-align: center; /* Center text horizontally */
+    margin-top: 0; /* Remove any extra spacing */
     display: flex;
-    flex-direction: column; 
+    flex-direction: column; /* Ensure lines are stacked */
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    position: absolute; /* Absolute positioning for centering */
+    top: 30%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Correct centering alignment */
+    line-height: 1.5; /* Adjust line spacing */
+    font-size: 3rem; /* Adjust font size if necessary */
+    color: #f5f5f5; /* Ensure text is visible on the background */
+    white-space: pre-wrap; /* Allow line breaks */
 }
 
 .top-section {
@@ -66,4 +85,13 @@ h3 {
     color: #f5f5f5;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
+}
+
+.TUTOR-title{
+    color:#466346; /* 1/2 green title*/
+    margin-right: 29px; /* Mostly aligned with login/signup titles */
+}
+
+.TITANS-title{
+    color:#f5f5f5; /* 1/2 whitesmoke title*/
 }

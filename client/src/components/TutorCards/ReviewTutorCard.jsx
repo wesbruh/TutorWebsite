@@ -1,8 +1,8 @@
 import React from 'react';
-import "./HomeTutorCard.css";
+import "./ReviewTutorCard.css";
 //import tutorcard1PersonaPhoto from '../images/tutorcard-1-persona-photo.png';
-
-export const HomeTutorCard = ({ tutor }) => {
+// @MAX USE THIS -> "../../assets/tutorcard-1-persona-photo.png"
+export const ReviewTutorCard = ({ tutor }) => {
     
     return (
         <div className="card-container">
@@ -14,4 +14,4 @@ export const HomeTutorCard = ({ tutor }) => {
     );
 };
 
-export default HomeTutorCard;
+export default ReviewTutorCard;
