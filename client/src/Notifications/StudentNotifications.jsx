@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentNotifications.css";
 
 const StudentNotificationsPage = () => {
   const [notifications, setNotifications] = useState([
-    { id: 1, title: "Cancellation of Appointment with Jane Smith", date: "15 October, 2024", time: "11:00 AM" },
-    { id: 2, title: "Confirmation of Appointment with Jane Smith", date: "14 October, 2024", time: "02:00 PM" },
-    { id: 3, title: "Cancellation of Appointment with Clark Kent", date: "13 October, 2024", time: "02:32 PM" },
-    { id: 4, title: "Confirmation of Appointment with Clark Kent", date: "13 October, 2024", time: "02:00 PM" },
-    { id: 5, title: "Completion of Appointment with Clark Kent", date: "11 October, 2024", time: "02:00 - 03:00 PM" },
+    { id: 1, title: "Cancellation of Appointment with Jane Smith", date: "2024-12-15", time: "11:00 AM" },
+    { id: 2, title: "Confirmation of Appointment with Jane Smith", date: "2024-12-14", time: "02:00 PM" },
+    { id: 3, title: "Cancellation of Appointment with Clark Kent", date: "2024-12-13", time: "02:32 PM" },
+    { id: 4, title: "Confirmation of Appointment with Clark Kent", date: "2024-12-13", time: "02:00 PM" },
+    { id: 5, title: "Completion of Appointment with Clark Kent", date: "2024-12-11", time: "02:00 - 03:00 PM" },
   ]);
 
-  const [unreadCount, setUnreadCount] = useState(1); // Example count for new notifications
+  const [closestNotification, setClosestNotification] = useState(null);
 
-  const markAllAsRead = () => {
-    setUnreadCount(0); // Reset unread count
+  useEffect(() => {
+    if (notifications.length > 0) {
+      const today = new Date();
+      const closest = notifications.reduce((prev, curr) => {
+        const prevDate = new Date(prev.date);
+        const currDate = new Date(curr.date);
+        return currDate >= today && currDate < prevDate ? curr : prev;
+      });
+      setClosestNotification(closest);
+    } else {
+      setClosestNotification(null);
+    }
+  }, [notifications]);
+
+  const handleRemoveNotification = (id) => {
+    setNotifications((prev) => prev.filter((notification) => notification.id !== id));
   };
 
   return (
@@ -31,15 +45,24 @@ const StudentNotificationsPage = () => {
                 <p className="notification-title">{notification.title}</p>
                 <p className="notification-date">{notification.date} | {notification.time}</p>
               </div>
+              <button
+                className="remove-button"
+                onClick={() => handleRemoveNotification(notification.id)}
+              >
+                Remove
+              </button>
             </li>
           ))}
         </ul>
-        <div className="new-notification">
-          <p>You have {unreadCount > 0 ? unreadCount : "no"} new notification{unreadCount > 1 ? "s" : ""}</p>
-          {unreadCount > 0 && (
-            <button className="mark-read-button" onClick={markAllAsRead}>Mark All as Read</button>
-          )}
-        </div>
+        {closestNotification && (
+          <div className="new-notification">
+            <p>Upcoming Notification:</p>
+            <p className="notification-title">{closestNotification.title}</p>
+            <p className="notification-date">
+              {closestNotification.date} | {closestNotification.time}
+            </p>
+          </div>
+        )}
       </main>
     </div>
   );
