@@ -22,7 +22,7 @@ export const StudentSettings = () => {
             try {
                 const response = await axios.put(
                     "http://localhost:8080/api/v1/userRoute/setFirstName",
-                    { firstName }, // Send updated first name in request body
+                    { firstName }, // Send updated first name
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ export const StudentSettings = () => {
             try {
                 const response = await axios.put(
                     "http://localhost:8080/api/v1/userRoute/setLastName",
-                    { lastName }, // Send updated last name in request body
+                    { lastName }, // Send updated last name
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -76,6 +76,31 @@ export const StudentSettings = () => {
 
     const UpdateEmail = async (e) => {
         e.preventDefault();
+        if (token) {
+            try {
+                const response = await axios.put(
+                    "http://localhost:8080/api/v1/userRoute/setEmail",
+                    { email }, // Send updated email
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                // Update the frontend state with the new email
+                setFirstName(response.data.user.email);
+                localStorage.setItem(
+                    "auth",
+                    JSON.stringify({
+                        ...auth,
+                        user: { ...auth.user, email: response.data.user.email },
+                    })
+                );
+                console.log('Email updated successfully:', response.data);
+            } catch (err) {
+                console.error("Error updating email:", err.response?.data || err.message);
+            }
+        }   
     };
 
     return (
