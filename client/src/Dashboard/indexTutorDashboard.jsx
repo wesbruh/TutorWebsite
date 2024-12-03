@@ -26,9 +26,9 @@ const TutorDashboard = () => {
   ];
 
   //For earnings with dummy data
-  const total = 120;
+  const total = 60;
 
-  // //this clock does not function as intended. Cannot actually get user information from the backend.  
+  // //this block does not function as intended. Cannot actually get user information from the backend.  
   // const [user, setUser] = useState([]);
   // // Fetch user info using the token
   // useEffect(() => {

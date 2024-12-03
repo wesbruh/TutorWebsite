@@ -3,10 +3,6 @@ import React/*, { useState, useEffect }*/ from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentDashboard.css";
 
-
-
-
-
 function StudentDashboard() {
   
   //First line fetches the localData. Subsequent lines are variables initialized with said data.
@@ -29,7 +25,7 @@ function StudentDashboard() {
   ];
 
   //For payroll with dummy data.
-  const total = 85;
+  const total = 120;
 
   // //Not functioning properly.
   // const [user, setUser] = useState([]);

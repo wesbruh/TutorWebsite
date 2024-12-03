@@ -1,8 +1,10 @@
+//AUTH IS OUR SINGLETON
 import { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 
 const AuthContext = createContext();
 
+//Single instance of AuthProvide. AuthContext is repeatedly accessed via useAuth. Matches singleton behavior.
 const AuthProvide = ({ children }) => {
   const [auth, setAuth] = useState({
     user: null,
