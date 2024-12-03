@@ -34,15 +34,15 @@ export const getUserData = async (req, res) => {
         const userId = req.user?._id; 
         if (!userId) return res.status(400).json({ error: 'User ID missing' });
 
-        // Extract `firstName` from the request body
+        //get firstName
         const { firstName } = req.body;
         if (!firstName) return res.status(400).json({ error: 'First name is required' });
 
-        // Update the user's first name
+        // Update first name
         const updatedUser = await User.findByIdAndUpdate(
             userId,
             { firstName }, // Update firstName field
-            { new: true, runValidators: true } // Return the updated document
+            { new: true, runValidators: true } // Return update
         );
 
         if (!updatedUser) return res.status(404).json({ error: 'User not found' });
@@ -54,6 +54,59 @@ export const getUserData = async (req, res) => {
     }
 };
 
+export const setLastName = async (req, res) => {
+    try {
+        // Validate the userId
+        const userId = req.user?._id; 
+        if (!userId) return res.status(400).json({ error: 'User ID missing' });
+
+        //get lastName
+        const { lastName } = req.body;
+        if (!lastName) return res.status(400).json({ error: 'Last name is required' });
+
+        // Update last name
+        const updatedUser = await User.findByIdAndUpdate(
+            userId,
+            { lastName }, // Update lastName field
+            { new: true, runValidators: true } // Return update
+        );
+
+        if (!updatedUser) return res.status(404).json({ error: 'User not found' });
+
+        res.status(200).json({ message: 'Last name updated successfully', user: updatedUser });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error updating user info' });
+    }
+};
+
+
+
+export const setEmail = async (req, res) => {
+    try {
+        // Validate the userId
+        const userId = req.user?._id; 
+        if (!userId) return res.status(400).json({ error: 'User ID missing' });
+
+        //get lastName
+        const { email } = req.body;
+        if (!email) return res.status(400).json({ error: 'Email is required' });
+
+        // Update last name
+        const updatedUser = await User.findByIdAndUpdate(
+            userId,
+            { email }, // Update lastName field
+            { new: true, runValidators: true } // Return update
+        );
+
+        if (!updatedUser) return res.status(404).json({ error: 'User not found' });
+
+        res.status(200).json({ message: 'Email updated successfully', user: updatedUser });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error updating user info' });
+    }
+};
 
 
 /*export const getTutorSubject = async (req, res) => {
