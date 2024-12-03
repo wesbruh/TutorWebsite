@@ -28,10 +28,8 @@
 }
 
 .tutorcard1-description {
-    font-style: italic;
-    font-weight: normal;
-    font-size: 16px;
-    color: black;
-    margin: 0.5rem 3%;
     font-variant: small-caps;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0rem 3%;
 }

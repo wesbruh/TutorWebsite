@@ -6,14 +6,11 @@ import ReviewTutorCard from "../components/TutorCards/ReviewTutorCard";
 
 function StudentReviewPage() {
 
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-    axios
-    .get('http://localhost:8080/api/vi/userRoute/getUserName')
-    .then((response) => setUser(response.data))
-    .catch((err) => console.log(err));
-  }
-)
+
+  const auth = JSON.parse(localStorage.getItem("auth"));
+  const id = auth?.user?._id;
+  const token = auth?.token;
+  const name = auth?.user?.firstName + " " + auth?.user?.lastName;
 
   // Use States
   const [reviews, setReviews] = useState([]);
@@ -76,7 +73,7 @@ function StudentReviewPage() {
     fetchReviews();
   }, []);
 
-  const handleSubmitReview = async (e) => {
+  /*const handleSubmitReview = async (e) => {
     e.preventDefault();
     if (!selectedTutor || !rating || !reviewText) {
       alert("Please fill out all fields!");
@@ -84,6 +81,7 @@ function StudentReviewPage() {
     }
     try {
       const response = await axios.post("http://localhost:8080/api/v1/reviews", {
+        author: name,
         tutorName: selectedTutor,
         reviewText,
         rating,
@@ -98,7 +96,44 @@ function StudentReviewPage() {
       console.error("Error submitting review:", error);
       alert("Failed to submit the review.");
     }
-  };
+  };*/
+  const handleSubmitReview = async (e) => {
+    e.preventDefault();
+
+    // Ensure all required fields are filled
+    if (!selectedTutor || !rating || !reviewText) {
+        alert("Please fill out all fields!");
+        return;
+    }
+
+    try {
+        // Construct the review object
+        const reviewData = {
+            author: name,         // Use the logged-in user's name for "author"
+            tutor: selectedTutor, // Use the selected tutor
+            content: reviewText,  // Map reviewText to "content"
+            rating: rating,       // Use the rating value
+        };
+
+        // Make the POST request
+        const response = await axios.post(
+            "http://localhost:8080/api/v1/reviews",
+            reviewData,
+        );
+
+        // Update the reviews state with the new review
+        setReviews([...reviews, response.data.data]); // Assuming the new review is in response.data.data
+        setSelectedTutor(""); // Reset selected tutor
+        setReviewText("");    // Reset review text
+        setRating(0);         // Reset rating
+        setShowModal(false);  // Close modal
+        alert("Review submitted successfully!");
+    } catch (error) {
+        console.error("Error submitting review:", error);
+        alert("Failed to submit the review.");
+    }
+};
+
 
   const handleStarClick = (starValue) => {
     setRating(starValue);
@@ -109,7 +144,7 @@ function StudentReviewPage() {
       <Sidebar />
       <main className="main-content">
         <div className="reviews-header">
-        <h1> {user?.firstName}</h1>
+        
           <h1>Reviews</h1>
           <p className="reviews-subtitle">Tutor Reviews</p>
           <p className="reviews-description">
@@ -123,18 +158,13 @@ function StudentReviewPage() {
           <div className="reviews-cards">
             {reviews.map((review, index) => (
               <div className="review-card" key={index}>
-                <div className="review-rating">⭐ {review.rating}/5</div>
+                <div className="review-rating">{review.tutor}⭐ {review.rating}/5</div>
                 <p className="review-text">{review.content}</p>
                 <div className="review-author">
-                  <div className="review-author-initials">
-                    {review.tutor
-                      .split(" ")
-                      .map((name) => name[0])
-                      .join("")}
-                  </div>
+                  
                   <div>
-                    <p className="review-author-name">{review.author}</p>
-                    <p className="review-author-role">Student</p>
+                    <p className="review-author-name">{"- " + review.author}</p>
+                    
                   </div>
                 </div>
               </div>
@@ -171,7 +201,7 @@ function StudentReviewPage() {
                   >
                     <option value="">Select a tutor</option>
                     {tutors.map((tutor) => (
-                      <option key={tutor._id} value={tutor._id}>
+                      <option key={tutor._id} value={tutor.name}>
                       {tutor.name}
                       </option>
                     ))}
@@ -213,11 +243,12 @@ function StudentReviewPage() {
           <h2>Meet Our Tutors</h2>
         </div>
         <div className= "tutor-cards">
-            {tutorCards.filter((tutor) => tutor.subjectName)
-            .slice(0,9)
-            .map((tutor) => (
-              <ReviewTutorCard key={tutor._id} tutor={tutor} subject = {tutor.subjectName} bio = {tutor.bio} />
-            ))}
+        {tutorCards
+          .filter((tutor) => tutor.subjectName) // Add check for bio
+          .slice(0,9)
+          .map((tutor) => (
+          <ReviewTutorCard key={tutor._id} tutor={tutor} subject={tutor.subjectName} bio={tutor.bio}/>
+        ))}
         </div>
         
       </main>
