@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from "../components/TutorSideBar/Sidebar";
 import "./styleTutorPayroll.css";
+import axios from 'axios';
 
 const TutorPayrollPage = () => {
   const [tutors, setTutors] = useState([]);
@@ -67,3 +67,64 @@ const TutorPayrollPage = () => {
 };
 
 export default TutorPayrollPage;
+
+/*
+const TutorPayrollPage = () => {
+  const [tutors, setTutors] = useState([]);
+  const [payroll, setPayroll] = useState([]);
+
+  //Fetch tutor id, name, payment
+   useEffect(() => {
+            axios.all([
+            axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorData', {getTutorData: tutorData}), 
+            axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorPay', {getTutorPay: tutorPay}),
+            axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorName', {getTutorName: tutorName})
+          ])
+            .then(axios.spread((tutorData, tutorPay, tutorName) => {
+            console.log('id', tutorData, 'payment', tutorPay, 'name', tutorName);
+        }));
+
+      .then(response => {
+        const tutorsData = response.data;
+        setTutors(tutorsData);
+        setPayroll(updatedPayroll);
+      })
+      .catch(err => console.log(err));
+  }, []);
+    
+
+*/
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+//
+///
+
+
+
+//
+//
+
+
+
+//
