@@ -5,7 +5,36 @@ import "./styleStudentNotifications.css";
 const StudentNotificationsPage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [notifications, setNotifications] = useState([
-    { id: 1, title: "Account Creation", date: "26 November, 2024 09:56 PM" },
+    {
+      id: 1,
+      title: "Cancellation of Appointment with Jane Smith",
+      date: "2024-11-26T11:00:00",
+    },
+    {
+      id: 2,
+      title: "Confirmation of Appointment with Jane Smith",
+      date: "2024-11-25T14:00:00",
+    },
+    {
+      id: 3,
+      title: "Cancellation of Appointment with Clark Kent",
+      date: "2024-11-24T10:32:00",
+    },
+    {
+      id: 4,
+      title: "Confirmation of Appointment with Clark Kent",
+      date: "2024-11-23T13:30:00",
+    },
+    {
+      id: 5,
+      title: "Completion of Appointment with Clark Kent",
+      date: "2024-11-22T15:00:00",
+    },
+    {
+      id: 6,
+      title: "Confirmation of Appointment with Clark Kent",
+      date: "2024-11-21T12:00:00",
+    },
   ]);
   const [showPopup, setShowPopup] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -32,9 +61,9 @@ const StudentNotificationsPage = () => {
   };
 
   // Get the most recent upcoming notification
-  const upcomingNotification = notifications.sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
-  )[0];
+  const upcomingNotification = notifications
+    .filter((notification) => new Date(notification.date) > currentTime)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
 
   return (
     <div className="notifications-page">
@@ -76,7 +105,7 @@ const StudentNotificationsPage = () => {
           <div className="new-notification">
             <p>Upcoming Notification:</p>
             <p className="notification-title">{upcomingNotification.title}</p>
-            <p className="notification-date">{upcomingNotification.date}</p>
+            <p className="notification-date">{new Date(upcomingNotification.date).toLocaleString()}</p>
           </div>
         )}
         <ul className="notifications-list">
@@ -85,7 +114,7 @@ const StudentNotificationsPage = () => {
               <div className="notification-icon"></div>
               <div>
                 <p className="notification-title">{notification.title}</p>
-                <p className="notification-date">{notification.date}</p>
+                <p className="notification-date">{new Date(notification.date).toLocaleString()}</p>
               </div>
               <button
                 className="remove-button"
