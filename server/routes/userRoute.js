@@ -1,5 +1,5 @@
 import express from 'express';
-import { getUserName,getUserData, setFirstName } from '../controllers/userController.js';
+import { getUserName,getUserData, setFirstName, setLastName } from '../controllers/userController.js';
 import { requireSignIn } from '../middlewares/authMiddleware.js';
 import verifyJWT from '../middlewares/getJwt.js'; // Import the verifyJWT middleware
 
@@ -22,5 +22,6 @@ router.get('/test', verifyJWT, (req, res) => {
 router.get('/getUserName', verifyJWT, getUserName);
 router.get('/getUserData', getUserData);
 router.put('/setFirstName', verifyJWT, setFirstName);
+router.put('/setLastName', verifyJWT, setLastName);
 
 export default router;
