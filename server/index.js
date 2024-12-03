@@ -97,17 +97,15 @@ app.get('/getTutorData', (req, res) => {
     .catch(err => res.status(500).json({ error: "Failure" }));
 });
 
-app.get('/api/v1/tutorRoute/availableTimes/:tutorId', (req, res) => {
+app.get("/api/v1/tutors/availableTimes/:tutorId", (req, res) => {
   const tutorId = req.params.tutorId;
-  
   tutorModel.findById(tutorId)
-      .then(tutor => {
-          if (tutor) {
-              // Assuming tutor has an "availableTimes" array containing available time slots
-              res.json(tutor.availableTimes);  // Return the available times for the tutor
-          } else {
-              res.status(404).json({ error: 'Tutor not found' });
-          }
-      })
-      .catch(err => res.status(500).json({ error: 'Server error' }));
+    .then(tutor => {
+      if (tutor) {
+        res.json(tutor.availableTimes || []); // Handle missing times gracefully
+      } else {
+        res.status(404).json({ error: "Tutor not found" });
+      }
+    })
+    .catch(err => res.status(500).json({ error: "Server error" }));
 });

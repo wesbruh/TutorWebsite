@@ -117,3 +117,32 @@ export const getTutorCardInfo = async (req, res) => {
         res.status(500).json({ success: false, error: 'Error fetching tutor info' });
     }
 }
+
+/*-----------METHODS FOR TUTOR AVAILABILITY------------
+
+//Method to Update Tutor Availability
+export const updateTutorAvailability = (req, res) => {
+    const tutorId = req.params.tutorId;
+    Tutor.findById(tutorId)
+        .then((tutor) => {
+            if (!tutor) {
+                return res.status(404).json({ error: 'Tutor not found' });
+            }
+            tutor.updateAvailableTimes()
+                .then(() => res.json({ message: 'Tutor availability updated' }))
+                .catch(err => res.status(500).json({ error: 'Error updating availability' }));
+        })
+        .catch(err => res.status(500).json({ error: 'Error finding tutor' }));
+};
+
+// Cron job to update tutor availability every Sunday at midnight
+cron.schedule('0 0 * * Sunday', () => {
+    console.log('Updating tutor availability...');
+    Tutor.find().then(tutors => {
+        tutors.forEach(tutor => {
+            tutor.updateAvailableTimes()
+                .then(() => console.log(`Updated availability for tutor: ${tutor.name}`))
+                .catch(err => console.error(`Error updating availability for tutor: ${tutor.name}`, err));
+        });
+    }).catch(err => console.error('Error finding tutors:', err));
+});*/
