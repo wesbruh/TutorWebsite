@@ -4,6 +4,9 @@ import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentDashboard.css";
 
 
+
+
+
 function StudentDashboard() {
   
   //First line fetches the localData. Subsequent lines are variables initialized with said data.
@@ -11,6 +14,22 @@ function StudentDashboard() {
   // const id = auth?.user?._id;
   // const token = auth?.token;
   const name = auth?.user?.firstName;
+
+  //Appointments with dummy data. 
+  const appointments = [
+    { subject: "Math", tutor: "John Doe", date: "12/5/24" },
+    { subject: "Science", tutor: "Abhijit Singh", date: "12/7/24" },
+    { subject: "History", tutor: "Wes Bruh", date: "12/9/24" },
+  ];
+
+  const oldAppointments = [
+    { subject: "Math", tutor: "John Doe", date: "12/1/24" },
+    { subject: "Science", tutor: "Wes Bruh", date: "11/25/24" },
+    { subject: "History", tutor: "Abhijit Singh", date: "11/4/24" },
+  ];
+
+  //For payroll with dummy data.
+  const total = 85;
 
   // //Not functioning properly.
   // const [user, setUser] = useState([]);
@@ -38,12 +57,31 @@ function StudentDashboard() {
         <p>Welcome to your student dashboard.</p>
         <div className="appointments">
           <h2>Upcoming Sessions</h2>
+          <div className="appointment-blocks">
+            {/*Prints out only the number of blocks as there are appointments*/}
+            {appointments.map((appointment, index) => (
+              <div key={index} className="appointment-block">
+                <div className="appointment-row">Subject: {appointment.subject}</div>
+                <div className="appointment-row">Session with: {appointment.tutor}</div>
+                <div className="appointment-row">Date: {appointment.date}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="oldAppointments">
+        <div className="appointments"> {/*Past appointments*/}
           <h2>Past Sessions</h2>
+          <div className="appointment-blocks">
+            {oldAppointments.map((appointment, index) => (
+              <div key={index} className="appointment-block">
+                <div className="appointment-row">Subject: {appointment.subject}</div>
+                <div className="appointment-row">Session with: {appointment.tutor}</div>
+                <div className="appointment-row">Date: {appointment.date}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="billing">
-          <h2>Balance Due: $</h2>
+          <h2>Balance Due: ${total}</h2>
         </div>
       </main>
     </div>
