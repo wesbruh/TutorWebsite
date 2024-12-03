@@ -73,39 +73,13 @@ function StudentReviewPage() {
     fetchReviews();
   }, []);
 
-  /*const handleSubmitReview = async (e) => {
-    e.preventDefault();
-    if (!selectedTutor || !rating || !reviewText) {
-      alert("Please fill out all fields!");
-      return;
-    }
-    try {
-      const response = await axios.post("http://localhost:8080/api/v1/reviews", {
-        author: name,
-        tutorName: selectedTutor,
-        reviewText,
-        rating,
-      });
-      setReviews([...reviews, response.data]);
-      setSelectedTutor("");
-      setReviewText("");
-      setRating(0);
-      setShowModal(false);
-      alert("Review submitted successfully!");
-    } catch (error) {
-      console.error("Error submitting review:", error);
-      alert("Failed to submit the review.");
-    }
-  };*/
   const handleSubmitReview = async (e) => {
     e.preventDefault();
-
     // Ensure all required fields are filled
     if (!selectedTutor || !rating || !reviewText) {
         alert("Please fill out all fields!");
         return;
     }
-
     try {
         // Construct the review object
         const reviewData = {
@@ -120,7 +94,6 @@ function StudentReviewPage() {
             "http://localhost:8080/api/v1/reviews",
             reviewData,
         );
-
         // Update the reviews state with the new review
         setReviews([...reviews, response.data.data]); // Assuming the new review is in response.data.data
         setSelectedTutor(""); // Reset selected tutor
@@ -137,7 +110,7 @@ function StudentReviewPage() {
 
   const handleStarClick = (starValue) => {
     setRating(starValue);
-  };
+};
 
   return (
     <div className="reviews-page">
@@ -244,10 +217,15 @@ function StudentReviewPage() {
         </div>
         <div className= "tutor-cards">
         {tutorCards
-          .filter((tutor) => tutor.subjectName) // Add check for bio
+          .filter((tutor) => tutor.subjectName)
           .slice(0,9)
           .map((tutor) => (
-          <ReviewTutorCard key={tutor._id} tutor={tutor} subject={tutor.subjectName} bio={tutor.bio}/>
+          <ReviewTutorCard key={tutor._id} 
+          tutor={tutor}
+          subject={tutor.subjectName} 
+          bio={tutor.bio}
+          rating={tutor.rating}
+          />
         ))}
         </div>
         
@@ -255,8 +233,6 @@ function StudentReviewPage() {
 
     </div>
   );
-
-
 }
 
 export default StudentReviewPage;
