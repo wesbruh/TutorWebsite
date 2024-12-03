@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Sidebar from "../components/StudentSideBar/Sidebar";
+import Sidebar from "../components/TutorSideBar/Sidebar";
 import "./styleTutorNotificationsPage.css";
 
 const StudentNotificationsPage = () => {
