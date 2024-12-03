@@ -1,4 +1,3 @@
-
 /* HomePage css*/
 .home-page {
     background-color: rgba(255, 255, 255, 1.0);background: linear-gradient(
@@ -25,12 +24,7 @@
     width: 70px;
 }
 
-h1{
-    margin-top: -16px;
-    font-size: 6rem;
-}
-
-h3 {
+.learning-quote {
     text-align: center; /* Center text horizontally */
     margin-top: 0; /* Remove any extra spacing */
     display: flex;
@@ -56,6 +50,8 @@ h3 {
     top: 10px;
     text-align: center;
     width: 100%;
+    margin-top: -80px;
+    font-size: 3rem;
 }
 
 .button {
@@ -90,30 +86,24 @@ h3 {
 }
 
 .TUTOR-title{
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
     color:#466346; /* 1/2 green title*/
     margin-right: 29px; /* Mostly aligned with login/signup titles */
 }
 
-.TITANS-title{
+.TITANS-title {
     color:#f5f5f5; /* 1/2 whitesmoke title*/
 }
 
-.tutor-cards {
-    
+.hometutor-cards {
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap if there isn't enough space */
     justify-content: flex-start; /* Centers the cards horizontally */
     align-items: center; /* Centers the cards vertically in their container */
     gap: 30px; /* Adds spacing between the cards */
-    margin: 20px 20%; /* Adds vertical spacing and centers the container */
+    margin: 20px; /* Adds vertical spacing and centers the container */
+    margin-left:25%;
     padding: 60px; /* Optional: Adds padding around the container */
     max-width: 1200px; /* Limits the width of the cards' container */
-    
-}
-
-.TUTOR-title{
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
-    color:#466346; /* 1/2 green title*/
-    margin-right: 29px; /* Mostly aligned with login/signup titles */
 }

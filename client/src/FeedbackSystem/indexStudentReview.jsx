@@ -212,7 +212,7 @@ function StudentReviewPage() {
             </div>
           </div>
         )}
-        <div className= "tutor-card-title">
+        <div className= "meet-our-tutors">
           <h2>Meet Our Tutors</h2>
         </div>
         <div className= "tutor-cards">

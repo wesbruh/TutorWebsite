@@ -5,13 +5,49 @@ import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentSettings.css";
 import axios from "axios";
 
-export const StudentSettings = () => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
 
-    const UpdateInfo = async (e) => { };
+export const StudentSettings = () => {
+
+    //First line fetches the localData. Subsequent lines are variables initialized with said data.
+    const auth = JSON.parse(localStorage.getItem("auth"));
+    const id = auth?.user?._id;
+    const token = auth?.token;
+
+    const [firstName, setFirstName] = useState(auth?.user?.firstName);
+    const [lastName, setLastName] = useState(auth?.user?.lastName);
+    const [name, setName] = useState(auth?.user?.name);
+    const [email, setEmail] = useState(auth?.user?.email);
+
+    const UpdateInfo = async (e) => {
+        e.preventDefault();
+        if (token) {
+            try {
+                const response = await axios.put(
+                    "http://localhost:8080/api/v1/userRoute/setFirstName",
+                    { firstName }, // Send updated first name in request body
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                // Update the frontend state with the new first name
+                setFirstName(response.data.user.firstName);
+                localStorage.setItem(
+                    "auth",
+                    JSON.stringify({
+                        ...auth,
+                        user: { ...auth.user, firstName: response.data.user.firstName },
+                    })
+                );
+                console.log('First name updated successfully:', response.data);
+            } catch (err) {
+                console.error("Error updating first name:", err.response?.data || err.message);
+            }
+        }
+    };
+
+    
 
     return (
         <div className="student-settings">

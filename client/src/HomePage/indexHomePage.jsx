@@ -26,18 +26,18 @@ export const Home = () => {
         </h1>
       </div>
       <div className="button">
-          <button className="button-text" onClick={signup}>
-            Sign Up
-          </button>
           <button className="button-text" onClick={login}>
             Login
           </button>
+          <button className="button-text" onClick={signup}>
+            Sign Up
+          </button>
         </div>
 
-      <h3>Learning Made Simple<br/>
+      <h3 className="learning-quote">Learning Made Simple<br/>
           Success Made Possible
       </h3>
-      <div className="tutor-cards">
+      <div className="hometutor-cards">
       <HomeTutorCard
         imgSrc={tutorcard1PersonaPhoto}
         imgAlt="Tutor1 Image" 
