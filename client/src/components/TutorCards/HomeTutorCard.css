@@ -1,5 +1,6 @@
-.card1-container {
-    width: 16rem;
+/* Home Tutor Card Styling*/
+.card-container {
+    width: 15rem;
     border-radius: 1rem;
     box-shadow: 0px 10px 8px #999;
     display: flex;
@@ -7,31 +8,48 @@
     margin: 0.5rem;
     background-color: #466346;
     height: fit-content;
+    white-space: pre-wrap; /* Allow line breaks */
+    gap: 0.7rem;
 }
 
-.tutorcard1-img {
+.tutor-card-img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
 }
 
-.tutor1card-title {
+.tutor-card-title {
     font-size: 30px;
     font-variant: small-caps;
     margin: 0rem 3%;
 }
 
-.tutor1card-subject {
+.tutor-card-subject {
     font-variant: small-caps;
     font-weight: normal;
-    font-size: 18px;
-    margin: 0rem 3%;
+    font-size: 20px;
+    margin-left: 6%;
+    align-self: flex-start;
 }
 
-.tutorcard1-description {
+.tutor-card-description {
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
-    color: black;
+    color: #f5f5f5;
     margin: 0.5rem 3%;
     font-variant: small-caps;
+}
+
+.tutor-card-h2{
+    display: flex;
+    justify-content: space-between; /* Space out the subject and rating */
+    width: 100%;
+    margin: -0.3rem 3%; /* Keeps margin consistent with other elements */
+    padding-right: 1rem;
+}
+
+.tutor-card-rating{
+    font-size: 20px;
+    align-self: flex-start;
+    margin-right: 1rem;
 }
