@@ -5,8 +5,7 @@ import axios from "axios";
 import ReviewTutorCard from "../components/TutorCards/ReviewTutorCard";
 
 function StudentReviewPage() {
-
-
+  // Get us the current user's name.
   const auth = JSON.parse(localStorage.getItem("auth"));
   const id = auth?.user?._id;
   const token = auth?.token;
@@ -20,9 +19,7 @@ function StudentReviewPage() {
   const [selectedTutor, setSelectedTutor] = useState(""); // Dropdown state
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
-
-  // Dummy data for tutors
-  //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
+  // Fetches all tutors for the dropdown menu.
   useEffect(() => {
     const fetchTutors = async () => {
         try {
@@ -40,7 +37,7 @@ function StudentReviewPage() {
 
     fetchTutors();
 }, []);
-
+  // Will fetch the card info that is needed for the drop down menu.
   useEffect(() => {
     const fetchCardInfo = async () => {
         try {
@@ -58,8 +55,7 @@ function StudentReviewPage() {
 
     fetchCardInfo();
 }, []);
-
-
+  // Will fetch the reviews that are displayed. 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -72,7 +68,7 @@ function StudentReviewPage() {
 
     fetchReviews();
   }, []);
-
+  // Handles how the review is submitted.
   const handleSubmitReview = async (e) => {
     e.preventDefault();
     // Ensure all required fields are filled
@@ -106,12 +102,11 @@ function StudentReviewPage() {
         alert("Failed to submit the review.");
     }
 };
-
-
+// Does the star value.
   const handleStarClick = (starValue) => {
     setRating(starValue);
 };
-
+// HTML content.
   return (
     <div className="reviews-page">
       <Sidebar />

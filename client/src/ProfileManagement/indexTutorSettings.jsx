@@ -10,13 +10,9 @@ export const TutorSettings = () => {
     const auth = JSON.parse(localStorage.getItem("auth"));
     const token = auth?.token;
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [bio, setBio] = useState(""); //needs fixing because larger text box is needed
-    const [selectedSubject, setSelectedSubject] = useState('');
-    //const [subjects, setSubjects] = useState([]);
+    const [firstName, setFirstName] = useState(auth?.user?.firstName);
+    const [lastName, setLastName] = useState(auth?.user?.lastName);
+    const [email, setEmail] = useState(auth?.user?.email);
 
     const UpdateFirstName = async (e) => {
         e.preventDefault();
@@ -46,6 +42,7 @@ export const TutorSettings = () => {
             }
         }
     };
+
     const UpdateLastName = async (e) => {
         e.preventDefault();
         if (token) {
@@ -74,6 +71,7 @@ export const TutorSettings = () => {
             }
         }        
     };
+
     const UpdateEmail = async (e) => {
         e.preventDefault();
         if (token) {
@@ -103,15 +101,12 @@ export const TutorSettings = () => {
         }   
     };
 
-
     return (
-        <div className="tutor-settings">
+        <div className="student-settings">
             <Sidebar />
             <main className="main-content">
-                
                 <h1>Account Settings</h1>
-                <p>Change your profile picture, bio, and settings.</p>
-                
+                <p>Change your first name, last name, and email.</p>
                 <div className="input-fields">
                     <div className = "input-item">
                         <div>
@@ -153,10 +148,10 @@ export const TutorSettings = () => {
                         </div>
                     </div>
                 </div>
-                
             </main>
         </div>
     );
 };
+
 
 export default TutorSettings;
