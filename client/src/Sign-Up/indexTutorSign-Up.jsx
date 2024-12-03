@@ -47,7 +47,7 @@ export const TutorSignUp = () => {
       );
       // Step 2: Create the tutor entry if role is tutor
       if (role === "tutor") {
-        const userId = res.data.data._id;
+        // const userId = res.data.data._id;
         const tutorRes = await axios.post(
           `${process.env.REACT_APP_API}/api/v1/tutorRoute/newTutor`,
           { 

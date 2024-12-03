@@ -21,14 +21,14 @@ export const createAppointment = async (req, res) => {
 
       // Create a new appointment instance
       const newAppointment = new Appointment({
-        tutorId: tutor._id,         // grab tutor object id
-        tutorName: tutor.name,      // grab tutor name
-        userId: user._id,           // grab user object id
-        userName: user.name,        // dont have student model, use user model
+        tutorId: tutor._id,           // grab tutor object id
+        tutorName: tutor.name,        // grab tutor name
+        userId: user._id,             // grab user object id
+        firstName: user.firstName,     // user model first name
         subject,
         date,
         duration,
-        status: 'scheduled',        // Default status
+        status: 'scheduled',          // Default status
       });
   
       // Save the new appointment to MongoDB

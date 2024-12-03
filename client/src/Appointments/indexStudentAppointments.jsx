@@ -3,7 +3,7 @@ import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentAppointments.css";
 import axios from 'axios';
 
-const ScheduleAppointment = () => {
+const ScheduleAppointment =() => {
     const [subjects, setSubjects] = useState([]);
     const [tutors, setTutors] = useState([]);
     const [times, setTimes] = useState([]);
@@ -12,6 +12,13 @@ const ScheduleAppointment = () => {
     const [selectedTime, setSelectedTime] = useState('');
     const [subjectsLoaded, setSubjectsLoaded] = useState(false);    //Tracks subjects loading
     const [currentTime, setCurrentTime] = useState(new Date());     //Current date and time
+
+    
+    const auth = JSON.parse(localStorage.getItem("auth"));
+    const id = auth?.user?._id;
+    const token = auth?.token;
+    const name = auth?.user?.firstName;
+    
 
     //Fetch subjects for dropdown
    useEffect(() => {
@@ -22,7 +29,7 @@ const ScheduleAppointment = () => {
                 setSubjects(response.data);
                 setSubjectsLoaded(true); //Avoid fetching again
             }) 
-            .catch(err => console.error('Error fetching subjects:', err));
+            .catch(err => console.error('Error fetching subjects.', err));
         }
     }, [subjectsLoaded]);
     
@@ -39,7 +46,7 @@ const ScheduleAppointment = () => {
                     setSelectedTutor(''); //Reset tutor if subject is changed
                     setSelectedTime(''); //Reset time if subject is changed
                 })
-                .catch(err => console.error('Error fetching tutors:', err));    // Throw error message
+                .catch(err => console.error('Error fetching tutors.', err));    // Throw error message
         }
     }, [selectedSubject]);
 
@@ -51,7 +58,7 @@ const ScheduleAppointment = () => {
                 .then(response => {
                     setTimes(response.data); // Array of available Date objects
                 })
-                .catch(err => console.error('Error fetching times:', err));     // Throw error message
+                .catch(err => console.error('Error fetching times.', err));     // Throw error message
         }else{
             setTimes([]); //Reset times if no tutor is selected
         }
@@ -61,12 +68,15 @@ const ScheduleAppointment = () => {
     const handleSubmit = () => {
         if (selectedTutor && selectedTime){
             axios
-                .post('http://localhost:8080/api/v1/appointmentRoutes/appointments', { 
+                .post('http://localhost:8080/api/v1/appointmentRoutes/bookAppointment', { 
                     tutorId: selectedTutor, 
-                    time: selectedTime,
+                    userId: id,
+                    firstName: name,
+                    subject: selectedSubject,
+                    date: selectedTime,
                 })
-                .then(() => alert('Appointment booked!'))
-                .catch(err => console.error('Error booking appointment:', err));    // Throw error message
+                .then(() => alert('Appointment successfully booked!'))
+                .catch(err => alert('Error booking appointment.', err));    // Throw error message to screen
         }
     };
 

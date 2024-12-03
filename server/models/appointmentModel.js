@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const AppointmentSchema = new mongoose.Schema({
   tutorId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Tutor',
+    ref: 'tutors',
     required: true
   },
   tutorName: {
@@ -15,11 +15,10 @@ const AppointmentSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  userName: {
+  firstName: {
     type: String,
     required: true
   },
-  
   subject: {
     type: String,
     required: true
@@ -30,7 +29,7 @@ const AppointmentSchema = new mongoose.Schema({
   },
   duration: {
     type: Number, // Duration in minutes (e.g., 60 for 1 hour)
-    required: true
+    default: 60
   },
   status: {
     type: String,
@@ -47,4 +46,4 @@ const AppointmentSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('Appointment', AppointmentSchema);
+export default mongoose.model('appointments', AppointmentSchema);

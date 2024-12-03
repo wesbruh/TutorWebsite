@@ -16,4 +16,6 @@ router.get('/getTutorData', getTutorData);
 router.get('/getsubject/:subjectId', getTutorSubjectForAppointment);                 //For appointment booking, fetches tutors absed on subject selected.
 router.get('/getAllTutorNames', getAllTutorNames);
 router.get('/getTutorCardInfo', getTutorCardInfo);
+
+
 export default router;

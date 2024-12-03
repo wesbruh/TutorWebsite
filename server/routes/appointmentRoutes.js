@@ -5,7 +5,7 @@ import {createAppointment}  from "../controllers/appointmentController.js";
 const router = express.Router();
 
 // Route to create an appointment
-router.post('/bookAppointment', createAppointment);
+router.post("/bookAppointment", createAppointment);
 
 // NOT READY YET
 // // Route to get an appointment by ID
