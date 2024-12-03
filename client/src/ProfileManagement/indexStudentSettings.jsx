@@ -108,7 +108,7 @@ export const StudentSettings = () => {
             <Sidebar />
             <main className="main-content">
                 <h1>Account Settings</h1>
-                <p>Change your profile picture, bio, and settings.</p>
+                <p>Change your first name, last name, and email.</p>
                 <div className="input-fields">
                     <div className = "input-item">
                         <div>
