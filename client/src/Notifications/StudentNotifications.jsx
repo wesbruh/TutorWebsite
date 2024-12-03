@@ -1,48 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentNotifications.css";
-import axios from 'axios';
 
 const StudentNotificationsPage = () => {
-  const [appointments, setAppointments] = useState([]);
+  const [notifications, setNotifications] = useState([
+    { id: 1, title: "Cancellation of Appointment with Jane Smith", date: "15 October, 2024", time: "11:00 AM" },
+    { id: 2, title: "Confirmation of Appointment with Jane Smith", date: "14 October, 2024", time: "02:00 PM" },
+    { id: 3, title: "Cancellation of Appointment with Clark Kent", date: "13 October, 2024", time: "02:32 PM" },
+    { id: 4, title: "Confirmation of Appointment with Clark Kent", date: "13 October, 2024", time: "02:00 PM" },
+    { id: 5, title: "Completion of Appointment with Clark Kent", date: "11 October, 2024", time: "02:00 - 03:00 PM" },
+  ]);
 
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      try {
-        const response = await axios.get('http://localhost:8080/api/v1/appointments');
-        setAppointments(response.data); // Set fetched appointments
-      } catch (err) {
-        console.error("Error fetching appointments:", err.message);
-      }
-    };
+  const [unreadCount, setUnreadCount] = useState(1); // Example count for new notifications
 
-    fetchAppointments();
-  }, []);
+  const markAllAsRead = () => {
+    setUnreadCount(0); // Reset unread count
+  };
 
   return (
     <div className="notifications-page">
       <Sidebar />
       <main className="main-content">
-        <h1>Notifications</h1>
-        <h3>View your notifications regarding the status of your appointments.</h3>
+        <h1 className="notifications-title">Notifications</h1>
+        <p className="notifications-subtitle">View your notifications regarding the status of your appointments.</p>
         <ul className="notifications-list">
-          {appointments.map((appointment) => (
-            <li key={appointment._id} className="notification-item">
+          {notifications.map((notification) => (
+            <li key={notification.id} className="notification-item">
               <div className="notification-icon"></div>
-              <div>
-                <p className="notification-title">
-                  Appointment with {appointment.tutorName} ({appointment.status})
-                </p>
-                <p className="notification-date">
-                  Date: {new Date(appointment.date).toLocaleString()}
-                </p>
-                <p className="notification-details">
-                  Duration: {appointment.duration} minutes
-                </p>
+              <div className="notification-content">
+                <p className="notification-title">{notification.title}</p>
+                <p className="notification-date">{notification.date} | {notification.time}</p>
               </div>
             </li>
           ))}
         </ul>
+        <div className="new-notification">
+          <p>You have {unreadCount > 0 ? unreadCount : "no"} new notification{unreadCount > 1 ? "s" : ""}</p>
+          {unreadCount > 0 && (
+            <button className="mark-read-button" onClick={markAllAsRead}>Mark All as Read</button>
+          )}
+        </div>
       </main>
     </div>
   );
