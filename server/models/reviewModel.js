@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const reviewSchema = new mongoose.Schema({
     //userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
-    tutorId: {type: mongoose.Schema.Types.ObjectId, ref: 'Tutor', required: true},
+    //tutorId: {type: mongoose.Schema.Types.ObjectId, ref: 'Tutor', required: true},
     //dateWritten: {type: Date, default: Date.now, required: true},
     author: {type: String, required: true},
     tutor: {type: String, required: true},
