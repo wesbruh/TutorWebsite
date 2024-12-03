@@ -51,10 +51,12 @@ const StudentNotificationsPage = () => {
   // Add a new notification
   const addNotification = () => {
     if (newTitle && newDate) {
-      setNotifications((prevNotifications) => [
-        ...prevNotifications,
-        { id: Date.now(), title: newTitle, date: newDate },
-      ]);
+      const newNotification = { id: Date.now(), title: newTitle, date: newDate };
+      setNotifications((prevNotifications) => {
+        const updatedNotifications = [...prevNotifications, newNotification];
+        // Sort notifications by date in descending order
+        return updatedNotifications.sort((a, b) => new Date(b.date) - new Date(a.date));
+      });
       setNewTitle('');
       setNewDate('');
       setShowPopup(false);
