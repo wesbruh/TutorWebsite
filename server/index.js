@@ -18,6 +18,7 @@ import reviewRoutes from "./routes/reviewRoutes.js"; // Import review routes
 import appointmentRoutes from './routes/appointmentRoutes.js';
 import subjectRoutes from './routes/subjectRoutes.js';
 import tutorModel from "./models/tutorModel.js";
+import notificationRoutes from "./routes/notifications.js";
 
 //configure env
 dotenv.config();
@@ -43,6 +44,7 @@ app.use("/api/v1/tutorRoute", tutorRoutes);
 app.use("/api/v1/userRoute", userRoutes);
 app.use("/api/v1/appointmentRoutes", appointmentRoutes);
 app.use("/api/v1", subjectRoutes);
+app.use("/api/v1/notifications", notificationRoutes);
 
 app.use("/api/v1/reviews", reviewRoutes);
 

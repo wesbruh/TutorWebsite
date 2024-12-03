@@ -1,45 +1,50 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentBilling.css";
+import axios from "axios";
 
 const StudentBillingPage = () => {
-  const payroll = [
-    { id: 1, payment:"", title: "Student Payment For November", date: "You have no payments for this month" },
-  ];
-  /*
-  //code based on tutor payroll
-  const [student, setStudent] = useState([])
-    useEffect(() => {
-    //routing needs fixing
-    axios.get('http://localhost:8080/api/v1/studentRoute/getStudentData')
-    .then(students => setStudents(students.data))
-    .catch(err => console.log(err))
-  }, [])
+  const [tutors, setTutors] = useState([]);
+  const [payroll, setPayroll] = useState([]);
+  const [pastPayroll, setPastPayroll] = useState([]);
 
-  return (
-  <div className = "payroll-page">
-          <Sidebar />
-            {student.length === 0 ? (
-              <h1>Student Fees</h1>
-              <p>View Your Billing Information.</p>
-              <p>No payment due.</p>
-            ) : (
-              tutors.map((tutor) => (
-                <li key={student._id} className="student-billing">
-                  <div>
-                    <p className="student-id">{student.id}</p>
-                    <p className="student-payment">{student.payment}</p>
-                    <p className="student-name">{student.title}</p>
-                    <p className="student-email">{student.date}</p>
-                  </div>
-                </li>
-              ))
-            )}
-          </div>
-   );
-};
-export default StudentBillingPage;
-  */
+  useEffect(() => {
+    const getMonthAndYear = (offset) => {
+      const date = new Date();
+      date.setMonth(date.getMonth() + offset); 
+      const month = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date);
+      const year = date.getFullYear();
+      return {month, year};
+    };
+
+    //past months info
+    const generatePastPayroll = (usersData, count) => {
+      const past = [];
+      for (let i = -1; i >= -count; i--) {
+        const {month, year} = getMonthAndYear(i);
+        past.push({id: Math.abs(i),amount: 215,title: `Past Student Payment for ${usersData[9]?.name}`,date: `Payment Paid on 30 ${month}, ${year}`,});
+      }
+      return past;
+    };
+
+    axios.get('http://localhost:8080/api/v1/userRoute/getUserData')
+      .then(response => {
+        const usersData = response.data;
+        setTutors(usersData);
+
+        const {month, year} = getMonthAndYear(0);
+        const updatedPayroll = [
+          {id: 1,amount: 215,title: `Upcoming Student Payment for ${usersData[9]?.name}`, date: `Payment Due on 30 ${month}, ${year}`,},
+        ];
+        setPayroll(updatedPayroll);
+
+        //past months payroll
+        const past = generatePastPayroll(usersData, 12);
+        setPastPayroll(past);
+      })
+      .catch(err => console.log(err));
+  }, []);
+
   return (
     <div className="payroll-page">
       <Sidebar />
@@ -47,13 +52,26 @@ export default StudentBillingPage;
         <h1>Student Fees</h1>
         <p>View Your Billing Information.</p>
         <ul className="payroll-list">
-          {payroll.map((payroll) => (
-            <li key={payroll.id} className="payroll-item">
+          {payroll.map((item) => (
+            <li key={item.id} className="payroll-item">
               <div className="payroll-icon"></div>
               <div>
-                <p className="payroll-title">{payroll.title}</p>
-                <p className="payroll-date">{payroll.date}</p>
-                <p className="payroll-amount"> Total Amount: {/*$*/}{payroll.amount}</p>
+                <p className="payroll-title">{item.title}</p>
+                <p className="payroll-date">{item.date}</p>
+                <p className="payroll-amount">Total Amount: ${item.amount}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p>View Your Billing History.</p>
+        <ul className="payroll-list">
+          {pastPayroll.map((item) => (
+            <li key={item.id} className="payroll-item">
+              <div className="payroll-icon"></div>
+              <div>
+                <p className="payroll-title">{item.title}</p>
+                <p className="payroll-date">{item.date}</p>
+                <p className="payroll-amount">Total Amount: ${item.amount}</p>
               </div>
             </li>
           ))}
@@ -64,3 +82,4 @@ export default StudentBillingPage;
 };
 
 export default StudentBillingPage;
+

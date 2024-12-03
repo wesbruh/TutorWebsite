@@ -302,9 +302,9 @@ form button[type="button"]:hover {
 
 .tutor-cards {
     display: flex;
-    flex-direction: row;
-    align-items: center;  /* Center the content horizontally */
-    justify-content: center;  /* Center the content vertically */
+    flex-wrap: wrap; /* Ensures items wrap into rows */
+    gap: 20px; /* Adds spacing between cards */
+    justify-content: center; /* Aligns items in the center */
        
 }
 

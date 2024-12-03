@@ -110,7 +110,7 @@ export const getTutorSubjectForAppointment = async (req, res) => {
 
 export const getTutorCardInfo = async (req, res) => {
     try {
-        const tutors = await Tutor.find({}, 'name subjectName'); // Fetch only `name` and `_id`
+        const tutors = await Tutor.find({}, 'name subjectName bio rating'); // Fetch only `name` and `_id`
         res.status(200).json({ success: true, data: tutors });
     } catch (error) {
         console.error("Error fetching tutor info:", error.message);

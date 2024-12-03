@@ -5,8 +5,7 @@ import axios from "axios";
 import ReviewTutorCard from "../components/TutorCards/ReviewTutorCard";
 
 function StudentReviewPage() {
-
-
+  // Get us the current user's name.
   const auth = JSON.parse(localStorage.getItem("auth"));
   const id = auth?.user?._id;
   const token = auth?.token;
@@ -20,9 +19,7 @@ function StudentReviewPage() {
   const [selectedTutor, setSelectedTutor] = useState(""); // Dropdown state
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState(0);
-
-  // Dummy data for tutors
-  //const tutors = ["Jane Smith", "John Doe", "Clark Kent", "Diana Prince"];
+  // Fetches all tutors for the dropdown menu.
   useEffect(() => {
     const fetchTutors = async () => {
         try {
@@ -40,7 +37,7 @@ function StudentReviewPage() {
 
     fetchTutors();
 }, []);
-
+  // Will fetch the card info that is needed for the drop down menu.
   useEffect(() => {
     const fetchCardInfo = async () => {
         try {
@@ -58,8 +55,7 @@ function StudentReviewPage() {
 
     fetchCardInfo();
 }, []);
-
-
+  // Will fetch the reviews that are displayed. 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -72,40 +68,14 @@ function StudentReviewPage() {
 
     fetchReviews();
   }, []);
-
-  /*const handleSubmitReview = async (e) => {
-    e.preventDefault();
-    if (!selectedTutor || !rating || !reviewText) {
-      alert("Please fill out all fields!");
-      return;
-    }
-    try {
-      const response = await axios.post("http://localhost:8080/api/v1/reviews", {
-        author: name,
-        tutorName: selectedTutor,
-        reviewText,
-        rating,
-      });
-      setReviews([...reviews, response.data]);
-      setSelectedTutor("");
-      setReviewText("");
-      setRating(0);
-      setShowModal(false);
-      alert("Review submitted successfully!");
-    } catch (error) {
-      console.error("Error submitting review:", error);
-      alert("Failed to submit the review.");
-    }
-  };*/
+  // Handles how the review is submitted.
   const handleSubmitReview = async (e) => {
     e.preventDefault();
-
     // Ensure all required fields are filled
     if (!selectedTutor || !rating || !reviewText) {
         alert("Please fill out all fields!");
         return;
     }
-
     try {
         // Construct the review object
         const reviewData = {
@@ -120,7 +90,6 @@ function StudentReviewPage() {
             "http://localhost:8080/api/v1/reviews",
             reviewData,
         );
-
         // Update the reviews state with the new review
         setReviews([...reviews, response.data.data]); // Assuming the new review is in response.data.data
         setSelectedTutor(""); // Reset selected tutor
@@ -133,12 +102,11 @@ function StudentReviewPage() {
         alert("Failed to submit the review.");
     }
 };
-
-
+// Does the star value.
   const handleStarClick = (starValue) => {
     setRating(starValue);
-  };
-
+};
+// HTML content.
   return (
     <div className="reviews-page">
       <Sidebar />
@@ -244,10 +212,15 @@ function StudentReviewPage() {
         </div>
         <div className= "tutor-cards">
         {tutorCards
-          .filter((tutor) => tutor.subjectName) // Add check for bio
+          .filter((tutor) => tutor.subjectName)
           .slice(0,9)
           .map((tutor) => (
-          <ReviewTutorCard key={tutor._id} tutor={tutor} subject={tutor.subjectName} bio={tutor.bio}/>
+          <ReviewTutorCard key={tutor._id} 
+          tutor={tutor}
+          subject={tutor.subjectName} 
+          bio={tutor.bio}
+          rating={tutor.rating}
+          />
         ))}
         </div>
         
@@ -255,8 +228,6 @@ function StudentReviewPage() {
 
     </div>
   );
-
-
 }
 
 export default StudentReviewPage;

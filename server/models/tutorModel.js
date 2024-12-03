@@ -16,7 +16,8 @@ const tutorSchema = new mongoose.Schema({
         userName: { type: String, required: true },
       }
     ],
-    bio: {type: String, default: " "}
+    bio: {type: String, default: " "},
+    rating: {type: Number, default: 1, min: 1, max: 5}
 });
 
 export default mongoose.model('tutors', tutorSchema);
