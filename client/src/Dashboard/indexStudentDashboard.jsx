@@ -8,8 +8,8 @@ function StudentDashboard() {
   
   //First line fetches the localData. Subsequent lines are variables initialized with said data.
   const auth = JSON.parse(localStorage.getItem("auth"));
-  const id = auth?.user?._id;
-  const token = auth?.token;
+  // const id = auth?.user?._id;
+  // const token = auth?.token;
   const name = auth?.user?.firstName;
 
   // //Not functioning properly.
