@@ -60,6 +60,7 @@ const StudentBillingPage = () => {
                 <p className="payroll-date">{item.date}</p>
                 <p className="payroll-amount">Total Amount: ${item.amount}</p>
               </div>
+              <button className="nextPaymentButton">Make Payment</button>
             </li>
           ))}
         </ul>
@@ -73,6 +74,7 @@ const StudentBillingPage = () => {
                 <p className="payroll-date">{item.date}</p>
                 <p className="payroll-amount">Total Amount: ${item.amount}</p>
               </div>
+              <button className="historyButton">View Payment Details</button>
             </li>
           ))}
         </ul>
