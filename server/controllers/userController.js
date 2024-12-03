@@ -28,6 +28,34 @@ export const getUserData = async (req, res) => {
     }
   };
 
+  export const setFirstName = async (req, res) => {
+    try {
+        // Validate the userId
+        const userId = req.user?._id; 
+        if (!userId) return res.status(400).json({ error: 'User ID missing' });
+
+        // Extract `firstName` from the request body
+        const { firstName } = req.body;
+        if (!firstName) return res.status(400).json({ error: 'First name is required' });
+
+        // Update the user's first name
+        const updatedUser = await User.findByIdAndUpdate(
+            userId,
+            { firstName }, // Update firstName field
+            { new: true, runValidators: true } // Return the updated document
+        );
+
+        if (!updatedUser) return res.status(404).json({ error: 'User not found' });
+
+        res.status(200).json({ message: 'First name updated successfully', user: updatedUser });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error updating user info' });
+    }
+};
+
+
+
 /*export const getTutorSubject = async (req, res) => {
   const {tutorId} = req.body;
 
