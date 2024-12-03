@@ -10,14 +10,14 @@ export const HomeTutorCard = ({
     description,
 }) => {
     return (
-        <div className="card-container">
-            <img src={imgSrc} alt={imgAlt} className="tutor-card-img" />
-            {title && <h1 className="tutor-card-title">{title}</h1>}
-            <h2 className="tutor-card-h2"> 
-                <span className="tutor-card-subject">{subject}</span>
-                <span className="tutor-card-rating">{rating}</span>
+        <div className="homecard-container">
+            <img src={imgSrc} alt={imgAlt} className="hometutor-card-img" />
+            {title && <h1 className="hometutor-card-title">{title}</h1>}
+            <h2 className="hometutor-card-h2"> 
+                <span className="hometutor-card-subject">{subject}</span>
+                <span className="hometutor-card-rating">{rating}</span>
             </h2>
-            {description && <p className="tutor-card-description">{description}</p>}
+            {description && <p className="hometutor-card-description">{description}</p>}
         </div>
     );
 };

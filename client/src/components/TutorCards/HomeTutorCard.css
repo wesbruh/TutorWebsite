@@ -1,5 +1,5 @@
 /* Home Tutor Card Styling*/
-.card-container {
+.homecard-container {
     width: 15rem;
     border-radius: 1rem;
     box-shadow: 0px 10px 8px #999;
@@ -12,26 +12,27 @@
     gap: 0.7rem;
 }
 
-.tutor-card-img {
+.hometutor-card-img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
 }
 
-.tutor-card-title {
+.hometutor-card-title {
     font-size: 30px;
+    text-align: center;
     font-variant: small-caps;
     margin: 0rem 3%;
 }
 
-.tutor-card-subject {
+.hometutor-card-subject {
     font-variant: small-caps;
     font-weight: normal;
     font-size: 20px;
-    margin-left: 6%;
+    margin-left: 0.5rem 3%;
     align-self: flex-start;
 }
 
-.tutor-card-description {
+.hometutor-card-description {
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
@@ -40,7 +41,7 @@
     font-variant: small-caps;
 }
 
-.tutor-card-h2{
+.hometutor-card-h2{
     display: flex;
     justify-content: space-between; /* Space out the subject and rating */
     width: 100%;
@@ -48,7 +49,7 @@
     padding-right: 1rem;
 }
 
-.tutor-card-rating{
+.hometutor-card-rating{
     font-size: 20px;
     align-self: flex-start;
     margin-right: 1rem;

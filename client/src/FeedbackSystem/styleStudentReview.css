@@ -308,9 +308,10 @@ form button[type="button"]:hover {
        
 }
 
-.tutor-card-title {
+.meet-our-tutors {
     text-align: center;   /* Center the text horizontally */
     margin-bottom: 1rem;  /* Optional: Add some space below the title */
+    color: #484944;
   }
 
 
