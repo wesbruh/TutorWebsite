@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React/*, { useState, useEffect }*/ from "react";
+//import axios from "axios";
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./StudentDashboard.css";
 
 
 function StudentDashboard() {
   
-  //The following two lines successfully retrieve the token
+  //First line fetches the localData. Subsequent lines are variables initialized with said data.
   const auth = JSON.parse(localStorage.getItem("auth"));
-  const id = auth?.user?._id;
-  const token = auth?.token;
+  // const id = auth?.user?._id;
+  // const token = auth?.token;
   const name = auth?.user?.firstName;
 
-  //Not functioning properly.
-  const [user, setUser] = useState([]);
-  // Fetch user info using the token
-  useEffect(() => {
-    if (token) {
-      axios
-        .get("http://localhost:8080/api/v1/userRoute/getUserName", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Send token in the Authorization header
-          },
-        })
-        .then((response) => {
-          setUser(response.data);
-        })
-        .catch((err) => console.error("Error fetching user:", err));
-    }
-  }, [token]);
+  // //Not functioning properly.
+  // const [user, setUser] = useState([]);
+  // // Fetch user info using the token
+  // useEffect(() => {
+  //   if (token) {
+  //     axios
+  //       .get("http://localhost:8080/api/v1/userRoute/getUserName", {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`, // Send token in the Authorization header
+  //         },
+  //       })
+  //       .then((response) => {
+  //         setUser(response.data);
+  //       })
+  //       .catch((err) => console.error("Error fetching user:", err));
+  //   }
+  // }, [token]);
 
   return (
     <div className="dashboard">

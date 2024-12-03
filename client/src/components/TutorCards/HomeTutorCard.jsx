@@ -1,20 +1,23 @@
 import React from 'react';
 import "./HomeTutorCard.css";
-import tutorcard1PersonaPhoto from "../../assets/tutorcard-1-persona-photo.png"
-
 
 export const HomeTutorCard = ({
+    imgSrc, 
     imgAlt,
     title,
     subject,
+    rating,
     description,
 }) => {
     return (
-        <div className="card1-container">
-            <img src={tutorcard1PersonaPhoto} alt={imgAlt} className="tutorcard1-img" />
-            {title && <h1 className="tutor1card-title">{title}</h1>}
-            <h2 className="tutor1card-subject">{subject}</h2>
-            {description && <p className="tutorcard1-description">{description}</p>}
+        <div className="card-container">
+            <img src={imgSrc} alt={imgAlt} className="tutor-card-img" />
+            {title && <h1 className="tutor-card-title">{title}</h1>}
+            <h2 className="tutor-card-h2"> 
+                <span className="tutor-card-subject">{subject}</span>
+                <span className="tutor-card-rating">{rating}</span>
+            </h2>
+            {description && <p className="tutor-card-description">{description}</p>}
         </div>
     );
 };
