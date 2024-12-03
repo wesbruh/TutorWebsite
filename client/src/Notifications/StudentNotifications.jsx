@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from "../components/StudentSideBar/Sidebar";
 import "./styleStudentNotifications.css";
 
@@ -40,6 +40,14 @@ const StudentNotificationsPage = () => {
   const [newTitle, setNewTitle] = useState('');
   const [newDate, setNewDate] = useState('');
 
+  // Update current time every minute
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000); // 60000 ms = 1 minute
+    return () => clearInterval(timer);
+  }, []);
+
   // Add a new notification
   const addNotification = () => {
     if (newTitle && newDate) {
@@ -72,12 +80,12 @@ const StudentNotificationsPage = () => {
         <h1>Notifications</h1>
         <h3>View your notifications regarding the status of your appointments.</h3>
         <button className="add-button" onClick={() => setShowPopup(true)}>
-          Add Appointment
+          Add Notification
         </button>
         {showPopup && (
           <div className="popup">
             <div className="popup-content">
-              <h2>Add Appointment</h2>
+              <h2>Add Notification</h2>
               <label>
                 Title:
                 <input
@@ -103,9 +111,11 @@ const StudentNotificationsPage = () => {
         )}
         {upcomingNotification && (
           <div className="new-notification">
-            <p>Upcoming Notification:</p>
+            <p className="upcoming-label">Upcoming Notification:</p>
             <p className="notification-title">{upcomingNotification.title}</p>
-            <p className="notification-date">{new Date(upcomingNotification.date).toLocaleString()}</p>
+            <p className="notification-date">
+              {new Date(upcomingNotification.date).toLocaleString()}
+            </p>
           </div>
         )}
         <ul className="notifications-list">
@@ -114,7 +124,9 @@ const StudentNotificationsPage = () => {
               <div className="notification-icon"></div>
               <div>
                 <p className="notification-title">{notification.title}</p>
-                <p className="notification-date">{new Date(notification.date).toLocaleString()}</p>
+                <p className="notification-date">
+                  {new Date(notification.date).toLocaleString()}
+                </p>
               </div>
               <button
                 className="remove-button"
