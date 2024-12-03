@@ -56,7 +56,7 @@ const ScheduleAppointment =() => {
             axios
                 .get(`http://localhost:8080/api/v1/tutorRoute/availableTimes/${selectedTutor}`)
                 .then(response => {
-                    setTimes(response.data); // Array of available Date objects
+                    setTimes(response.data.map(time => new Date(time).toISOString())); // Convert to ISO strings
                 })
                 .catch(err => console.error('Error fetching times.', err));     // Throw error message
         }else{

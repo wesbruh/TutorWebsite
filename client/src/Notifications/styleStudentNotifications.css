@@ -89,3 +89,29 @@
 .remove-button:hover {
   background-color: #cc0000;
 }
+
+/* Upcoming Notification */
+.new-notification {
+  background-color: #466346;
+  color: #ffffff; /* White text for better visibility */
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.1rem; /* Slightly larger font size for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.new-notification p {
+  margin: 5px 0;
+}
+
+.new-notification .notification-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.new-notification .notification-date {
+  font-size: 1rem;
+  color: #ffffff; /* Lighter text for the date */
+}

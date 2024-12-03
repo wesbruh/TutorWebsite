@@ -77,11 +77,12 @@ const TutorPayrollPage = () => {
 
   //Fetch tutor id, name, payment
   /*
+  //route the data for all three variables, id, name, payment
    useEffect(() => {
             axios.all([
             axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorData', {getTutorData: tutorData}), 
+            axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorName', {getTutorName: tutorName}),
             axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorPay', {getTutorPay: tutorPay}),
-            axios.post('http://localhost:8080/api/v1/tutorRoute/getTutorName', {getTutorName: tutorName})
           ])
             .then(axios.spread((tutorData, tutorPay, tutorName) => {
             console.log('id', tutorData, 'payment', tutorPay, 'name', tutorName);
@@ -104,6 +105,7 @@ const TutorPayrollPage = () => {
   const [payroll, setPayroll] = useState([]);
   const [pastPayroll, setPastPayroll] = useState([]);
 
+  //for date of payment
   useEffect(() => {
     const getMonthAndYear = (offset) => {
       const date = new Date();
@@ -161,16 +163,7 @@ const TutorPayrollPage = () => {
           <div>
             {tutors.length === 0 ? (
               <p>Invalid tutor information.</p>
-            ) : (
-              tutors.map((tutor) => (
-                <li key={tutor._id} className="tutor-payroll">
-                  <div>
-                    {/<p className="tutor-name">{tutor.name}</p>
-                    <p className="tutor-name">{tutor.email}</p>
-                    <p className="tutor-name">{tutor.amountDue}</p>}
-                    </div>
-                    </li>
-                  ))
+            ) : 
                 )}
               </div>
             </ul>

@@ -102,9 +102,9 @@ app.get('/getTutorData', (req, res) => {
 app.get("/api/v1/tutors/availableTimes/:tutorId", (req, res) => {
   const tutorId = req.params.tutorId;
   tutorModel.findById(tutorId)
-    .then(tutor => {
-      if (tutor) {
-        res.json(tutor.availableTimes || []); // Handle missing times gracefully
+    .then(tutors => {
+      if (tutors) {
+        res.json(tutors.availableTimes || []); // Handle missing times gracefully
       } else {
         res.status(404).json({ error: "Tutor not found" });
       }
