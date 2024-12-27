@@ -1,4 +1,11 @@
 ![Screenshot 2024-12-27 094226](https://github.com/user-attachments/assets/50a669f5-37c6-4a07-b1e5-9f940875cf84)
+![Screenshot 2024-12-27 094255](https://github.com/user-attachments/assets/31c978e5-c267-40f5-8a37-a52403844c1b)
+![Screenshot 2024-12-27 094319](https://github.com/user-attachments/assets/0601e487-4700-4a5a-bb72-b99988b8e617)
+![Screenshot 2024-12-27 094349](https://github.com/user-attachments/assets/ccf8e54f-d239-406a-846c-5657db6ec391)
+![Screenshot 2024-12-27 094413](https://github.com/user-attachments/assets/43d45264-b6c8-4d9f-b261-e8632bfda266)
+![Screenshot 2024-12-27 094429](https://github.com/user-attachments/assets/b4a61bef-70d8-437e-b439-69d491bb9bf1)
+
+
 
 ## INSTRUCTIONS (Please follow instruction accordingly):
 
