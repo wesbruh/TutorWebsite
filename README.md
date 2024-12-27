@@ -1,6 +1,4 @@
-# README testing section
-
-I tested with no problem
+![Screenshot 2024-12-27 094226](https://github.com/user-attachments/assets/50a669f5-37c6-4a07-b1e5-9f940875cf84)
 
 ## INSTRUCTIONS (Please follow instruction accordingly):
 
